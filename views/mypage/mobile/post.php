@@ -8,32 +8,32 @@
     </section>
     
     <section class="myinfo">
-        <figure>
-            <img src="<?php echo base_url('assets/images/temp/user02.png') ?>" alt="user">
+        <figure class="info_area">
+            <img src="<?php echo base_url('assets/images/temp/info_img/info_user.png') ?>" alt="user">
             <figcaption>
                 <h2>
                     <?php echo html_escape($this->member->item('mem_userid')); ?>
                 </h2>
                 <p><span>"<?php echo html_escape($this->member->item('mem_nickname')); ?>" 님 안녕하세요</span></p>
-                <figure>
-                    <img src="<?php echo base_url('assets/images/temp/level.png') ?>" alt="user">
-                    <figcaption>
-                        하사 <?php //echo html_escape($this->member->item('mem_level')); ?>
-                    </figcaption>
-                </figure>
             </figcaption>
         </figure>
 
-        <button style="height:23px;font-family: 'Jeju Gothic', sans-serif; font-weight: normal; " id="opener">
+        <div class="info_level">
+            <img src="<?php echo base_url('assets/images/temp/level.png') ?>" alt="user">
+            <p>하사 <?php //echo html_escape($this->member->item('mem_level')); ?></p>
+        </div>
+
+        <button>
                 등급혜택 보기 
         </button>
+
         <div id="dialog"  style="display:none">
             <img src="<?php echo base_url('assets/images/temp/benefit.png') ?>" alt="benefit" style="width:100%" >
         </div>
     </section>
 
-    <section class="title">
-        <table class="main_01">
+    <section class="info_table">
+        <table>
             <tr>
                 <td>
                     <a href="<?php echo site_url('mypage'); ?>">내 정보</a>
@@ -61,8 +61,8 @@
         <li><a href="<?php echo site_url('mypage/post'); ?>" class="btn btn-warning btn-sm" title="원글">원글</a></li>
         <li><a href="<?php echo site_url('mypage/comment'); ?>" class="btn btn-success btn-sm" title="댓글">댓글</a></li>
     </ul> -->
-    <section>
-        <table class="table mb3per">
+    <section class="table_02">
+        <table>
             <thead>
                 <tr>
                     <th>번호</th>
@@ -105,7 +105,7 @@
     
     <nav><?php echo element('paging', $view); ?></nav>
     </section>
-    <section class="ad">
+    <section class="ad" style="margin-bottom:0;">
         <h4>ad</h4>
         <?php echo banner("mypage_banner_1") ?>
     </section>

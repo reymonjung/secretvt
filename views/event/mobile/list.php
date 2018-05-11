@@ -8,8 +8,20 @@
         <span>다양한 이벤트를 만나보세요.</span>
         <table class="table02">
             <tr>
-                <td><a href="<?php echo element('document_board_url', $view); ?>" title="공지사항">공지사항</a></td>
-                <td style="background-color:rgb(239, 208, 222)">이벤트</td>
+                <td>
+                    <a href="<?php echo element('document_board_url', $view); ?>" title="공지사항">
+                        <figure>
+                            <img src="<?php echo base_url('assets/images/temp/de_img/de_bell.png')?>" alt="sub01"> 
+                            <figcaption>공지사항</figcaption>
+                        </figure>
+                    </a>
+                </td>
+                <td style="background-color:#f7edf1;">
+                    <figure>
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_gift.png')?>" alt="sub01"> 
+                        <figcaption>이벤트</figcaption>
+                    </figure>
+                </td>
             </tr>
         </table>
     </section>
@@ -24,7 +36,6 @@
                 <a href="<?php echo element('post_url', $result); ?>" title="<?php echo html_escape(element('eve_title', $result)); ?>">
                 <figure>
                     <img src="<?php echo element('thumb_url', $result); ?>" alt="<?php echo html_escape(element('eve_title', $result)); ?>" title="<?php echo html_escape(element('eve_title', $result)); ?>"/>
-
                      <figcaption>
                         <h3>
                             <?php echo html_escape(element('eve_title', $result)); ?>

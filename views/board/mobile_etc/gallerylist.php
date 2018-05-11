@@ -40,12 +40,12 @@ if (element('menu', $layout)) {
     ?>
         <table>
             <tr>
-            <td onClick="contentsAjax('contents_<?php echo $contentsId?>','<?php echo board_url(element('brd_key', element('board', element('list', $view)))); ?>?findex=<?php echo html_escape($this->input->get('findex')); ?>&category_id=');" role="presentation" <?php if ( ! $this->input->get('category_id')) { ?>class="active" <?php } ?>><img src="<?php echo base_url('assets/images/temp/karaokeall.png'); ?>" alt="sub01">전체</td>
+            <td onClick="contentsAjax('contents_<?php echo $contentsId?>','<?php echo board_url(element('brd_key', element('board', element('list', $view)))); ?>?findex=<?php echo html_escape($this->input->get('findex')); ?>&category_id=');" role="presentation" <?php if ( ! $this->input->get('category_id')) { ?>class="active" <?php } ?>><img src="<?php echo base_url('assets/images/temp/sub_img/sub_all.png'); ?>" alt="sub01">전체</td>
             <?php
             if (element(0, $category)) {
                 foreach (element(0, $category) as $ckey => $cval) {
             ?>
-                <td onClick="contentsAjax('contents_<?php echo $contentsId?>','<?php echo board_url(element('brd_key', element('board', element('list', $view)))); ?>?findex=<?php echo html_escape($this->input->get('findex')); ?>&category_id=<?php echo element('bca_key', $cval); ?>')" role="presentation" <?php if ($this->input->get('category_id') === element('bca_key', $cval)) { ?>class="active" <?php } ?>><img src="<?php echo base_url('assets/images/temp/msg0'.($ckey+1).'.png'); ?>" alt="sub01"><?php echo html_escape(element('bca_value', $cval)); ?></td>
+                <td onClick="contentsAjax('contents_<?php echo $contentsId?>','<?php echo board_url(element('brd_key', element('board', element('list', $view)))); ?>?findex=<?php echo html_escape($this->input->get('findex')); ?>&category_id=<?php echo element('bca_key', $cval); ?>')" role="presentation" <?php if ($this->input->get('category_id') === element('bca_key', $cval)) { ?>class="active" <?php } ?>><img src="<?php echo base_url('assets/images/temp/sub_all/msg0'.($ckey+1).'.png'); ?>" alt="sub01"><?php echo html_escape(element('bca_value', $cval)); ?></td>
             <?php
                 }
             }
@@ -260,7 +260,7 @@ if (element('menu', $layout)) {
         ?>
         </div>
     </section>
-    <section class="ad" style="margin-bottom:3%">
+    <section class="ad" style="margin-bottom:4%">
         <h4>ad</h4>
         <?php echo banner("msg_list_banner_1") ?>
     </section>

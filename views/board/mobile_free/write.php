@@ -11,13 +11,13 @@
     echo form_open_multipart(current_full_url(), $attributes);
     ?>
         <input type="hidden" name="<?php echo element('primary_key', $view); ?>"    value="<?php echo element(element('primary_key', $view), element('post', $view)); ?>" />
-        <div class="writeform">
+        <div>
 
        
         <?php if (element('is_post_name', element('post', $view))) { ?>
              <input type="hidden"  name="post_nickname" id="post_nickname" value="<?php echo set_value('post_nickname', element('post_nickname', element('post', $view))); ?>" />
              <input type="hidden"  name="post_email" id="post_email" value="<?php echo set_value('post_email', element('post_email', element('post', $view))); ?>" />
-            <section class="write" style="margin-bottom:5%;">
+            <section class="write">
                 <figure>
                     <img src="<?php echo base_url('assets/images/temp/user.png');?>" alt="user">
                     <figcaption>
@@ -45,7 +45,7 @@
             </li> -->
         <?php } else { ?>
        
-            <section class="write" style="margin-bottom:5%;">
+            <section class="write">
                 <figure>
                     <img src="<?php echo base_url('assets/images/temp/user.png');?>" alt="user">
                     <figcaption>
@@ -206,7 +206,7 @@
 
 <?php echo element('footercontent', element('board', $view)); ?>
 
-<section class="ad">
+<section class="ad" style="margin-bottom:0;">
     <h4>ad</h4>
     <?php echo banner("review_write_banner_1") ?>
 </section>

@@ -23,7 +23,9 @@ if (element('menu', $layout)) {
 <div class="wrap05">
     <section class="title">
         <div></div>
-        <h2 class="bottom_02" style="color:#000;"><?php echo element('brd_name', element('board', element('list', $view))) ?> <?php echo element('post_title', element('post_parent',$view)) ?></h2>
+        <h2 class="bottom_02" style="color:#000;"><?php echo element('brd_name', element('board', element('list', $view))) ?> <?php echo element('post_title', element('post_parent',$view)) ?>
+        
+        </h2>
     </section>
 
     <section class="title03">
@@ -36,7 +38,7 @@ if (element('menu', $layout)) {
     </section>
 
 
-    <section class="list">
+    <section>
         
 
 
@@ -70,6 +72,9 @@ if (element('menu', $layout)) {
         });
 
 
+        $(document).ready(function(){
+            $('.find_list input[type="text"]').css('width' , $('.find_list').width() - 35)
+        });
     </script>
     
     <!-- <div class="notice_find">
@@ -90,15 +95,14 @@ if (element('menu', $layout)) {
         <input type="hidden" name="findex" value="<?php echo html_escape($this->input->get('findex')); ?>" />
         <input type="hidden" name="category_id" value="<?php echo html_escape($this->input->get('category_id')); ?>" />
         <input type="hidden" name="sfield" id="sfield" value="post_title">
-        <div class="notice_find ">
+        
+        <div class="find_list">
             <div class="form-group choice">
-                
-                
             </div>
-                <input type="text" class="input per60" placeholder="Search" name="skeyword" value="<?php echo html_escape($this->input->get('skeyword')); ?>" />
-                <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-search"></i></button>
-            
+            <input type="text" placeholder="Search" name="skeyword" value="<?php echo html_escape($this->input->get('skeyword')); ?>" />
+             <button type="submit"><i class="fa fa-search"></i></button>
         </div>
+
     </form>
     </div>
     <?php
@@ -128,7 +132,7 @@ if (element('menu', $layout)) {
         <div><label for="all_boardlist_check" class='label'><input id="all_boardlist_check" onclick="if (this.checked) all_boardlist_checked(true,<?php echo $contentsId ?>); else all_boardlist_checked(false,<?php echo $contentsId ?>);" type="checkbox" /> 전체선택</label></div>
     <?php } ?>
 
-    <div class=" mt10">
+    <div>
     <?php
     $i = 0;
     $open = false;
@@ -137,20 +141,20 @@ if (element('menu', $layout)) {
         foreach (element('list', element('data', element('list', $view))) as $result) {
             
             if ($cols && $i % $cols === 0) {
-                echo '<ul class="list02 ">';
+                echo '<ul class="txt_list">';
                 $open = true;
             }
             $marginright = (($i+1)% $cols === 0) ? 0 : 2;
             
     ?>
 
-        <li class="gallery-box" style="width:<?php echo element('gallery_percent', element('board', element('list', $view))); ?>%;margin-right:<?php echo $marginright;?>%;">
+        <li>
             <?php if (element('is_admin', $view)) { ?><input type="checkbox" name="chk_post_id[]" value="<?php echo element('post_id', $result); ?>" /><?php } ?>
             <a href="<?php echo element('post_url', $result); ?>" title="<?php echo html_escape(element('title', $result)); ?>">
            
                 <!-- <?php if (element('category', $result)) { ?><span class="label label-default">[<?php echo html_escape(element('bca_value', element('category', $result))); ?>]</span><?php } ?> -->
-                <h2 class="info_subject"><?php echo html_escape(element('title', $result));?> <?php if (element('post_comment_count', $result)) { ?>[+<?php echo element('post_comment_count', $result); ?>]<?php } ?> </h2>
-                <p><?php echo element('post_content', $result); ?></p>
+                <h2><?php echo html_escape(element('title', $result));?> <?php if (element('post_comment_count', $result)) { ?>[+<?php echo element('post_comment_count', $result); ?>]<?php } ?> </h2>
+                <div><p><?php echo element('post_content', $result); ?></p></div>
                 <span>
                     <?php echo element('display_name', $result); ?> | 작성일 : <?php echo element('display_datetime', $result); ?>
                 </span>
@@ -178,11 +182,8 @@ if (element('menu', $layout)) {
 
     </section>
     <?php echo form_close(); ?>
-    <div class="border_button  mb3per">
-        <div class="pull-right mr10">
-            <a href="<?php echo element('list_url', element('list', $view)); ?>" class="btn btn-default btn-sm">전체목록</a>
-            
-        </div>
+    <section class="cont_tab">
+            <a href="<?php echo element('list_url', element('list', $view)); ?>">전체목록</a>
         <?php if (element('is_admin', $view)) { ?>
             <div class="pull-left mb10">
                 <a onClick="post_multi_action('multi_delete', '0', '선택하신 글들을 완전삭제하시겠습니까?','<?php echo $contentsId ?>');" class="btn btn-default btn-sm">선택삭제</a>
@@ -209,7 +210,7 @@ if (element('menu', $layout)) {
          
     </div>
     <nav><?php echo element('paging', element('list', $view)); ?></nav>
-    <section class="ad">
+    <section class="ad" style="margin-bottom: 0;">
         <h4>ad</h4>
         <?php echo banner("karaoke_post_banner_1") ?>
     </section>

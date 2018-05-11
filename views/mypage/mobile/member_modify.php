@@ -7,8 +7,8 @@
         <p><span>내 정보</span>를 수정 하실 수 있습니다.</p>
     </section>
 
-    <section class="title">
-        <table class="main_01">
+    <section class="info_table">
+        <table>
             <tr>
                 <td>
                     <a href="<?php echo site_url('mypage'); ?>">내 정보</a>
@@ -27,7 +27,7 @@
     </section>
 
 
-
+    <section class="info_modify">
     <?php
     echo validation_errors('<div class="alert alert-warning" role="alert">', '</div>');
     echo show_alert_message(element('message', $view), '<div class="alert alert-auto-close alert-dismissible alert-info"><button type="button" class="close alertclose" >&times;</button>', '</div>');
@@ -35,26 +35,37 @@
     $attributes = array('name' => 'fregisterform', 'id' => 'fregisterform');
     echo form_open_multipart(current_url(), $attributes);
     ?>
-        <ol class="member_modify member_01">
+        <ol>
             <li>
                 <span>아이디</span>
-                <div class="form-text text-primary" style="text-align: left; padding-left: 25%;"><strong><?php echo $this->member->item('mem_userid'); ?></strong></div>
+                <div class="text-primary"><strong><?php echo $this->member->item('mem_userid'); ?></strong></div>
             </li>
+
+
             <li>
                 <span>패스워드</span>
-                <div class="form-text text-primary" style="text-align: left; padding-left: 25%;"><a href="<?php echo site_url('membermodify/password_modify'); ?>" class="btn btn-default" title="패스워드 변경">패스워드 변경</a></div>
+                <div class="text-primary"><a href="<?php echo site_url('membermodify/password_modify'); ?>" title="패스워드 변경">패스워드 변경</a></div>
             </li>
+
+
+
+
             <?php foreach (element('html_content', $view) as $key => $value) { ?>
                 <li>
                     <span><?php echo element('display_name', $value); ?></span>
-                    <div class="form-text text-primary group" style="text-align:left; ">
+                    <div class="text-primary">
                         <?php echo element('input', $value); ?>
                         <?php if (element('description', $value)) { ?>
-                            <p class="help-block help_01" style="line-height: 13px;"><?php echo element('description', $value); ?></p>
+                            <p><?php echo element('description', $value); ?></p>
                         <?php } ?>
                     </div>
                 </li>
             <?php } ?>
+
+
+
+
+
             <?php if ($this->cbconfig->item('use_member_photo') && $this->cbconfig->item('member_photo_width') > 0 && $this->cbconfig->item('member_photo_height') > 0) { ?>
                 <li>
                     <span>프로필사진</span>
@@ -139,12 +150,12 @@
                     </div>
                 </div>
             </li> -->
-            <li style="text-align:right">
-                <button style="width:30%;" type="submit" class="btn btn-success">수 정 하 기</button>
-            </li>
         </ol>
 
-    <section class="ad">
+        <button type="submit">수 정 하 기</button>
+    </section>
+
+    <section class="ad" style="margin-bottom:0;">
         <h4>ad</h4>
         <?php echo banner("mypage_banner_1") ?>
     </section>

@@ -5,10 +5,8 @@
         <h2>회원가입</h2>
         <p><span>*</span>는 필수입력 사항 입니다.</p>
     </section>
-    <section class="my_info01">
+    <section class="join_info">
         <h4>회원가입 영역</h4>
-        
-
             <?php
             echo validation_errors('<div class="alert alert-warning" role="alert">', '</div>');
             echo show_alert_message($this->session->flashdata('message'), '<div class="alert alert-auto-close alert-dismissible alert-info"><button type="button" class="close alertclose" >&times;</button>', '</div>');
@@ -25,13 +23,13 @@
                 foreach (element('html_content', $view) as $key => $value) {
                 ?>
                     <tr>
-                        <td><span><?php 
-                        if(element('required', $value)) echo '* ';
-                        echo element('display_name', $value); ?></span></td>
+                        <td><?php 
+                        if(element('required', $value)) echo '<span>*</span> ';
+                        echo element('display_name', $value); ?></td>
                         <td>
                             <?php echo element('input', $value); ?>
                             <?php if (element('description', $value)) { ?>
-                                <p class="help-block"><?php echo element('description', $value); ?></p>
+                            <p><?php echo element('description', $value); ?></p>
                             <?php } ?>
                         </td>
                     </tr>
@@ -40,13 +38,12 @@
                 ?>
                 </tbody>
             </table>
-                <button type="submit" style="width: 30%;" >회 원 가 입</button>
+                <button type="submit" class="join_btn">회 원 가 입</button>
                     
             <?php echo form_close(); ?>
-        
     </section>
 </div>
-<section class="ad">
+<section class="ad" style="margin-bottom:0;">
         <h4>ad</h4>
         <?php echo banner("register_banner_1") ?>
     </section>

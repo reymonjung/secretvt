@@ -3,19 +3,18 @@
 <?php echo element('headercontent', element('board', element('list', $view))); ?>
 
 <div class="wrap05" style="padding-top:0px;" >
-    <section class="inquire">
-    
+    <section class="inquire" style="margin-bottom: 0;">
         <div class="board">
             <div class="col-md-6">
                 <div class="col-md-6">
-                    <form class="navbar-form navbar-right pull-right" action="<?php echo current_full_url() ?>" onSubmit="return postSearch(this);">
+                    <form class="navbar-form navbar-right" action="<?php echo current_full_url() ?>" onSubmit="return postSearch(this);">
                         <input type="hidden" name="findex" value="<?php echo html_escape($this->input->get('findex')); ?>" />
                         <input type="hidden" name="category_id" value="<?php echo html_escape($this->input->get('category_id')); ?>" />
                         <input type="hidden" name="sfield" value="post_title" />
                         <div class="form-group">
                             
-                            <input type="text" class="input px100" placeholder="Search" name="skeyword" value="<?php echo html_escape($this->input->get('skeyword')); ?>" />
-                            <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-search"></i></button>
+                            <input type="text" placeholder="Search" name="skeyword" value="<?php echo html_escape($this->input->get('skeyword')); ?>" />
+                            <button type="submit"><i class="fa fa-search"></i></button>
                         </div>
                     </form>
                 </div>
@@ -67,7 +66,6 @@
                 <li id="heading_<?php echo $key; ?>" onclick="alert('본인의 글 이외의 열람이 금지되어있습니다.');">
                 <?php } ?>
                 
-                <div class="table-box">
                     <h3 <?php echo element('brd_key',element('board', $view))==='vtn_discount' ? 'style=width:100%;':''; ?>><?php echo html_escape(element('post_title', $result)); ?></h3>
                         <div class="question " style = "width:100%;" id="answer_<?php echo $key; ?>">
                             <?php if (element('brd_key',element('board', $view)) ==='vtn_discount' || element('is_admin', $view) || element('modify_url', $result)) { ?>
@@ -76,8 +74,11 @@
                             <?php if (element(abs(element('post_num', $result)),element('reply_content', element('reply_data', element('list', $view))))) { ?>
 
                                 <ul>
-                                    <li><p><?php echo element(abs(element('post_num', $result)),element('reply_content', element('reply_data', element('list', $view)))) ?>
+                                    <li>
+                                    <div class="re_cont">
+                                    <p><?php echo element(abs(element('post_num', $result)),element('reply_content', element('reply_data', element('list', $view)))) ?>
                                     </p>
+                                    </div>
 
                                 <div class='button' >
                                 <?php if (element(abs(element('post_num', $result)),element('modify_url', element('reply_data', element('list', $view))))) { ?>
@@ -99,11 +100,11 @@
                         <?php if (element(abs(element('post_num', $result)),element('reply_content', element('reply_data', element('list', $view))))) { ?>
                                 <span class="color">답변완료</span>
                             <?php } else {?>
-                                <span>답변대기</span>
+                                <span class="color">답변대기</span>
                             <?php }?>
                         <?php } ?>
                         <div class="clear">
-                            <div class="button" style="float: left">
+                            <div class="button">
                                 <?php if (element('modify_url', $result)) { ?>
                                     <button type="button" onClick="event.stopPropagation();location.href='<?php echo element('modify_url', $result); ?>';">
                                         수 정
@@ -124,8 +125,6 @@
                                 <?php echo element('display_name', $result); ?> | 작성일 : <?php echo element('display_datetime', $result); ?>
                             </p>
                         </div>
-                    </div>
-
                 </li>
             <?php
                 }
@@ -152,17 +151,40 @@
         <nav><?php echo element('paging', element('list', $view)); ?></nav>
     
     <section class="caution">
+    
             <h2>
                 필독! 주의사항
             </h2>
-            <pre> 01. 욕설이나 미풍양속에 어긋나는 메시지는 삭제되며, 
-       그러한 경우 법적으로 불이익을 받을 수 있습니다.</pre>
 
-            <pre> 02. 본인이 작성한 글의 내용과 그에 대한 답변만 볼 수 있습니다.</pre>
+            <ol>
+                <li>
+                    <strong>01.</strong>
+                    <p>
+                        욕설이나 미풍양속에 어긋나는 메시지는 삭제되며,그러한 경우 법적으로 불이익을 받을 수 있습니다.
+                    </p>
+                </li>
 
-            <pre> 03. 작성한 모든 내용은 시크릿베트남에 저장 됩니다.</pre>
+                <li>
+                    <strong>02.</strong>
+                    <p>
+                        본인이 작성한 글의 내용과 그에 대한 답변만 볼 수 있습니다.
+                    </p>
+                </li>
 
-            <pre> 04. 기타 자세한 내용은 시크릿베트남 이용약관을 참조해 주세요.</pre>
+                <li>
+                    <strong>03.</strong>
+                    <p>
+                        작성한 모든 내용은 시크릿베트남에 저장 됩니다.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>04.</strong>
+                    <p>
+                        기타 자세한 내용은 시크릿베트남 이용약관을 참조해 주세요.
+                    </p>
+                </li>
+            </ol>
     </section>
 </div>
 
@@ -195,4 +217,10 @@ function btn_one_delete_click(el) {
     }
 }
 //]]>
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.inquire .form-group input').css('width' , $('.inquire .form-group').width()-35);
+    });
 </script>

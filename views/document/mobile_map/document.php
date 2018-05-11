@@ -169,45 +169,38 @@ img.adp-marker{
     font-size: 10px;
    }
 
-
-
-
-
-
-
-
 </style>
 <div class="wrap">
 
   <!-- title 영역 -->
-    <section class="title">
+    <section class="de_title">
       <h4>
         title
       </h4>
       <h2 class="bottom_02">[<?php echo "업소정보";//$menuName ?>] <?php echo element('post_title', element('post',$view)) ?></h2>
         <table>
             <tr>
-                <td style="width:25%;">
+                <td>
                     <a href="<?php echo element('post_url', $view); ?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu12.png')?>" alt="sub01"> 
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_store.png')?>" alt="sub01"> 
                         업소정보
                     </a>
                 </td>
-                <td style="width:25%;" class="active">
+                <td class="active">
                     <a href="<?php echo base_url('document/map/'.element('post_id', element('post', $view))); ?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu10.png')?>" alt="sub02">
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_navi.png')?>" alt="sub02">
                         위치확인
                     </a>
                 </td>
-                <td style="width:25%;">
+                <td>
                     <a href="<?php echo base_url('/board/vtn_review?post_parent='.element('post_id', element('post', $view)))?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu13.png')?>" alt="sub03">
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_write.png')?>" alt="sub03">
                         업소후기
                     </a>
                 </td>
-                <td style="width:25%;">
+                <td>
                    <a href="tel:<?php echo $tel1 ?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu11.png')?>" alt="sub04">
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_tel.png')?>" alt="sub04">
                         전화걸기
                     </a>
                 </td>
@@ -241,7 +234,7 @@ img.adp-marker{
         <tr>
           <td >
             <figure>
-              <img src="<?php echo base_url('assets/images/temp/traffic02.png')?>" alt="traffic02">
+              <img src="<?php echo base_url('assets/images/temp/de_img/de_traff.png')?>" alt="traffic01">
               <figcaption>
                 대중교통
               </figcaption>
@@ -250,7 +243,7 @@ img.adp-marker{
 
           <td class="active">
             <figure>
-              <img src="<?php echo base_url('assets/images/temp/google_map.png')?>" alt="google_map">
+              <img style="width:17%;" src="<?php echo base_url('assets/images/temp/de_img/de_map.png')?>" alt="google_map">
               <figcaption>
                 지 도
               </figcaption>
@@ -259,17 +252,14 @@ img.adp-marker{
         </tr>
         </table>
     </section>
-
   <!-- ===== -->
  
   
 
 </div>
 
-<div class="map">
-
-        
-        <div id="map-canvas" style="width: 100%; height: 300px;margin-bottom:3%"></div>
+<div>
+        <div id="map-canvas" style="width: 94%; height:300px; margin:0 auto 6%; border: 1px solid #ededed; box-sizing: border-box;"></div>
         <div id="directionsPanel" style="width: 100%; height: 100%;margin-bottom:10px;display:none"></div>
 </div>
 <?php if (!get_cookie('popup_layer_gps')) { ?>
@@ -277,7 +267,7 @@ img.adp-marker{
   <img src="<?php echo base_url('assets/images/temp/gps.png') ?>" alt="benefit" style="width:100%;display:block" >
 
   <div class="popup_layer_footer" >
-    <div style="width:70%;" class="popup_layer_reject pull-left text-center" data-wrapper-id="popup_layer_gps">다시보지않기
+    <div style="width:70%; border-right: 1px solid #fff; box-sizing: border-box;" class="popup_layer_reject pull-left text-center" data-wrapper-id="popup_layer_gps">다시보지않기
     </div>
     <div style="width:30%" class="popup_layer_close pull-right text-center" >닫기
     </div>
@@ -292,7 +282,7 @@ img.adp-marker{
   </div>
 </div>
  <!-- 광고 배너 영역 -->
-  <section class="ad">
+  <section class="ad" style="margin-bottom:0;">
       <h4>ad</h4>
       <?php echo banner("google_map_banner_1") ?>
   </section>

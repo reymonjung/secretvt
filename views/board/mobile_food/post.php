@@ -57,31 +57,31 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
               
     }
     ?>
-    <section class="title">
+    <section class="de_title">
         <h2 class="bottom_02">[<?php echo "업소정보";//$menuName ?>] <?php echo element('post_title', element('post',$view)) ?></h2>
         <table>
             <tr>
-                <td style="width:25%;" class="active">
+                <td style="padding-top: 1%;" class="active">
                     <a href="<?php echo element('post_url', $view); ?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu12.png')?>" alt="sub01"> 
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_store.png')?>" alt="sub01" style="margin-bottom:9%;"> 
                         업소정보
                     </a>
                 </td>
-                <td style="width:25%;">
+                <td style="padding-top: 1%;">
                     <a href="<?php echo base_url('document/map/'.element('post_id', element('post', $view))); ?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu10.png')?>" alt="sub02">
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_navi.png')?>" alt="sub02" style="margin-bottom:9%;">
                         위치확인
                     </a>
                 </td>
-                <td style="width:25%;">
+                <td style="padding-top: 1%;">
                     <a href="<?php echo base_url('/board/vtn_review?post_parent='.element('post_id', element('post', $view)))?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu13.png')?>" alt="sub03">
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_write.png')?>" alt="sub03" style="margin-bottom:9%;">
                         업소후기
                     </a>
                 </td>
-                <td style="width:25%;">
+                <td style="padding-top: 1%;">
                    <a href="tel:<?php echo $tel1 ?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu11.png')?>" alt="sub04">
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_tel.png')?>" alt="sub04" style="margin-bottom:9%;">
                         전화걸기
                     </a>
                 </td>
@@ -145,23 +145,23 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
     <div class="clearfix"></div>
 
    
-    <div class="border_button  mb3per">
-        <div class="btn-group pull-right" role="group" aria-label="...">
+    <section class="cont_tab">
+        <div role="group" aria-label="...">
             <?php if (element('modify_url', $view)) { ?>
-                <a href="<?php echo element('modify_url', $view); ?>" class="btn btn-default btn-sm">수정</a>
+                <a href="<?php echo element('modify_url', $view); ?>" class="btn-sm">수정</a>
             <?php } ?>
             <?php    if (element('delete_url', $view)) { ?>
-                <a href="<?php echo element('delete_url', $view); ?>" class="btn btn-default btn-sm btn-one-delete">삭제</a>
+                <a href="<?php echo element('delete_url', $view); ?>" class="btn-sm btn-one-delete">삭제</a>
             <?php } ?>
-                <a href="<?php echo site_url('main').'?curentContents='.$curentContents ?>" class="btn btn-default btn-sm">목 록</a>
+                <a href="<?php echo site_url('main').'?curentContents='.$curentContents ?>" class="btn-sm">목 록</a>
             <?php if (element('search_list_url', $view)) { ?>
-                    <a href="<?php echo element('search_list_url', $view); ?>" class="btn btn-default btn-sm">검색목록</a>
+                    <a href="<?php echo element('search_list_url', $view); ?>" class="btn-sm">검색목록</a>
             <?php } ?>
             <?php if (element('prev_post', $view)) { ?>
-                <a href="<?php echo element('url', element('prev_post', $view)); ?>" class="btn btn-default btn-sm">◀이전 글</a>
+                <a href="<?php echo element('url', element('prev_post', $view)); ?>" class="btn-sm">◀이전 글</a>
             <?php } ?>
             <?php if (element('next_post', $view)) { ?>
-                <a href="<?php echo element('url', element('next_post', $view)); ?>" class="btn btn-default btn-sm">다음 글▶</a>
+                <a href="<?php echo element('url', element('next_post', $view)); ?>" class="btn-sm">다음 글▶</a>
             <?php } ?>
         </div>
         <?php if (element('write_url', $view)) { ?>
@@ -169,7 +169,7 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
                 <a href="<?php echo element('write_url', $view); ?>" class="btn btn-default btn-sm">글쓰기</a>
             </div>
         <?php } ?>
-    </div>
+    </section>
 
      <?php
     if (element('use_comment', element('board', $view))) {
@@ -183,7 +183,7 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
         }
     }
     ?>
-    <section class="ad">
+    <section class="ad" style="margin-bottom:0;">
         <h4>ad</h4>
         <?php echo banner("food_post_banner_1") ?>
     </section>

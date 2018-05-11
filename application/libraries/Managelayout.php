@@ -414,19 +414,19 @@ class Managelayout extends CI_Controller
                    <li>
                        <ul>
                            <li>
-                                <a href="tel::+8416-8639-1004" style="background:url(\''.base_url('/assets/images/temp/tel.png').'\') no-repeat right center; display: inline-block; width: 100%; background-size: 9%; ">
+                                <a href="tel::+8416-8639-1004" style="background:url(\''.base_url('/assets/images/temp/footer_img/footer_tel.png').'\') no-repeat right center; display: inline-block; width: 100%; background-size: 9%; ">
                                     Telephone<br/>
                                     +8416-8639-1004
                                 </a>
                             </li>
 
                            <li>
-                                <a href="mailto:vinadone@gmail.com" style="background:url(\''.base_url('/assets/images/temp/mail.png').'\') no-repeat right center; display: inline-block; width: 100%; background-size: 9%;">
+                                <a href="mailto:vinadone@gmail.com" style="background:url(\''.base_url('/assets/images/temp/footer_img/footer_mail.png').'\') no-repeat right center; display: inline-block; width: 100%; background-size: 9%;">
                                     E-Mail<br/>
                                     vinadone@gmail.com
                                 </a>
                             </li>
-                           <li style="background:url(\''.base_url('/assets/images/temp/talk.png').'\') no-repeat right center; display: inline-block; width: 100%; background-size: 9%;">
+                           <li style="background:url(\''.base_url('/assets/images/temp/footer_img/footer_talk.png').'\') no-repeat right center; display: inline-block; width: 100%; background-size: 9%;">
                                 Kakao Talk<br/>
                                 ID : secretvn17
                            </li>
@@ -439,7 +439,7 @@ class Managelayout extends CI_Controller
                                 <figcaption>
                                     구글 앱 다운로드
                                 </figcaption>
-                                <img src="/assets/images/temp/down.png" alt="download">
+                                <img src="/assets/images/temp/footer_img/footer_down.png" alt="download">
                             </figure>
                             
                         </a>
@@ -465,7 +465,7 @@ class Managelayout extends CI_Controller
                 사용자들을 위한 성인전용 서비스이며, 미성년자의 출입을 금지합니다.
             </p>
 
-            <h2>Copyright ⓒ Vietnam. All Rights Reserved </h2>
+            <h2>Copyright ⓒ Phillippines. All Rights Reserved </h2>
         </footer>
 
         <div id="dialog_talk"  style="display:none;background:#fff">

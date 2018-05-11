@@ -11,8 +11,8 @@ if ( ! element('post_hide_comment', element('post', $view)) && element('is_admin
 if (element('can_comment_write', element('comment', $view)) OR element('show_textarea', element('comment', $view))) {
 ?>
     <div id="comment_write_box">
-        <div class="well ">
-            <div class="alert alert-auto-close alert-dismissible alert-comment-message" style="display:none;"><button type="button" class="close alertclose">×</button><span class="alert-comment-message-content"></span></div>
+        <div class="well">
+            <div class="alert-auto-close alert-dismissible alert-comment-message reply_msg" style="display:none;"><!-- <button type="button" class="close alertclose">×</button> --><span class="alert-comment-message-content"></span></div>
             <?php
             $attributes = array('name' => 'fcomment', 'id' => 'fcomment');
             echo form_open('', $attributes);

@@ -46,33 +46,29 @@
             });              
         });
 </script>
-<div class="wrap02">
-    <!-- 이미지 슬라이드 영역 -->
+
+<div class="wrap06">
         <section class="slide" style="visibility: hidden;">
-            <h4>슬라이드 영역</h4>
-                <ul >
-                    <?php echo banner('index_bxslider','order',3,0,'<li>','</li>'); ?>
-                </ul>
+            <ul >
+                <?php echo banner('index_bxslider','order',3,0,'<li>','</li>'); ?>
         </section>
 
-            
-       <!--  <section class="ad" style="margin-bottom:4%;">
-        <h4>
-            ad01
-        </h4>
-        <a href="<?php echo base_url('write/vtn_discount') ?>">
-            <img src="<?php echo base_url('assets/images/temp/middle_btn.png') ?>">
-        </a>
-        </section> -->
+        <section class="ad" style="margin-bottom:4%;">
+            <h4>
+                ad01
+            </h4>
+            <a href="<?php echo base_url('write/vtn_discount') ?>">
+                <img src="<?php echo base_url('assets/images/temp/middle_btn.png') ?>">
+            </a>
+        </section>
 
-    <!-- 대메뉴 리스트 영역 -->
         <section class="main_list">
             <h4>main_list</h4>
             <ul>
                 <li>
                     <a href="<?php echo site_url('main').'?curentContents=0' ?>">
                         <figure>
-                            <img src="<?php echo base_url('assets/images/temp/main_01.png'); ?>" alt="main_01">
+                            <img src="<?php echo base_url('assets/images/temp/main_menu/menu_01.png'); ?>" alt="main_01">
                             <figcaption>
                                 <h2>가라오케</h2>
                                 <p>맛좋은 술과 노래를 즐길 수 있는 곳</p>
@@ -84,7 +80,7 @@
                 <li>
                     <a href="<?php echo site_url('main').'?curentContents=1' ?>">
                         <figure>
-                            <img src="<?php echo base_url('assets/images/temp/main_02.png'); ?>" alt="main_02">
+                            <img src="<?php echo base_url('assets/images/temp/main_menu/menu_02.png'); ?>" alt="main_02">
                             <figcaption>
                                 <h2>클 럽</h2>
                                 <p>베트남 여성들과 다양하고 즐거운 만남</p>
@@ -96,7 +92,7 @@
                 <li>
                     <a href="<?php echo site_url('main').'?curentContents=2' ?>">
                         <figure>
-                            <img src="<?php echo base_url('assets/images/temp/main_03.png'); ?>" alt="main_03">
+                            <img src="<?php echo base_url('assets/images/temp/main_menu/menu_03.png'); ?>" alt="main_03">
                             <figcaption>
                                 <h2>마사지&이발소</h2>
                                 <p>내 몸 관리와 함께 특별한 서비스</p>
@@ -108,7 +104,7 @@
                 <li>
                     <a href="<?php echo site_url('main').'?curentContents=3' ?>">
                         <figure>
-                            <img src="<?php echo base_url('assets/images/temp/main_04.png'); ?>" alt="main_04">
+                            <img src="<?php echo base_url('assets/images/temp/main_menu/menu_04.png'); ?>" alt="main_04">
                             <figcaption>
                                 <h2>호 텔</h2>
                                 <p>체계적인 서비스와 깜끔한 시설 관리</p>
@@ -120,10 +116,10 @@
                 <li>
                     <a href="<?php echo site_url('main').'?curentContents=4' ?>">
                         <figure>
-                            <img src="<?php echo base_url('assets/images/temp/main_05.png'); ?>" alt="main_05">
+                            <img src="<?php echo base_url('assets/images/temp/main_menu/menu_05.png'); ?>" alt="main_05">
                             <figcaption>
                                 <h2>골 프</h2>
-                                <p>높은 퀄리티와 서비스, 넓은 페어웨이 </p>
+                                <p>높은 퀄리티와 서비스,<br>넓은 페어웨이 </p>
                             </figcaption>
                         </figure>
                     </a>
@@ -132,10 +128,10 @@
                 <li>
                     <a href="<?php echo site_url('main').'?curentContents=5' ?>">
                         <figure>
-                            <img src="<?php echo base_url('assets/images/temp/main_06.png'); ?>" alt="main_06">
+                            <img src="<?php echo base_url('assets/images/temp/main_menu/menu_06.png'); ?>" alt="main_06">
                             <figcaption>
                                 <h2>맛 집</h2>
-                                <p>베트남 로컬 맛집 부터 퓨전 맛집까지</p>
+                                <p>베트남 로컬 맛집 부터<br> 퓨전 맛집까지</p>
                             </figcaption>
                         </figure>
                     </a>
@@ -144,10 +140,10 @@
                 <li>
                     <a href="<?php echo site_url('main').'?curentContents=6' ?>">
                         <figure>
-                            <img src="<?php echo base_url('assets/images/temp/main_07.png'); ?>" alt="main_07">
+                            <img src="<?php echo base_url('assets/images/temp/main_menu/menu_07.png'); ?>" alt="main_07">
                             <figcaption>
                                 <h2>여행정보</h2>
-                                <p>여행기사부터 코스정보까지 한곳에</p>
+                                <p>여행기사부터 코스정보<br>까지 한곳에</p>
                             </figcaption>
                         </figure>
                     </a>
@@ -156,10 +152,10 @@
                 <li>
                     <a href="<?php echo site_url('main').'?curentContents=7' ?>">
                         <figure>
-                            <img src="<?php echo base_url('assets/images/temp/main_08.png'); ?>" alt="main_0">
+                            <img src="<?php echo base_url('assets/images/temp/main_menu/menu_08.png'); ?>" alt="main_0">
                             <figcaption>
-                                <h2>베남정보</h2>
-                                <p>다양한 정보를 현지에서 전달</p>
+                                <h2>베남 정보</h2>
+                                <p>다양한 정보를 현지에서<br> 전달</p>
                             </figcaption>
                         </figure>
                     </a>
@@ -168,11 +164,10 @@
                 <li>
                     <a href="<?php echo site_url('board/vtn_free')?>">
                         <figure>
-                            <img src="<?php echo base_url('assets/images/temp/main_09.png'); ?>" alt="main_0">
+                            <img src="<?php echo base_url('assets/images/temp/main_menu/menu_09.png'); ?>" alt="main_0">
                             <figcaption>
                                 <h2>자유 게시판</h2>
-                                <p>
-                                    베트남의 경험담을<br> 자유롭게 작성</p>
+                                <p>베트남의 경험담을<br> 자유롭게 작성</p>
                             </figcaption>
                         </figure>
                     </a>
@@ -182,21 +177,21 @@
             </ul>
         </section>
 
-    <!-- 광고 배너 영역 -->
-        <section class="ad">
+    <!-- main 하단 배너 영역 -->
+        <section class="secret_bn">
             <a href="<?php echo base_url('write/vtn_tour') ?>">
                 <h4>ad02</h4>
-                <figure style="position: relative;">
-                    <img src="<?php echo base_url('assets/images/temp/bottom_vtn_tour.png') ?>" alt="bottom_vtn_tour" style="width: 100%;">
-                    <figcaption style="position: absolute; top: 0%; margin: auto 0;  bottom:0%; height:60px; left: 8%;">
-                        <h2 style="color:#fff; font-weight: bold; margin-bottom: 4%; font-size: 12px;">시크릿 투어</h2>
+                <figure>
+                    <img src="<?php echo base_url('assets/images/temp/main_bot/bottom_bn01.png') ?>" alt="bottom_vtn_tour">
+                    <figcaption style="left: 8%;">
+                        <h2>시크릿 투어</h2>
                      
-                        <p style="color:#fff; font-size: 10px; line-height: 12px; margin-bottom:3%;">
+                        <p>
                             호텔예약,골프부킹 가이드 요청<br>
                             예약서비스 입니다.
                         </p>
                      
-                         <button style="background-color:#c20e58; width: 43%; padding:0 1px 1px; border:none; border-radius: 0; outline: none; border-radius: 3px; color:#fff; font-size: 10px; font-weight: bold; ">
+                         <button>
                              바 로 가 기
                          </button>
                     </figcaption>
@@ -204,21 +199,20 @@
             </a>
         </section>
 
-
-        <!-- <section class="ad" style="position: relative; top: -3px;" >
+        <section class="secret_bn">
             <a href="<?php echo base_url('write/vtn_safevisa') ?>">
                 <h4>ad02</h4>
-                <figure style="position: relative;">
-                    <img src="<?php echo base_url('assets/images/temp/bottom_vtn_safevisa.png') ?>" alt="bottom_vtn_safevisa" style="width: 100%;">
-                    <figcaption style="position: absolute; top: 0%; bottom: 0; height: 60px; margin:auto 0; right: 8%;">
-                        <h2 style="color:#fff; font-weight: bold; margin-bottom: 4%; font-size: 12px; text-align: right;">시크릿 안전비자</h2>
+                <figure>
+                    <img src="<?php echo base_url('assets/images/temp/main_bot/bottom_bn03.png') ?>" alt="bottom_vtn_safevisa">
+                    <figcaption style="right: 8%; text-align: right;">
+                        <h2>시크릿 안전비자</h2>
                      
-                        <p style="color:#fff; font-size: 10px; line-height: 12px; text-align:right; margin-bottom:3%;">
+                        <p>
                             관광단수 및 복수,DN 비즈니스<br>
                             거주증 및 문제비자 문의
                         </p>
                      
-                         <button style="background-color:#c20e58; float: right; width: 43%; padding:0 1px 1px; border:none; border-radius: 0; outline: none; border-radius: 3px; color:#fff; font-size: 10px; font-weight: bold; ">
+                         <button >
                              바 로 가 기
                          </button>
                     </figcaption>
@@ -226,33 +220,27 @@
             </a>
         </section>
 
-        <section class="ad" style="position: relative; top: -6px;">
+        <section class="secret_bn" style="margin-bottom:4%;">
             <a href="<?php echo base_url('write/vtn_renta') ?>">
                     <h4>ad02</h4>
-                    <figure style="position: relative;">
-                        <img src="<?php echo base_url('assets/images/temp/bottom_vtn_renta.png') ?>" alt="bottom_vtn_renta" style="width: 100%;">
-                        <figcaption style="position: absolute; top: 0%; bottom: 0; height: 60px; margin:auto 0; left: 8%;">
-                            <h2 style="color:#fff; font-weight: bold; margin-bottom: 4%; font-size: 12px;">시크릿 렌트카</h2>
+                    <figure>
+                        <img src="<?php echo base_url('assets/images/temp/main_bot/bottom_bn02.png') ?>" alt="bottom_vtn_renta">
+                        <figcaption style="left: 8%;">
+                            <h2>시크릿 렌트카</h2>
                          
-                            <p style="color:#fff; font-size: 10px; line-height: 12px; margin-bottom:3%;">
+                            <p>
                                 7인,16인,25인,45인 리무진 <br>
                                 차량요청 서비스
                             </p>
                          
-                             <button style="background-color:#c20e58; width: 43%; padding:0 1px 1px; border:none; border-radius: 0; outline: none; border-radius: 3px; color:#fff; font-size: 10px; font-weight: bold; ">
+                             <button>
                                  바 로 가 기
                              </button>
                         </figcaption>
                     </figure>
             </a>
-        </section> -->
-        
+        </section>
 
-
-
-
-        
-    
     <?php 
     if(element('noti_title',element('0',element('notice_result', $view))) || element('eve_title',element('0',element('event_result', $view)))){
     ?>
@@ -263,7 +251,7 @@
                 if(element('noti_title',element('0',element('notice_result', $view)))){
                 ?>
                 
-                <li>
+                <li style="border-bottom:1px solid #ededed;">
                     <a href="<?php echo element('notice_url', $view) ?>">
                         <h3>공지사항</h3>
                         <p>시크릿베트남에서 알려드립니다.
@@ -282,7 +270,7 @@
                 <li>
                     <a href="<?php echo element('event_url', $view) ?>">
                         <h3>이벤트</h3>
-                        <p>시크릿베트남의 다양한 이벤트를 만나보세요
+                        <p>시크릿베트남의 다양한 이벤트를 만나보세요.
                         <?php 
                         if(element('is_new',element('event', $view))){
                         ?>

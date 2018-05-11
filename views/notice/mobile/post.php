@@ -6,12 +6,29 @@
 
     <section class="title">
         <h2 >[공지]<?php echo element('noti_title', element('data', $view)); ?></h2>
-         <table class="table02">
+        <!-- <table class="table02">
             <tr>
-                <td style="background-color:rgb(239, 208, 222)">공지사항</td>
-                <td><a href="<?php echo element('document_board_url', $view); ?>" title="이벤트">이벤트</a></td>
+                <td style="background-color:#e7ecf5;">
+                <figure>
+                    <img src="<?php echo base_url('assets/images/temp/de_img/de_bell.png')?>" alt="sub01"> 
+                    <figcaption>
+                        공지사항
+                    </figcaption>
+                </figure>
+                </td>
+                
+                <td>
+                    <a href="<?php echo element('document_board_url', $view); ?>" title="이벤트">
+                    <figure>
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_gift.png')?>" alt="sub01"> 
+                        <figcaption>
+                                이벤트
+                        </figcaption>
+                    </figure>
+                    </a>
+                </td>
             </tr>
-        </table>
+        </table> -->
     </section>
 
     <section class="title02" style="border-bottom:0;">
@@ -35,20 +52,20 @@
     
 
     <div class="clearfix"></div>
-    <div class="border_button  mb3per">
-        <div class="btn-group pull-right" role="group" aria-label="...">
+    <section class="cont_tab">
+        <div role="group" aria-label="...">
             <?php if ($this->member->is_admin() === 'super') { ?>
-                <a href="<?php echo admin_url('page/notice/write/' . element('noti_id', element('data', $view))); ?>" class="btn btn-default btn-sm" target="_blank">수 정</a>
+                <a href="<?php echo admin_url('page/notice/write/' . element('noti_id', element('data', $view))); ?>" class="btn-sm" target="_blank">수 정</a>
             <?php } ?>
-                <a href="<?php echo element('list_url', $view); ?>" class="btn btn-default btn-sm">목 록</a>
+                <a href="<?php echo element('list_url', $view); ?>" class="btn-sm">목 록</a>
             <?php if (element('prev_post', $view)) { ?>
-                <a href="<?php echo element('url', element('prev_post', $view)); ?>" class="btn btn-default btn-sm">◀이전 글</a>
+                <a href="<?php echo element('url', element('prev_post', $view)); ?>" class="btn-sm">◀이전 글</a>
             <?php } ?>
             <?php if (element('next_post', $view)) { ?>
-                <a href="<?php echo element('url', element('next_post', $view)); ?>" class="btn btn-default btn-sm">다음 글▶</a>
+                <a href="<?php echo element('url', element('next_post', $view)); ?>" class="btn-sm">다음 글▶</a>
             <?php } ?>
         </div>
-    </div>
+    </section>
 
      <?php
     if (element('use_comment', element('board', $view))) {
@@ -62,7 +79,7 @@
         }
     }
     ?>
-    <section class="ad">
+    <section class="ad" style="margin-bottom:0;">
         <h4>ad</h4>
         <?php echo banner("karaoke_post_banner_1") ?>
     </section>

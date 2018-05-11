@@ -258,7 +258,7 @@ if (element('menu', $layout)) {
 
 
           echo '
-          <div class="backPannel" >
+          <div class="backPannel">
             <div style="position:absolute;top:0px;left:0px; z-index:0;width:100%">
               <div style="overflow: hidden; ">
                 <div  id="contents_'.$mkey.'">

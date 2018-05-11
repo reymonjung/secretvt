@@ -46,26 +46,23 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
 
 
 
-    <section class="title">
-        <div></div>
-        <h2 class="bottom_02" style="color:#000;">
+    <section class="de_title">
+        <h2>
             자유게시판
-            <span>자신의 의견을 게시하고 의견을 공유 하는 공간입니다.</span>
+            <!-- <span>자신의 의견을 게시하고 의견을 공유 하는 공간입니다.</span> -->
         </h2>
+    </section>
+
+    <section class="notice_title">
+        <div>
+        <?php echo element('post_title', element('post',$view)) ?>  
+        </div>
     </section>
 
     <section class="title02" style="border-bottom:0;">
         <h4>작성일</h4>
         <p><?php echo element('display_name', element('post', $view)); ?> | 작성일 : <?php echo element('display_datetime', element('post', $view)); ?></p>
     </section>
-    
-    <section class="notice_title">
-        <div class="bottom_02">
-        <?php echo element('post_title', element('post',$view)) ?>  
-        </div>
-    </section>
-
-    
 
     <section class="content">
        <!-- <ul>
@@ -92,26 +89,26 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
             <!-- 본문 내용 끝 -->
         </div>
 
-        <div class="border_button">
+        <section class="cont_tab">
                 <div class="btn-group" role="group" aria-label="...">
-                    <a href="<?php echo element('list_url', $view); ?>" class="btn btn-default btn-sm">목록</a>
+                    <a href="<?php echo element('list_url', $view); ?>" class="btn-sm">목록</a>
                     <?php if (element('modify_url', $view)) { ?>
-                        <a href="<?php echo element('modify_url', $view); ?>" class="btn btn-default btn-sm">수정</a>
+                        <a href="<?php echo element('modify_url', $view); ?>" class="btn-sm">수정</a>
                     <?php } ?>
                     <?php    if (element('delete_url', $view)) { ?>
-                        <a href="<?php echo element('delete_url', $view); ?>" class="btn btn-default btn-sm btn-one-delete">삭제</a>
+                        <a href="<?php echo element('delete_url', $view); ?>" class=" btn-sm btn-one-delete">삭제</a>
                     <?php } ?>
                     <?php if (element('search_list_url', $view)) { ?>
-                            <a href="<?php echo element('search_list_url', $view); ?>" class="btn btn-default btn-sm">검색목록</a>
+                            <a href="<?php echo element('search_list_url', $view); ?>" class="btn-sm">검색목록</a>
                     <?php } ?>
                     <?php if (element('prev_post', $view)) { ?>
-                        <a href="<?php echo element('url', element('prev_post', $view)); ?>" class="btn btn-default btn-sm">◀이전 글</a>
+                        <a href="<?php echo element('url', element('prev_post', $view)); ?>" class="btn-sm">◀이전 글</a>
                     <?php } ?>
                     <?php if (element('next_post', $view)) { ?>
-                        <a href="<?php echo element('url', element('next_post', $view)); ?>" class="btn btn-default btn-sm">다음 글▶</a>
+                        <a href="<?php echo element('url', element('next_post', $view)); ?>" class="btn-sm">다음 글▶</a>
                     <?php } ?>
                 </div>
-        </div>
+        </section>
     </section>
 
       
@@ -154,10 +151,10 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
     if (element('use_comment', element('board', $view))) {
 
         if ( ! element('post_hide_comment', element('post', $view))) { ?>
-            <section class="reply_02">
-                <div><?php   $this->load->view(element('view_skin_path', $layout) . '/comment_write'); ?></div>
-                <div id="viewcomment"></div>
+            <section class="reply_write">
+                <?php   $this->load->view(element('view_skin_path', $layout) . '/comment_write'); ?>
             </section>
+            <section id="viewcomment"></section>
         <?php
         }
     }
@@ -168,7 +165,7 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
 
 
 
-    <section class="ad">
+    <section class="ad" style="margin-bottom:0;">
         <h4>ad</h4>
         <?php echo banner("review_post_banner_1") ?>
     </section>

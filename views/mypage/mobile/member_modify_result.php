@@ -6,8 +6,8 @@
             정보수정 완료
         </h2>
     </section>
-    <section class="title">
-        <table class="main_01">
+    <section class="info_table">
+        <table>
             <tr>
                 <td>
                     <a href="<?php echo site_url('mypage'); ?>">내 정보</a>
@@ -25,27 +25,21 @@
         </table>
     </section>
 
+    <section class="info_logout">
+        <figure>
+            <img src="<?php echo base_url('/assets/images/temp/info_img/info_check.png')?>">
+            <figcaption>
+               <h2><?php echo element('result_message', $view); ?></h2>
+            </figcaption>
+        </figure>       
+        <button>
+            <a href="<?php echo site_url(); ?>" class="btn btn-danger" title="<?php echo html_escape($this->cbconfig->item('site_title'));?>">홈페이지로 이동
+            </a>
+        </button>
+    </section>
 
-
-
-    <div class="final">
-        <div class="table-box">
-            <div class="table-body">
-                <div class="msg_content" style="text-align:center;">
-                        <img src="<?php echo base_url('/assets/images/temp/check.png')?>">
-                    <?php echo element('result_message', $view); ?>
-                    <p class="btn_final final_01">
-                        <a href="<?php echo site_url(); ?>"  style="color:#fff" class="btn btn-danger" title="<?php echo html_escape($this->cbconfig->item('site_title'));?>">홈페이지로 이동
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="ad">
+    <section class="ad" style="margin-bottom:0;">
         <h4>ad</h4>
         <?php echo banner("mypage_banner_1") ?>
     </section>
-
 </div>

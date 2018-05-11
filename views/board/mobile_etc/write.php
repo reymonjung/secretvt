@@ -12,10 +12,11 @@ if ($this->member->is_member() === false) {
 
     <section class="title">
             <div></div>
-            <h2>
-                 <?php echo(element('board_name',element('board', $view)));
- ?>
-                <span>
+            <h2 style="color:#c20e58">
+                <?php echo(element('board_name',element('board', $view)));?>
+            </h2>
+
+            <span>
                     <?php 
                     switch (element('brd_key',element('board', $view))) {
                         case 'vtn_tour':
@@ -39,14 +40,13 @@ if ($this->member->is_member() === false) {
                             break;
                     }
                     ?>
-                </span>
-            </h2>
+            </span>
 
             <?php if(element('brd_key',element('board', $view)) !== 'vtn_discount'){ ?>
-            <figure style="position: relative;">
-                <img src="<?php echo base_url('assets/images/temp/bottom_'.element('brd_key',element('board', $view)).'.png'); ?>">
-                <figcaption style="position: absolute; width:188px; height: 40px; top: 0; bottom: 0; margin:auto; left: 3%; color: #fff;">
-                    <p style="margin-bottom:2%; text-align: left; font-size: 10px; line-height: 12px; ">
+            <figure class="botbn_img">
+                <img src="<?php echo base_url('assets/images/temp/botbn_img/bottom_'.element('brd_key',element('board', $view)).'.png'); ?>">
+                <figcaption>
+                    <p>
                         베트남 현지 대형 여행사와 특정 제휴하여<br>
                         가장 좋은 조건으로 안전하게 타사보다 <br>
                         무조건 저렴하게 견적 드립니다.
@@ -54,8 +54,9 @@ if ($this->member->is_member() === false) {
                 </figcaption>
             </figure>
             <?php }else { ?>
-                
+                <figure class="botbn_img">
                 <img src="<?php echo base_url('assets/images/temp/bottom_'.element('brd_key',element('board', $view)).'.png'); ?>">
+                </figure>
             <?php } ?>
     </section>
 
@@ -64,19 +65,19 @@ if ($this->member->is_member() === false) {
                 <img src="<?php echo base_url('assets/images/temp/talk_logo.png'); ?>">
                 <figcaption>
                     <h2><span>Kakaotalk ID</span>eco0322</h2>
-                    <p>
-                        카카오톡 친구추가를 하시고<br>
-                        상담 요청을 하실 수 있습니다.
-                    </p> 
                 </figcaption>
             </figure>
+            <p>
+                카카오톡 친구추가를 하시고<br>
+                상담 요청을 하실 수 있습니다.
+            </p> 
     </section>
 <?php if(element('brd_key',element('board', $view))!=='vtn_discount' || element('is_admin', $view) ) {?>
 <section class="write_area">
     
     <?php
     echo validation_errors('<div class="alert alert-warning" role="alert">', '</div>');
-    echo show_alert_message(element('message', $view), '<div class="alert alert-auto-close alert-dismissible alert-info"><button type="button" class="close alertclose" >&times;</button>', '</div>');
+    echo show_alert_message(element('message', $view), '<div class="alert alert-auto-close alert-dismissible alert-info">', '</div>');
     echo show_alert_message($this->session->flashdata('message'), '<div class="alert alert-auto-close alert-dismissible alert-info"><button type="button" class="close alertclose" >&times;</button>', '</div>'); 
     $attributes = array('class' => 'form-horizontal', 'name' => 'fwrite', 'id' => 'fwrite', 'onsubmit' => 'return submitContents(this)');
     echo form_open_multipart(current_full_url(), $attributes);
@@ -86,7 +87,7 @@ if ($this->member->is_member() === false) {
        
         
             
-            <input type="text" class="input per95" name="post_title" id="post_title" <?php echo $readonly ?> value="<?php echo element('reply', $view) && element('origin', $view) ? 'RE) '.set_value('post_title', element('post_title', element('origin', $view))) : set_value('post_title', element('post_title', element('post', $view))); ?>" placeholder="제목글을 작성해 주세요.리스트에 노출됩니다." onfocus="this.placeholder=''" onblur="this.placeholder='제목글을 작성해 주세요. 리스트에 노출됩니다.'" />
+            <input type="text" name="post_title" id="post_title" <?php echo $readonly ?> value="<?php echo element('reply', $view) && element('origin', $view) ? 'RE) '.set_value('post_title', element('post_title', element('origin', $view))) : set_value('post_title', element('post_title', element('post', $view))); ?>" placeholder="제목글을 작성해 주세요.리스트에 노출됩니다." onfocus="this.placeholder=''" onblur="this.placeholder='제목글을 작성해 주세요. 리스트에 노출됩니다.'" />
         
         <?php if ( ! element('use_dhtml', element('board', $view)) AND (element('post_min_length', element('board', $view)) OR element('post_max_length', element('board', $view)))) { ?>
             <div class="well well-sm" style="margin-bottom:15px;">

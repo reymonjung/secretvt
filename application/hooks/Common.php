@@ -170,8 +170,7 @@ class _Common
                 $whitelist = array_unique($whitelist);
                 if (is_array($whitelist)) {
                     $CI->load->library('Ipfilter');
-                    $ipfilter = new Ipfilter();
-                    if ( ! $ipfilter->filter($whitelist)) {
+                    if ( ! Ipfilter::filter($whitelist)) {
                         $title = '관리자 페이지';
                         $message = '현재 접속하신 아이피는 관리자 페이지 접근이 차단되었습니다';
                         show_error($message, '500', $title);

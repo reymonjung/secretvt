@@ -8,8 +8,25 @@
         <span>시크릿 베트남에서 알려 드립니다.</span>
         <table class="table02">
             <tr>
-                <td style="background-color:rgb(239, 208, 222)">공지사항</td>
-                <td><a href="<?php echo element('document_board_url', $view); ?>" title="이벤트">이벤트</a></td>
+                <td style="background-color:#f7edf1">
+                    <figure>
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_bell.png')?>" alt="sub01"> 
+                        <figcaption>
+                             공지사항
+                        </figcaption>
+                    </figure>
+                </td>
+
+                <td>
+                    <a href="<?php echo element('document_board_url', $view); ?>" title="이벤트">
+                        <figure>
+                            <img src="<?php echo base_url('assets/images/temp/de_img/de_gift.png')?>" alt="sub01"> 
+                            <figcaption>
+                                이벤트
+                            </figcaption>
+                        </figure>
+                    </a>
+                </td>
             </tr>
         </table>
     </section>

@@ -42,31 +42,31 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
             </table>
         </div>몰
     <?php } */?>
-    <section class="title">
+    <section class="de_title" style="margin-bottom: 0;">
         <h2 class="bottom_02">[업소후기] <?php echo element('post_title', element('post',$view)) ?></h2>
         <table>
             <tr>
-             <td style="width:25%;" class="active">
+             <td class="active">
                     <a href="">
-                        <img src="<?php echo base_url('assets/images/temp/submenu13.png')?>" alt="sub01"> 
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_write.png')?>" alt="sub01"> 
                         업소후기
                     </a>
                 </td>
-                <td style="width:25%;">
+                <td>
                     <a href="<?php echo element('list_url', $view); ?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu09.png')?>" alt="sub01"> 
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_list.png')?>" alt="sub01"> 
                         목록보기
                     </a>
                 </td>
-                <td style="width:25%;">
+                <td>
                     <a href="<?php echo element('write_url', $view); ?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu13.png')?>" alt="sub02">
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_write02.png')?>" alt="sub02">
                         글쓰기
                     </a>
                 </td>
-                <td style="width:25%;">
+                <td>
                    <a href="tel:<?php echo element('tel1',element('post_parent_extravars', $view)) ?>">
-                        <img src="<?php echo base_url('assets/images/temp/submenu11.png')?>" alt="sub02">
+                        <img src="<?php echo base_url('assets/images/temp/de_img/de_tel.png')?>" alt="sub02">
                         전화걸기
                     </a>
                 </td>
@@ -105,25 +105,25 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
             <!-- 본문 내용 끝 -->
         </div>
 
-        <div class="border_button">
-                <div class="btn-group" role="group" aria-label="...">
+        <section class="cont_tab">
+                <div role="group" aria-label="...">
                     <?php if (element('modify_url', $view)) { ?>
-                        <a href="<?php echo element('modify_url', $view); ?>" class="btn btn-default btn-sm">수정</a>
+                        <a href="<?php echo element('modify_url', $view); ?>" class="btn-sm">수정</a>
                     <?php } ?>
                     <?php    if (element('delete_url', $view)) { ?>
-                        <a href="<?php echo element('delete_url', $view); ?>" class="btn btn-default btn-sm btn-one-delete">삭제</a>
+                        <a href="<?php echo element('delete_url', $view); ?>" class="btn-sm btn-one-delete">삭제</a>
                     <?php } ?>
                     <?php if (element('search_list_url', $view)) { ?>
-                            <a href="<?php echo element('search_list_url', $view); ?>" class="btn btn-default btn-sm">검색목록</a>
+                            <a href="<?php echo element('search_list_url', $view); ?>" class="btn-sm">검색목록</a>
                     <?php } ?>
                     <?php if (element('prev_post', $view)) { ?>
-                        <a href="<?php echo element('url', element('prev_post', $view)); ?>" class="btn btn-default btn-sm">◀이전 글</a>
+                        <a href="<?php echo element('url', element('prev_post', $view)); ?>" class="btn-sm">◀이전 글</a>
                     <?php } ?>
                     <?php if (element('next_post', $view)) { ?>
-                        <a href="<?php echo element('url', element('next_post', $view)); ?>" class="btn btn-default btn-sm">다음 글▶</a>
+                        <a href="<?php echo element('url', element('next_post', $view)); ?>" class="btn-sm">다음 글▶</a>
                     <?php } ?>
                 </div>
-        </div>
+        </section>
     </section>
     
 

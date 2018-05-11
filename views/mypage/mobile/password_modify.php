@@ -7,10 +7,10 @@
         <p><span>비밀번호</span>를 변경 하실 수 있습니다 .</p>
     </section>
 
-    <section class="title" style="margin-bottom:3%;">
-        <table style="width:90%;">
+    <section class="info_table">
+        <table>
             <tr>
-                <td style="padding:2% 0;">
+                <td >
                     <a href="<?php echo site_url('mypage'); ?>">내 정보</a>
                 </td>
                 <td>
@@ -27,36 +27,36 @@
     </section>
 
 
-    <div class="mt3per" style="width:94%; margin:0 auto 3%;">
+    <section class="modify_pw">
         <?php
         echo validation_errors('<div class="alert alert-warning" role="alert">', '</div>');
         echo show_alert_message(element('message', $view), '<div class="alert alert-auto-close alert-dismissible alert-info"><button type="button" class="close alertclose" >&times;</button>', '</div>');
         echo show_alert_message($this->session->flashdata('message'), '<div class="alert alert-auto-close alert-dismissible alert-info"><button type="button" class="close alertclose" >&times;</button>', '</div>');
-        echo show_alert_message(element('info', $view), '<div class="alert alert-info" style="margin-bottom:3%;">', '</div>');
+        echo show_alert_message(element('info', $view), '<div class="pw_alert">', '</div>');
         $attributes = array('class' => 'form-horizontal display', 'name' => 'fchangepassword', 'id' => 'fchangepassword');
         echo form_open(current_url(), $attributes);
         ?>
-            <ol class="change_password">
-                <li class="change_password01" style="height:26px;">
-                    <span style="padding:2.5%; height: 26px;">아이디</span>
-                    <div class="form-text" style="height: 26px; font-size: 14px; padding-left: 40%; text-align: left"><strong><?php echo $this->member->item('mem_userid'); ?></strong></div>
+            <ol>
+                <li class="change_password01">
+                    <h3>아이디</h3>
+                    <div class="text-primary"><strong><?php echo $this->member->item('mem_userid'); ?></strong></div>
                 </li>
                 <li class="change_password01">
-                    <span style="padding:4% 0; ">현재비밀번호</span>
-                    <div class="group" style="text-align:left; padding-left:5%;">
-                        <input type="password" class="input" id="cur_password" name="cur_password" />
+                    <h3>현재비밀번호</h3>
+                    <div>
+                        <input type="password" id="cur_password" name="cur_password" />
                     </div>
                 </li>
                 <li class="change_password01">
-                    <span style="padding:4% 0;">새로운비밀번호</span>
-                    <div class="group" style="text-align:left; padding-left:5%;">
-                        <input type="password" class="input" id="new_password" name="new_password" />
+                    <h3>새로운비밀번호</h3>
+                    <div>
+                        <input type="password"  id="new_password" name="new_password" />
                     </div>
                 </li>
-                <li class="change_password01"  style="border-bottom:0;">
-                    <span style="padding:4% 0;" >재입력</span>
-                    <div class="group" style="text-align:left; padding-left:5%;">
-                        <input type="password" class="input" id="new_password_re" name="new_password_re" />
+                <li class="change_password01">
+                    <h3>재입력</h3>
+                    <div>
+                        <input type="password" id="new_password_re" name="new_password_re" />
                     </div>
                 </li>
                 <!--
@@ -65,13 +65,13 @@
                 </li>
                 -->
             </ol>
-
-            <button type="submit" class="btn btn-success" style="float: right; width: 30%; background: #231b26; padding:0.5%;">수 정 하 기</button>
+            <button type="submit">수 정 하 기</button>
+            
 
 
         <?php echo form_close(); ?>
     </div>
-    <section class="ad">
+    <section class="ad" style="margin-bottom:0;">
         <h4>ad</h4>
         <?php echo banner("mypage_banner_1") ?>
     </section>

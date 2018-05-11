@@ -4,9 +4,9 @@
         <h2><?php echo html_escape(element('doc_title', element('data', $view))); ?></h2>
     </section>
 <!-- ===== -->
-    <section class="agree">
-        <div class="document" style="height: 400px;">
-<?php echo element('content', element('data', $view)); ?>
+    <section>
+        <div class="agree">
+            <?php echo element('content', element('data', $view)); ?>
         </div>
     </section>
 
@@ -16,7 +16,7 @@
     </div>
 <?php } ?>
     
-    <section class="ad">
+    <section class="ad" style="margin-bottom:0;">
         <h4>ad</h4>
         <?php echo banner("document_banner_1"); ?>
     </section>

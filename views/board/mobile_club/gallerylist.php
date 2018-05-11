@@ -176,7 +176,6 @@ if (element('menu', $layout)) {
         <p>총 <span><?php echo (element('total_rows', element('main_data', element('list', $view)))+element('total_rows', element('data', element('list', $view)))) ?>개</span>의 업소가 있습니다.</p>
     </section>
     <section class="store_list">
-    <div class="table-image">
     <?php
     $i = 0;
     $open = false;
@@ -186,12 +185,12 @@ if (element('menu', $layout)) {
         foreach (element('list', element('main_data', element('list', $view))) as $result) {
 
             if ($cols && $i % $cols === 0) {
-                echo '<ul class="">';
+                echo '<ul>';
                 $open = true;
             }
             $marginright = (($i+1)% $cols === 0) ? 0 : 2;
     ?>
-        <li class="gallery-box" style="width:49%;margin-right:<?php echo $marginright;?>%;">
+        <li>
             <?php if (element('is_admin', $view)) { ?><input type="checkbox" name="chk_post_id[]" value="<?php echo element('post_id', $result); ?>" /><?php } ?>
             <a href="<?php echo element('post_url', $result); ?>" title="<?php echo html_escape(element('title', $result)); ?>">
             <figure>
@@ -231,14 +230,12 @@ if (element('menu', $layout)) {
             $open = false;
         }
         ?>
-        </div>
     </section>
-    <section class="ad" style="margin-bottom:3%">
+    <section class="ad" style="margin-bottom:4%">
         <h4>ad</h4>
         <?php echo banner("club_list_banner_1") ?>
     </section>
     <section class="store_list02">
-    <div class="table-image">
     <?php
     $i = 0;
     $open = false;
@@ -247,12 +244,12 @@ if (element('menu', $layout)) {
     if (element('list', element('data', element('list', $view)))) {
         foreach (element('list', element('data', element('list', $view))) as $result) {
             if ($cols && $i % $cols === 0) {
-                echo '<ul class="" >';
+                echo '<ul>';
                 $open = true;
             }
             $marginright = (($i+1)% $cols === 0) ? 0 : 2;
     ?>
-        <li class="gallery-box" style="width:<?php echo element('gallery_percent', element('board', element('list', $view))); ?>%;margin-right:<?php echo $marginright;?>%;background: url('<?php echo element('thumb_url', $result)?>') no-repeat left top;background-size: 38.5%;" onClick="location.href='<?php echo element('post_url', $result); ?>'">
+        <li style="background: url('<?php echo element('thumb_url', $result)?>') no-repeat left top; background-size: 40% 100%;" onClick="location.href='<?php echo element('post_url', $result); ?>'">
             <?php if (element('is_admin', $view)) { ?><input type="checkbox" name="chk_post_id[]" value="<?php echo element('post_id', $result); ?>" /><?php } ?>
             <a>
             
@@ -286,7 +283,6 @@ if (element('menu', $layout)) {
             $open = false;
         }
         ?>
-        </div>
     </section>
     
     <?php echo form_close(); ?>
@@ -330,7 +326,7 @@ if (element('menu', $layout)) {
     <nav><?php echo element('paging', element('list', $view)); ?></nav>
 
     <!-- 광고 배너 영역 -->
-        <section class="ad">
+        <section class="ad" style="margin-bottom: 0;">
             <h4>ad</h4>
             <?php echo banner("club_list_banner_2") ?>
         </section>

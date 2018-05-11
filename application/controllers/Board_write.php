@@ -2231,30 +2231,15 @@ class Board_write extends CB_Controller
             $this->Post_model->update($this->input->post($primary_key), $updatedata);
 
             
-            // if($this->input->post('post_order',null,0) > 0){
-            //     $field='post_order';
-            //     $post_order_update[$field.'<']=element('post_order', $post);
-            //     $post_order_update[$field.'!=']=0;
-            //     $post_order_update['post_id !=']=$post_id;
-            //     $post_order_update['brd_id']=element('brd_id', $post);
-            //     if(!empty($this->input->post('post_main_4',null,0))) $post_order_update['post_main_4']=1;
-
-            //     $this->Post_model->db->set($field, $field . '+' . 1, false);
-            //     $this->Post_model->db->where($post_order_update);
-            //     $this->Post_model->db->update($this->Post_model->_table);
-            // } 
-            $post_order_update='';
-            if($view['view']['post']['max_post_order'] == element('post_order', $post)){
-
+            if($this->input->post('post_order',null,0) > 0){
                 $field='post_order';
-                // $post_order_update[$field.'<']=element('post_order', $post);
-                $post_order_update[$field]=element('post_order', $post);
+                $post_order_update[$field.'<']=element('post_order', $post);
                 $post_order_update[$field.'!=']=0;
                 $post_order_update['post_id !=']=$post_id;
                 $post_order_update['brd_id']=element('brd_id', $post);
                 if(!empty($this->input->post('post_main_4',null,0))) $post_order_update['post_main_4']=1;
 
-                $this->Post_model->db->set($field, $field . '-' . 1, false);
+                $this->Post_model->db->set($field, $field . '+' . 1, false);
                 $this->Post_model->db->where($post_order_update);
                 $this->Post_model->db->update($this->Post_model->_table);
             } 

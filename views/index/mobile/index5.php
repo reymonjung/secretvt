@@ -96,7 +96,9 @@
 				제휴업체 할인, 이벤트, 현지 정보 제공
 			</span>
 		</h2>
-		<img src="assets/images/temp/middle_bn02.png">
+		<figure class="botbn_img">
+			<img src="assets/images/temp/middle_bn02.png">
+		</figure>
 </section>
 
 <section class="talk">

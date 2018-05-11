@@ -1,4 +1,4 @@
-<div class="alert alert-auto-close alert-dismissible alert-comment-list-message" style="display:none;"><button type="button" class="close alertclose">×</button><span class="alert-comment-list-message-content"></span></div>
+<div class="alert-auto-close alert-dismissible alert-comment-list-message reply_msg" style="display:none;"><!-- <button type="button" class="close alertclose">×</button> --><span class="alert-comment-list-message-content"></span></div>
 
 <?php
 if (element('list', element('data', $view))) {
@@ -11,19 +11,20 @@ if (element('list', element('data', $view))) {
             </div>
         <?php } ?>
         <ul>
-            <li>
+            <li class="reply_list">
+                <img src="/assets/images/temp/write_img/reply_arrow.png">
                 <?php if (element('is_admin', $view)) { ?><input type="checkbox" name="chk_comment_id[]" value="<?php echo element('cmt_id', $result); ?>" /><?php } ?>
-                <div><?php echo element('content', $result); ?></div>
+                <div class="reply_cont"><?php echo element('content', $result); ?></div>
             
-                <span>
+                <div class="reply_info">
                     <?php echo element('display_name', $result); ?> | 
-                    작성일: <?php echo element('display_datetime', $result); ?>
-                    
+                    작성일 : <?php echo element('display_datetime', $result); ?>
+                
                     
                     <?php
                     if ( ! element('post_del', element('post', $view)) && ! element('cmt_del', $result)) {
                     ?>
-                        <span class="reply">
+                        <div class="reply_edit">
                             <?php if (element('use_comment_like', element('board', $view))) { ?>
                                 <a class="good" href="javascript:;" id="btn-comment-like-<?php echo element('cmt_id', $result); ?>" onClick="comment_like('<?php echo element('cmt_id', $result); ?>', '1', 'comment-like-<?php echo element('cmt_id', $result); ?>');" title="추천하기"><i class="fa fa-thumbs-o-up fa-xs"></i> 추천 <span class="comment-like-<?php echo element('cmt_id', $result); ?>"><?php echo number_format(element('cmt_like', $result)); ?></span></a>
                             <?php } ?>
@@ -51,19 +52,21 @@ if (element('list', element('data', $view))) {
                                 }
                             }
                             ?>
-                        </span>
+                        </div>
                     <?php
                     }
                     ?>
-                </span>
+                </div>
+
+
+            <div id="edit_<?php echo element('cmt_id', $result); ?>" class="reply_write"></v><!-- 수정 -->
             
-            <div id="edit_<?php echo element('cmt_id', $result); ?>"></v><!-- 수정 -->
+
             <sdivpan id="reply_<?php echo element('cmt_id', $result); ?>"></div><!-- 답변 -->
             <input type="hidden" value="<?php echo element('cmt_secret', $result); ?>" id="secret_comment_<?php echo element('cmt_id', $result); ?>" />
             <textarea id="save_comment_<?php echo element('cmt_id', $result); ?>" style="display:none"><?php echo html_escape(element('cmt_content', $result)); ?></textarea>
             </li>
         </div>
-    </div>
 <?php
     }
 }
