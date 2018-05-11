@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Philippines</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/import.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="/images/favi.png">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+	$(document).ready(function(){
+
+		/*대메뉴의 스크롤바를 항상 왼쪽으로 위치 시키는 스크립트*/
+			$('.main_menu02').animate({ scorllLeft : 0 } , 300);
+
+		/*해당메뉴의 css 를 수정 하는 스크립트*/
+			$('.main_menu02 ul li:nth-child(2) a').css({'background-color':'#001c44' , 'color':'#fff'});
+
+		/*두번째 메뉴의 이미지 높이값을 figure 의 높이값으로설정 하는 스크립트*/
+			var img_height = $('.content01 ol li img').height();
+			$('.content01 ol li a figure').css('height' , img_height );
+
+		});
+</script>
+</head>
+
+<body>
+<article class="wrap01">
+	<!-- header 영역 -->
+			<header>
+				<h1>
+					<a href="index.html">
+						<img src="./images/logo.png" alt="logo_img">
+					</a>
+				</h1>
+
+				<nav>
+					<ul>
+						<li>
+							<a href="index08.html">
+								로그인
+							</a>
+						</li>
+
+						<li>
+							<a href="index09.html">
+								회원가입
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+	<!-- main_menu02 영역 -->
+			<section class="main_menu02">
+				<nav>
+					<ul>
+						<li><a href="index02.html">가라오케</a></li>
+						<li><a href="index03.html">클 럽</a></li>
+						<li><a href="index04.html">마사지</a></li>
+						<li><a href="index05.html">호 텔</a></li>
+						<li><a href="index06.html">골 프</a></li>
+						<li><a href="index07.html">맛 집</a></li>
+					</ul>
+				</nav>
+			</section>
+
+	<!-- content01 영역 -->
+		<section class="content01">
+
+			<!-- title 영역 -->
+				<h2>
+					<span>▼</span>
+					클 럽
+				</h2>
+				<p>
+					클 럽 메뉴에 대한 설명을 넣어주세요.<br/>
+					대메뉴 설명 영역 입니다 .
+				</p>
+
+			<!-- 리스트 2*2 영역 -->
+					<ul>
+						<li>
+							<a href="">
+								<figrue>
+									<img src="./images/menu_02.png" alt="menu_01_img">
+									<figcaption>
+										<h3>
+											클 럽 01
+										</h3>
+										<p>
+											클 럽에 대한 설명문구를<br/> 입력해주세요.
+										</p>
+									</figcaption>
+								</figrue>
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<figrue>
+									<img src="./images/menu_02.png" alt="menu_01_img">
+									<figcaption>
+										<h3>
+											클 럽 02
+										</h3>
+										<p>
+											클 럽에 대한 설명문구를<br/> 입력해주세요.
+										</p>
+									</figcaption>
+								</figrue>
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<figrue>
+									<img src="./images/menu_02.png" alt="menu_01_img">
+									<figcaption>
+										<h3>
+											클 럽 03
+										</h3>
+										<p>
+											클 럽에 대한 설명문구를<br/> 입력해주세요.
+										</p>
+									</figcaption>
+								</figrue>
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<figrue>
+									<img src="./images/menu_02.png" alt="menu_01_img">
+									<figcaption>
+										<h3>
+											클 럽 04
+										</h3>
+										<p>
+											클 럽에 대한 설명문구를<br/> 입력해주세요.
+										</p>
+									</figcaption>
+								</figrue>
+							</a>
+						</li>
+					</ul>
+
+			<!-- 배너 영역 --> 
+				<img src="images/banner01.png" alt="banner01_img">
+
+			<!-- 리스트 1*5 영역 -->
+					<ol>
+						<li>
+							<a href="">
+								<figure>
+									<img src="./images/menu_02.png" alt="menu_01_img">
+									<figcaption>
+										<h3>
+											01. 클 럽										</h3>
+										<p>
+											클 럽에 대한 설명 문구를 넣어 주세요.
+											서브메뉴 설명 영역입니다.
+										</p>
+										<span>
+												영업시간:00:00~00:00
+										</span>
+									</figcaption>
+								</figure>		
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<figure>
+									<img src="./images/menu_02.png" alt="menu_01_img">
+									<figcaption>
+										<h3>
+											02. 클 럽										</h3>
+										<p>
+											클 럽에 대한 설명 문구를 넣어 주세요.
+											서브메뉴 설명 영역입니다.
+										</p>
+										<span>
+												영업시간:00:00~00:00
+										</span>
+									</figcaption>
+								</figure>		
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<figure>
+									<img src="./images/menu_02.png" alt="menu_01_img">
+									<figcaption>
+										<h3>
+											03. 클 럽										</h3>
+										<p>
+											클 럽에 대한 설명 문구를 넣어 주세요.
+											서브메뉴 설명 영역입니다.
+										</p>
+										<span>
+												영업시간:00:00~00:00
+										</span>
+									</figcaption>
+								</figure>		
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<figure>
+									<img src="./images/menu_02.png" alt="menu_01_img">
+									<figcaption>
+										<h3>
+											04.클 럽										</h3>
+										<p>
+											클 럽에 대한 설명 문구를 넣어 주세요.
+											서브메뉴 설명 영역입니다.
+										</p>
+										<span>
+												영업시간:00:00~00:00
+										</span>
+									</figcaption>
+								</figure>		
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<figure>
+									<img src="./images/menu_02.png" alt="menu_01_img">
+									<figcaption>
+										<h3>
+											05.클 럽										</h3>
+										<p>
+											클 럽에 대한 설명 문구를 넣어 주세요.
+											서브메뉴 설명 영역입니다.
+										</p>
+										<span>
+												영업시간:00:00~00:00
+										</span>
+									</figcaption>
+								</figure>		
+							</a>
+						</li>
+					</ol>
+
+			<!-- 배너 영역 --> 
+				<img src="images/banner03.png" alt="banner01_img">
+				
+		</section>
+
+	<!-- footer 확장영역 -->
+		    <section class="footer">
+		    	<nav>
+		    		<ul>
+		    			<li>
+		    				CONTECT US
+		    				<span>+</span>
+		    			</li>
+		    			<li>
+		    				<ul>
+		    					<li>
+		    						<a href="tel:012-5623-2580">
+		    							<figure>
+		    								<figcaption>
+		    									Telephone<br/>
+		    									000-0000-0000
+		    								</figcaption>
+		    								<img src="./images/tel.png" alt="tel_img">
+		    							</figure>
+		    						</a>
+		    					</li>
+
+		    					<li>
+		    						<a href="mailto:hcm0179@naver.com">
+		    							<figure>
+		    								<figcaption>
+		    									E-Mail<br/>
+		    									oooo@oooo.com
+		    								</figcaption>
+		    								<img src="./images/mail.png" alt="tel_img">
+		    							</figure>
+		    						</a>
+		    					</li>
+		    					<li>
+		    						<figure>
+		    							<figcaption>
+		    								Kakao Talk<br/>
+		    								ID : ooooo
+		    							</figcaption>
+		    							<img src="./images/talk.png" alt="tel_img">
+		    						</figure>
+		    					</li>
+		    				</ul>
+		    			</li>
+
+		    			<li>
+		    				<a href="">
+		    					<figure>
+		    						<figcaption>
+		    							DOWNLOAD US APP
+		    						</figcaption>
+		    						<img src="./images/down.png" alt="down">
+		    					</figure>
+		    				</a>
+		    			</li>
+
+		    			<li>
+		    					▲<br/>
+		    					TOP
+		    			</li>
+		    		</ul>
+		    	</nav>
+		    </section>
+
+	<!-- footer 영역 -->
+		    <footer>
+		    	<nav>
+		    		<ul>
+		    			<li>
+		    				<a href="">
+		    					이용약관
+		    				</a>
+		    			</li>
+
+		    			<li>
+		    				<a href="">
+		    					개인 정보 방침
+		    				</a>
+		    			</li>
+
+		    			<li>
+		    				<a href="">
+		    					위치정보
+		    				</a>
+		    			</li>
+		    		</ul>
+		    	</nav>
+
+		    	<p>
+		    		이 사이트는 베트남에 거주하는 한글을 사용하는 사용자들을 위한
+		    		성인전용 서비스이며 , 미성년자의 출입을 금지합니다.
+
+		    		<span>
+		    			Copyright ⓒ Philippines.All Right Reserved
+		    		</span>
+		    	</p>
+		    </footer>
+
+</article>
+</body>
+</html>

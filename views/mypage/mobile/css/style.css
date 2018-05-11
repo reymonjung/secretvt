@@ -1,0 +1,30 @@
+/**
+	mypage skin css
+*/
+
+.mypage .mypagemain li {display: block;margin: 0px; clear: both; margin-bottom: 15px;}
+.mypage .mypagemain li>span {float: left;width: 25%;text-align: right;padding-right: 20px;margin-top: 8px;color: #000;font-weight: bold;}
+.mypage .mypagemain li {min-height:25px;}
+
+.mypage .scrapbtn {font-size:10px;}
+
+
+.mypage .askpassword li > .group > span {width: 26%; font-weight: bold; font-size: 12px; margin-right: 2%;}
+
+.mypage .member_modify li {/*display: block;*/ margin: 0px; clear: both; /*margin-bottom: 15px;*/}
+.mypage .member_modify li>span {float: left;/*width: 15%;text-align: right;padding-right: 20px;margin-top: 8px;color: #000;font-weight: bold;font-size:11px;*/}
+.mypage .member_modify textarea {width:90%; }
+
+.mypage .table thead{font-size:12px;font-weight: bold;}
+.mypage .table tbody{font-size:12px;}
+.mypage .table-top {overflow: hidden;padding-bottom: 10px;}
+.mypage .table-top input{margin-bottom: 0;margin-top: 0;}
+.mypage .table-top li{float: left;text-align: center;padding-right: 5px;}
+
+.mypage .nav {margin-bottom:20px;}
+
+.mypage .btn_final{/*margin-top:20px; text-align:right;*/}
+.change_password li {display: block;margin: 0px; clear: both; margin-bottom: 15px;}
+.change_password li>span {float: left;width: 25%;text-align: right;padding-right: 20px;margin-top: 5px;color: #000;font-weight: bold;}
+
+

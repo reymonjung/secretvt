@@ -1,0 +1,714 @@
+@charset "utf-8";
+/* page */
+
+/*content(main_page) 영역*/
+    /*이미지 슬라이드 css*/
+        .bx-wrapper {
+            position: relative;
+            margin: 0 auto 5%;
+            padding: 0;
+            *zoom: 1;
+        }
+
+        .bx-wrapper img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .bx-wrapper ul{padding:0;}
+
+
+        /** THEME
+        ===================================*/
+
+        .bx-wrapper .bx-viewport {
+            /*fix other elements on the page moving (on Chrome)*/
+            -webkit-transform: translatez(0);
+            -moz-transform: translatez(0);
+                -ms-transform: translatez(0);
+                -o-transform: translatez(0);
+                transform: translatez(0);
+        }
+
+        .bx-wrapper .bx-pager,
+        .bx-wrapper .bx-controls-auto {
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+        }
+
+        /* LOADER */
+
+        .bx-wrapper .bx-loading {
+            min-height: 50px;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2000;
+        }
+
+        /* 라운드 pager */
+
+        .bx-wrapper .bx-pager {
+            text-align: center;
+            font-size: .85em;
+            font-family: Arial;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .bx-wrapper .bx-pager .bx-pager-item,
+        .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+            display: inline-block;
+            *zoom: 1;
+            *display: inline;
+        }
+
+        /*pager 관련 css*/
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: #666;
+            text-indent: -9999px;
+            display: block;
+            width: 8px;
+            height: 8px;
+            margin: 0 5px;
+            outline: 0;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        /*선택되 pager의 배경 색상 지정*/
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            background: #001c44;
+        }
+
+        .img_slide{
+            margin-bottom:5%;
+        }
+        /*이미지 슬라이드 타이틀*/
+        .content h2{
+        font-size: 8px;
+        line-height: 10px;
+        color:#5d5d5d;
+        text-align:center;
+        width: 80%;
+        margin: 0 auto 5%;
+        font-family: 'Nanum Gothic', sans-serif;
+        }
+
+    /*메인페이지의 대 메뉴 리스트 css*/
+        .content nav{
+            display: inline-block;
+            margin-bottom: 3%;
+            padding:0 3%;
+            box-sizing: border-box;
+        }
+
+        .content nav ul li{
+            width:32%;
+            margin-right: 2%;
+            float: left;
+        }
+
+        .content nav ul li:nth-child(3n){
+            margin-right: 0;
+        }
+
+        .content nav ul li:nth-child(1),
+        .content nav ul li:nth-child(2),
+        .content nav ul li:nth-child(3){
+            margin-bottom:1%;
+        }
+
+        .content nav ul li figure{
+            position: relative;
+        }
+
+        .content nav ul li figure img{
+            border-radius: 5px;
+        }
+
+        .content nav ul li figure figcaption{
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            color:#fff;
+            font-size: 13px;
+            text-shadow: 1px 1px 1px #000;
+        }
+
+/*content 01(대메뉴_page) 영역*/
+    /*리스트 2*2영역*/
+        .content01 ul{
+            display: inline-block;
+            padding: 0 3%;
+            box-sizing: border-box;
+        }
+
+        .content01 ul li {
+            width: 49.5%;
+            margin-right:1%;
+            float: left; 
+        }
+
+        .content01 ul li:nth-child(2n){
+            margin-right: 0
+        }
+
+        .content01 ul li h3{
+            font-size: 13px;
+            margin-bottom: 3%;
+            padding:0 5%;
+            box-sizing: border-box;
+            color:#ec2229;
+        }
+
+        .content01 ul li p{
+            text-align:left;
+            padding:0 5%;
+            font-size: 11px;
+            line-height: 13px;
+            color:#5d5d5d;
+            margin-bottom:5%;
+        }
+
+        .content01 ul li img{
+            border-radius: 8px;
+            border:1px solid #ededed;
+            box-sizing: border-box;
+            margin-bottom: 3%;
+        }
+
+    /* 리스트 1*5 영역 */
+        .content01 ol{
+            display: inline-block;
+            padding:0 3%;
+            box-sizing: border-box;
+            width: 100%;
+            margin:3% 0;
+        }
+
+        .content01 ol li{
+            margin-bottom:1.5%;
+        }
+
+        .content01 ol li:last-child{
+            margin-bottom:0;
+        }
+
+        .content01 ol li img{
+            width: 35%;
+            border-radius: 5px;
+            margin-right: 3%;
+            float: left;
+        }
+
+        .content01 ol li figure{
+            position: relative;
+        }
+
+        .content01 ol li figcaption{
+            display: inline-block;
+            width: 62%;
+            height: 52px;
+            position: absolute;
+            margin:  auto 0;
+            top: 0;
+            bottom:0;
+        }
+
+        .content01 ol li figcaption h3{
+            font-size: 13px;
+            margin-bottom:3%;
+            color: #ec2229;
+        }
+
+        .content01 ol li figcaption p{
+            margin-bottom:0;
+            text-align:left;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 11px;
+            line-height: 13px;
+            color:#5d5d5d;
+            margin-bottom:3%;
+        }
+
+        .content01 ol li figcaption span{
+            display: inline-block;
+            width: 100%;
+            text-align: right;
+            font-size: 10px;
+        }
+
+
+/*content02(로그인_page) 영역*/
+
+    /*알려드립니다 영역 */
+        .content02 figure{
+            text-align:center;
+            margin-bottom:5%;
+        }
+
+        .content02 figure img{
+            width: 30%;
+            margin-bottom: 2%;
+        }
+
+        .content02 figure figcaption h2{
+            font-size: 18px;
+            color:#ec2229;
+        }
+
+        .content02 figure figcaption h2 span{
+            display: block;
+            font-size: 13px;
+            line-height: 15px;
+            margin-top: 2%;
+            color:#5d5d5d;
+            font-weight: normal;
+        }
+
+    /*아이디 , 패스워드 입력 영역*/
+        .id_pw{
+            width: 210px;
+            margin:0 auto 5%;
+        }
+
+        .id_pw > ul > li{
+            margin-bottom: 3%;
+            /*height: 20px;*/
+        }
+
+        .id_pw > ul > li:last-child{
+            margin-bottom:3%;
+        }
+
+        .id_pw > ul > li input{
+            width: 150px;
+        }
+
+        .id_pw > ul > li label{
+            position: relative;
+            top: 7.5px;
+            width: 50px;
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .id_pw > ul > li > p{
+            display: none;            
+        }
+
+    /*로그인 버튼영역*/
+        .content02 button{
+            width: 40%;
+            margin: 0 30% 6%;
+        }
+
+    /*회원가입 , ID/PW찾기 영역*/
+        .content02 > ul{
+            width: 82%;
+            margin: 0 9% 3%;
+            display: inline-block;
+        }
+
+        .content02 > ul > li{
+            width: 50%;
+            float: left;
+            border-right: 1px solid #9d9d9d;
+            box-sizing: border-box;
+        }
+
+        .content02 > ul > li:last-child{
+            border-right: 0 ;
+        }
+
+        .content02 > ul > li a h4{
+            font-size: 13px;
+            color: #001c44;
+            text-align:center;
+            font-weight: bold;
+        }
+
+        .content02 > ul > li a h4 span{
+            font-size: 11px;
+            line-height: 13px;
+            display: block;
+            color:#5d5d5d;
+            margin-bottom: 5%;
+            font-weight: normal;
+        }
+
+/*content03(회원가입 약관_page) 영역*/
+    .content03 ul li{
+        margin-bottom: 6%;
+    }
+
+    /*약관내용 영역*/
+        .agreement{
+            font-size: 11px;
+            padding:3%;
+            border:1px solid #9d9d9d;
+            box-sizing: border-box;
+            height: 250px;
+            overflow-y: scroll;
+            line-height: 15px;
+            color: #5d5d5d;
+            margin:0 auto 3%;
+            width: 94%;
+        }
+
+    /*동의 체크박스 영역*/
+        .content03 ul li .check{
+           margin:0 0 0 6%;
+           text-align:left; 
+        }
+
+/*content04(회원가입/회원정보수정/패스워드 수정_page) 영역*/
+
+    .content04 table{
+        width: 94%;
+        margin: 0 auto 3%;
+    }
+
+    .content04 table tr td{
+        border:1px solid #9d9d9d;
+    }
+
+    .content04 table tr td:first-child{
+        text-align:center;
+        background:#e8eef7;
+        font-size: 12px;
+        width:35%;
+    }
+
+    .content04 table tr td:first-child span{
+        color:#ec2229;
+    }
+
+    .content04 table tr td:last-child{
+        padding:2.5%;
+    }
+
+    .content04 table tr td:last-child input{
+        font-size: 12px;
+        padding:3px 5px 4px 5px; 
+        outline: none;
+        border:1px solid #9d9d9d;
+        margin-bottom:3%;
+        width: 93%;
+        border-radius: 0;
+    }
+
+    .content04 table tr td:last-child label{
+        display: block;
+        font-size:10px;
+        color:#5d5d5d;
+        line-height: 12px;
+    }
+
+    /*회원정보 수정 영역(마이페이지 > 정보수정_page 영역)*/
+        .content04 table tr td:last-child h2,
+        .content04 table tr td:last-child a{
+            font-size: 13px;
+            font-weight: bold;
+            margin-top:2%;
+            color:#001c44;
+        }
+
+        .content04 table tr td:last-child a{
+            font-size: 12px;
+            color:#ec2229;
+        }
+
+/*content03,04  공통역역 (회원가입 ,회원가입 약관 의 회원가입영역)*/
+        .content03 button,
+        .content04 button{
+            width: 30%;
+            float: right;
+            margin:0 3% 3% 0;
+        }
+
+/*content05(이메일주소 계정찾기,회원가입 축하,아이디/패스워드 전송완료,회원탈퇴 완료,패스워드 수정완료_page) 영역*/
+    
+    /*이메일 주소로 계정 찾기 영역*/
+        .content05 input{
+            width: 200px;
+        }
+
+        .find_mail{
+            margin-bottom:3%;
+        }
+
+    /*content05 공통 영역*/
+        .content05 {
+            text-align: center;
+        }
+
+        .content05 figure{
+            text-align:center;
+            margin-bottom: 5%;
+        }
+        .content05 figure img{
+            width: 50%;
+            margin-bottom: 5%;
+        }
+
+        .content05 figure figcaption p{
+            font-size: 13px;
+            line-height: 15px;
+            color: #5d5d5d;
+        }
+
+        .content05 figure figcaption p span{
+            font-size: 13px;
+            color:#ea242b;
+            font-weight: bold;
+        }
+
+        .content05 button{
+            width:30%;
+            margin: 0 35% 3%;
+        }
+
+/*content06(정보수정 > 내정보,작성글_page) 영역*/
+
+    /*내정보 영역*/
+        /*사용자 이미지 , 정보 영역*/
+            .my_info01{
+                padding:0 5%;
+                box-sizing: border-box;
+                position: relative;
+                display: inline-block;
+                margin-bottom: 3%;
+            }
+
+            .my_info01 figure{
+                width: 75%;
+                float: left;
+            }
+
+            .my_info01 figure img{
+                width: 35%;
+                float: left;
+                margin-right: 3%;
+            }
+
+            .my_info01 figure h2{
+                font-size: 13px;
+                font-weight: bold;
+                display: inline-block;
+                width: 62%;
+                margin:7% 0 3%;
+                color:#ec2229;
+                text-align:left;
+            }
+
+            .my_info01 figure h2 span{
+                font-size: 11px;
+                font-weight: normal;
+                color:#5d5d5d;
+                display: block;
+                margin-top: 2%;
+            }
+
+            .my_info01 figure p{
+                font-size: 11px;
+                font-weight: bold;
+                background:url(../images/level.png) no-repeat left center;
+                background-size: 41%;
+                padding:1% 0 1% 8%;
+                display: inline-block;
+                color:#001c44;
+            }
+
+        /*내 정보 리스트 영역*/
+            .content06 table{
+                width: 85%;
+                margin:0 auto;
+                border-top: 1px solid #9d9d9d;
+                box-sizing: border-box;
+                margin-bottom: 3%;
+            }
+
+            .content06 table tr{
+                border-bottom:1px solid #9d9d9d;
+                box-sizing: border-box;
+            }
+
+            .content06 table tr td{
+                padding:3% 0 2%;
+                font-size: 12px;
+                text-align:center;
+                color:#001c44;
+            }
+
+    /*작성글 영역*/
+        .content06 .talble02{
+            border-top:2px solid #001c44;
+        }
+
+        .content06 .talble02 tr:nth-child(1){
+            font-weight: bold;
+        }
+
+        .content06 .talble02 tr td:nth-child(2){
+            text-overflow: ellipsis;
+            overflow:hidden;
+            white-space: nowrap;
+        }
+        .content06 figure figcaption p{
+            font-size: 12px;
+            line-height: 15px;
+            color: #5d5d5d;
+        }
+
+/*content07(정보수정 > 정보수정,탈퇴하기_page) 영역*/
+
+    /*정보수정 영역*/
+        .content07 figure{
+            margin-bottom: 5%;
+            text-align:center;
+        }
+
+        .content07 figure figcaption p{
+            font-size: 12px;
+            line-height: 15px;
+            color: #5d5d5d;
+        }
+
+        .content07 .check_pw{
+            text-align:center;
+            margin-bottom: 3%;
+        }
+
+        .check_pw label{
+            margin-right: 10px;
+        }
+
+        .check_pw button{
+            width: 15%;
+            position: relative;
+            top: 1px;
+        }
+
+    /*탈퇴하기 영역*/
+        .content07 figure figcaption p span{
+            font-size: 15px;
+            font-weight: bold;
+            display: block;
+            color:#ec2229;
+            margin-bottom: 3%;
+        }
+
+/*content06,07 공통영역 (마이페이지 > 대타이틀,서브메뉴 영역)*/
+    /*서브메뉴 영역*/ 
+            .content06 ul,
+            .content07 ul{
+                width: 90%;
+                margin: 0 5% 5%;
+                border:1px solid #ededed;
+                box-sizing: border-box;
+                display: inline-block;
+            }
+
+            .content06 ul li,
+            .content07 ul li{
+                border-right:1px solid #ededed;
+                box-sizing: border-box;
+                text-align:center;
+                padding:1.5% 0 1%;
+                width: 25%;
+                float: left;
+            }
+
+            .content06 ul li:last-child,
+            .content07 ul li:last-child{
+                border-right: 0;
+            }
+
+            .content06 ul li a,
+            .content07 ul li a{
+                color:#001c44;
+                font-size: 13px;
+            }
+
+    /*등급 혜택 버튼 영역*/
+        .my_info01 button{
+            width: 25%;
+            margin-top: 17%;
+        }
+
+    /*팝업이미지 영역*/
+        .popup {
+            opacity: 0;
+            display: none;
+            position: relative;
+            width: auto;
+            background-color:#fff;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .popup h2{
+            font-size: 18px;
+            color: #001c44;
+            margin-bottom:3%;
+        }
+
+        .popup h2 span{
+            color:#ec2229;
+            font-weight: bold;
+        }
+
+        .popup p{
+            font-size: 11px;
+            color: #5d5d5d;
+            line-height: 13px;
+            margin-bottom: 10%;
+        }
+
+        .b-close {
+            position: absolute;
+            top: 213px;
+            left: 230px;
+            font-size: 13px;
+        }
+
+
+
+
+/*미디어 쿼리 영역*/
+
+/* width:414px 이상일 경우 PC */
+    @media screen and (min-width:414px){
+        .main_menu02 ul{
+            width: 100%;
+        }
+        .wrap01{
+            border:1px solid #ededed;
+        }
+
+        .main_menu02{
+            overflow-x: hidden;
+        }
+    }
+
+/* width:413px 이하일 경우 모바일 */
+    @media screen and (max-width:413px){
+        /*scroll bar 숨기기*/
+            html {scrollbar-arrow-color: rgba(0,0,0,.2); scrollbar-base-color: rgba(0,0,0,.2); scrollbar-Face-Color: rgba(0,0,0,.2); scrollbar-Track-Color: rgba(0,0,0,.2); scrollbar-DarkShadow-Color: rgba(0,0,0,.2); scrollbar-Highlight-Color: rgba(0,0,0,.2); scrollbar-Shadow-Color: rgba(0,0,0,.2);}
+            ::-webkit-scrollbar {width: 0px; height: 0px; }
+            ::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block; height: 10px;}
+            ::-webkit-scrollbar-track {background: #efefef; -webkit-border-radius: 10px; border-radius:10px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.2)}
+            ::-webkit-scrollbar-thumb {height: 50px; width: 50px; background: rgba(0,0,0,.2); -webkit-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1)}
+        /*============*/
+    }
+

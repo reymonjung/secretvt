@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Philippines</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/import.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="/images/favi.png">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		/*해당메뉴의 css 를 수정 하는 스크립트*/
+			$('.main_menu02 ul li:nth-child(1) a').css({'background-color':'#001c44' , 'color':'#fff'});
+
+		/*서브메뉴의 해당 메뉴의 css 를 수정하는 스크립트*/
+			$('.content07 ul li:nth-child(4)').css('background-color' , '#e8eef7');
+
+			var re_pw = /^[a-z0-9]{4,16}$/;
+
+				$('.check_pw input').blur(function(){
+					if($(this).val().length === 0){
+						$(this).siblings('p').slideDown();
+						$(this).focus();
+
+					}else if($(this).val().length < 4){
+						$(this).siblings('p').slideDown().text('4글자 이상 입력 하세요');
+						$(this).focus();
+
+					}else if(re_pw.test($(this).val()) != true){
+						$(this).siblings('p').slideDown().text('잘못된 패스워드 입니다');
+						$(this).focus();
+
+					}else{
+						$(this).siblings('p').slideUp();
+					}
+				});
+
+		/*"ID/PW찾기" 버튼 클릭시 각 항목별  조건에 맞지 않을 경우 경고문 보여주는 스크립트*/
+			$('.check_pw button').click(function(){
+
+				if(re_pw.test($('.check_pw input').val()) != true){
+					if($('.check_pw input').val() == ''){
+						$('.check_pw input').siblings('p').slideDown();
+
+					}else if($('.check_pw input').siblings('p').css('display') =='block'){
+						$('.check_pw input').siblings('p').css('display' , 'block');
+
+					}
+				}else{
+					location.href="index19.html"
+				}
+			});
+	});
+</script>
+<style>
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<article class="wrap01">
+	<!-- header 영역 -->
+			<header>
+				<h1>
+					<a href="index.html">
+						<img src="./images/logo.png" alt="logo_img" >
+					</a>
+				</h1>
+
+				<nav>
+					<ul>
+						<li>
+							<a href="index.html">
+								로그아웃
+							</a>
+						</li>
+
+						<li>
+							<a href="index14.html">
+								마이페이지
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+	<!-- main_menu02 영역--> 
+		<section class="main_menu02">
+			<nav>
+				<ul>
+					<li><a href="index02.html">가라오케</a></li>
+					<li><a href="index03.html">클 럽</a></li>
+					<li><a href="index04.html">마사지</a></li>
+					<li><a href="index05.html">호 텔</a></li>
+					<li><a href="index06.html">골 프</a></li>
+					<li><a href="index07.html">맛 집</a></li>
+				</ul>
+			</nav>
+		</section>
+	
+	<!-- content 영역 -->
+		<section class="content07">
+
+			<h2>
+				<span>
+					▼
+				</span>
+				마이페이지
+			</h2>
+
+			<p>
+				Secret Philippines 을 탈퇴 하시겠습니까?
+			</p>
+
+			<ul>
+				<li>
+					<a href="index14.html">
+						내 정보
+					</a>
+				</li>
+
+				<li>
+					<a href="index15.html">
+						작성글
+					</a>
+				</li>
+
+				<li>
+					<a href="index16.html">
+						정보수정
+					</a>
+				</li>
+
+				<li>
+					<a href="index17.html">
+						탈퇴하기
+					</a>
+				</li>
+			</ul>
+
+			<figure>
+				<img src="images/stop.png" alt="stop_img" style="width: 40%;">
+				<figcaption>
+					<p>
+						<span>
+							정말로 탈퇴하시겠습니까?
+						</span>
+						회원 탈퇴후엔 모든 정보가 삭제되며,<br/>
+						어떠한 경우에도 복구되지 않습니다.</br>
+						</br>
+						탈퇴시 동일한 아이디,이메일의 재가입은</br>
+						1개월 이내로 불가능하며</br>
+						사용하신 모든 내역 정보가 소멸됩니다.</br>
+						</br>
+
+						그래도 탈퇴 하시겠습니까 ?
+					</p>	
+				</figcaption>
+			</figure>
+
+			<div class="check_pw">
+				<label>
+					패스워드
+				</label>
+				<input type="text" value="" placeholder="패스워드 입력" onfocus="this.placeholder=''" onblur="this.placeholder='패스워드 입력'">
+				<button>
+					확 인
+				</button>
+				<p>필수 입력 사항 입니다.</p>
+			</div>
+
+
+
+		<!-- 배너영역 -->
+			<img src="images/banner03.png" alt="banner01_img">
+		</section>
+
+	<!-- footer 확장영역 -->
+		    <section class="footer">
+		    	<nav>
+		    		<ul>
+		    			<li>
+		    				CONTECT US
+		    				<span>+</span>
+		    			</li>
+		    			<li>
+		    				<ul>
+		    					<li>
+		    						<a href="tel:012-5623-2580">
+		    							<figure>
+		    								<figcaption>
+		    									Telephone<br/>
+		    									000-0000-0000
+		    								</figcaption>
+		    								<img src="./images/tel.png" alt="tel_img">
+		    							</figure>
+		    						</a>
+		    					</li>
+
+		    					<li>
+		    						<a href="mailto:hcm0179@naver.com">
+		    							<figure>
+		    								<figcaption>
+		    									E-Mail<br/>
+		    									oooo@oooo.com
+		    								</figcaption>
+		    								<img src="./images/mail.png" alt="tel_img">
+		    							</figure>
+		    						</a>
+		    					</li>
+		    					<li>
+		    						<figure>
+		    							<figcaption>
+		    								Kakao Talk<br/>
+		    								ID : ooooo
+		    							</figcaption>
+		    							<img src="./images/talk.png" alt="tel_img">
+		    						</figure>
+		    					</li>
+		    				</ul>
+		    			</li>
+
+		    			<li>
+		    				<a href="">
+		    					<figure>
+		    						<figcaption>
+		    							DOWNLOAD US APP
+		    						</figcaption>
+		    						<img src="./images/down.png" alt="down">
+		    					</figure>
+		    				</a>
+		    			</li>
+
+		    			<li>
+		    					▲<br/>
+		    					TOP
+		    			</li>
+		    		</ul>
+		    	</nav>
+		    </section>
+
+	<!-- footer 영역 -->
+		    <footer>
+		    	<nav>
+		    		<ul>
+		    			<li>
+		    				<a href="">
+		    					이용약관
+		    				</a>
+		    			</li>
+
+		    			<li>
+		    				<a href="">
+		    					개인 정보 방침
+		    				</a>
+		    			</li>
+
+		    			<li>
+		    				<a href="">
+		    					위치정보
+		    				</a>
+		    			</li>
+		    		</ul>
+		    	</nav>
+
+		    	<p>
+		    		이 사이트는 베트남에 거주하는 한글을 사용하는 사용자들을 위한
+		    		성인전용 서비스이며 , 미성년자의 출입을 금지합니다.
+
+		    		<span>
+		    			Copyright ⓒ Philippines.All Right Reserved
+		    		</span>
+		    	</p>
+		    </footer>
+
+</article>
+</body>
+</html>

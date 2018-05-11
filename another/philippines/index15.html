@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Philippines</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/import.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="/images/favi.png">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		/*해당메뉴의 css 를 수정 하는 스크립트*/
+			$('.main_menu02 ul li:nth-child(1) a').css({'background-color':'#001c44' , 'color':'#fff'});
+
+		/*서브메뉴의 해당 메뉴의 css 를 수정하는 스크립트*/
+			$('.content06 ul li:nth-child(2)').css('background-color' , '#e8eef7');
+
+		/*등급혜택 클릭시 팝업이미지 보여주기*/
+			$('.my_info01 button').click(function(){
+				$('.popup').bPopup();
+			});
+	});
+</script>
+<style>
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="popup" style="width:280px;">
+	<img src="images/popup.png" alt="popup_img" style="width:150px;">
+
+	<h2>
+	  	현재 페이지 <span>준비중</span> 입니다.
+	</h2>
+
+	<p>
+	  	페이지 준비중 입니다. 조금만 기다려 주세요.<br/>
+	  	더욱 나은 모습으로 찾아 뵙겠습니다.	
+	</p>
+
+	<span class="b-close">닫기 X</span>
+</div>
+
+<article class="wrap01">
+	<!-- header 영역 -->
+			<header>
+				<h1>
+					<a href="index.html">
+						<img src="./images/logo.png" alt="logo_img" >
+					</a>
+				</h1>
+
+				<nav>
+					<ul>
+						<li>
+							<a href="index08.html">
+								로그아웃
+							</a>
+						</li>
+
+						<li>
+							<a href="index14.html">
+								마이페이지
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+	<!-- main_menu02 영역--> 
+		<section class="main_menu02">
+			<nav>
+				<ul>
+					<li><a href="index02.html">가라오케</a></li>
+					<li><a href="index03.html">클 럽</a></li>
+					<li><a href="index04.html">마사지</a></li>
+					<li><a href="index05.html">호 텔</a></li>
+					<li><a href="index06.html">골 프</a></li>
+					<li><a href="index07.html">맛 집</a></li>
+				</ul>
+			</nav>
+		</section>
+	
+	<!-- content 영역 -->
+		<section class="content06">
+			<h2>
+				<span>
+					▼
+				</span>
+				마이페이지
+			</h2>
+			<p>
+				내 작성글를 확인 하실수 있습니다.
+			</p>
+
+			<ul>
+				<li>
+					<a href="index14.html">
+						내 정보
+					</a>
+				</li>
+
+				<li>
+					<a href="index15.html">
+						작성글
+					</a>
+				</li>
+
+				<li>
+					<a href="index16.html">
+						정보수정
+					</a>
+				</li>
+
+				<li>
+					<a href="index17.html">
+						탈퇴하기
+					</a>
+				</li>
+			</ul>
+
+			<div class="my_info01">
+				<figure>
+					<figcaption>
+						<img src="images/user.png" alt="user_img">
+						<h2>
+							회원아이디
+							<span>
+							"회원아이디"님 안녕하세요.
+							</span>
+						</h2>
+
+						<p>
+							하사
+						</p>
+					</figcaption>
+				</figure>
+
+				<button>
+					등급혜택
+				</button>
+			</div>
+
+			<table class="talble02">
+				<tr>
+					<td>번 호</td>
+					<td>제 목</td>
+					<td>날 짜</td>
+					<td>댓 글</td>
+				</tr>
+
+				<tr>
+					<td>01</td>
+					<td>안녕하세요.</td>
+					<td>00-00 00:00</td>
+					<td>3</td>
+				</tr>
+
+				<tr>
+					<td>02</td>
+					<td>베트남 또 가보고 싶다</td>
+					<td>00-00 00:00</td>
+					<td>5</td>
+				</tr>
+
+				<tr>
+					<td>03</td>
+					<td>만나서 반갑습니다.</td>
+					<td>00-00 00:00</td>
+					<td>5</td>
+				</tr>
+
+				<tr>
+					<td>04</td>
+					<td>가입 인사 드립니다.</td>
+					<td>00-00 00:00</td>
+					<td>0</td>
+				</tr>
+
+				
+
+				<tr>
+					<td>05</td>
+					<td>시크릿베트남 완전 좋아요..</td>
+					<td>00-00 00:00</td>
+					<td>0</td>
+				</tr>
+			</table>
+
+		<!-- 배너영역 -->
+			<img src="images/banner03.png" alt="banner01_img">
+		</section>
+
+	<!-- footer 확장영역 -->
+		    <section class="footer">
+		    	<nav>
+		    		<ul>
+		    			<li>
+		    				CONTECT US
+		    				<span>+</span>
+		    			</li>
+		    			<li>
+		    				<ul>
+		    					<li>
+		    						<a href="tel:012-5623-2580">
+		    							<figure>
+		    								<figcaption>
+		    									Telephone<br/>
+		    									000-0000-0000
+		    								</figcaption>
+		    								<img src="./images/tel.png" alt="tel_img">
+		    							</figure>
+		    						</a>
+		    					</li>
+
+		    					<li>
+		    						<a href="mailto:hcm0179@naver.com">
+		    							<figure>
+		    								<figcaption>
+		    									E-Mail<br/>
+		    									oooo@oooo.com
+		    								</figcaption>
+		    								<img src="./images/mail.png" alt="tel_img">
+		    							</figure>
+		    						</a>
+		    					</li>
+		    					<li>
+		    						<figure>
+		    							<figcaption>
+		    								Kakao Talk<br/>
+		    								ID : ooooo
+		    							</figcaption>
+		    							<img src="./images/talk.png" alt="tel_img">
+		    						</figure>
+		    					</li>
+		    				</ul>
+		    			</li>
+
+		    			<li>
+		    				<a href="">
+		    					<figure>
+		    						<figcaption>
+		    							DOWNLOAD US APP
+		    						</figcaption>
+		    						<img src="./images/down.png" alt="down">
+		    					</figure>
+		    				</a>
+		    			</li>
+
+		    			<li>
+		    					▲<br/>
+		    					TOP
+		    			</li>
+		    		</ul>
+		    	</nav>
+		    </section>
+
+	<!-- footer 영역 -->
+		    <footer>
+		    	<nav>
+		    		<ul>
+		    			<li>
+		    				<a href="">
+		    					이용약관
+		    				</a>
+		    			</li>
+
+		    			<li>
+		    				<a href="">
+		    					개인 정보 방침
+		    				</a>
+		    			</li>
+
+		    			<li>
+		    				<a href="">
+		    					위치정보
+		    				</a>
+		    			</li>
+		    		</ul>
+		    	</nav>
+
+		    	<p>
+		    		이 사이트는 베트남에 거주하는 한글을 사용하는 사용자들을 위한
+		    		성인전용 서비스이며 , 미성년자의 출입을 금지합니다.
+
+		    		<span>
+		    			Copyright ⓒ Philippines.All Right Reserved
+		    		</span>
+		    	</p>
+		    </footer>
+
+</article>
+</body>
+</html>

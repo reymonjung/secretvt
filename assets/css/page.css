@@ -1,0 +1,2290 @@
+@charset "utf-8";
+
+
+.registerform{
+			width: 100%;
+			}
+
+		.registerform tr{
+			border-bottom:1px solid #ededed;
+		}
+		.registerform tr:last-child{
+			border-bottom: 0;
+		}
+
+		.registerform tr td:first-child{
+			border-right: 1px solid #ededed;
+			padding: 3.5% 0 2%;
+			box-sizing: border-box;
+			text-align: center;
+			font-size: 12px;
+			font-weight: bold;
+			width: 30%;
+			background-color: rgb(239, 208, 222);
+		}
+
+/*회원탈퇴하기 버튼*/
+	.finish button, .finish a{
+		width:40%; 
+		text-align:center;
+		padding:1.5%;
+		color:#fff;
+		background-color:#231b26;
+		border:0;
+		border-radius: 15px;
+		font-size:14px;
+		display: inline-block;
+		font-weight: bold;
+		float: right;
+		outline: none;
+		}
+
+	.finish a{
+		font-weight: normal;
+		float:left;
+	}
+/* ===== */
+
+/*탈퇴하기 경고메시지 영역*/
+	.logout h2{
+		width:100%;
+		box-sizing: border-box;
+		text-align:center;
+		font-size:14px;
+		color:rgb(194, 14, 88);
+		font-weight: bold;
+		margin-bottom: 3%;
+		}
+
+	.logout h2 img{
+		width:25%;
+		display: block;
+		margin:0 auto 5%;
+		}
+
+	.logout h2 span{
+		font-size:12px;
+		font-weight: normal;
+		color:#000;
+		display: inline-block;
+		margin-top:3%;
+		line-height: 16px;
+		}
+/* ===== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*업소 정보의 이미지& 문구 */
+
+	/*.store{
+		margin-bottom: 0;
+	}
+	*/
+	.store img{
+		
+		margin-bottom:0.5%;
+		border:1px solid #ededed;
+		box-sizing: border-box;
+		}
+	.store h2{
+		line-height: 18px;
+		padding-left: 3%;
+		font-weight: normal;
+		margin-bottom: 3%;
+		}
+	.store h2 span{
+		font-size:15px;
+		color:red;
+		}
+/* ===== */
+
+
+
+
+
+/*myinfo 영역 */
+		.myinfo figure{
+			width: 72%;
+			display: inline-block;
+			box-sizing: border-box;
+		}
+
+		.myinfo figure img{
+			float: left;
+			width: 30%;
+			margin-right: 3%;
+		}
+
+		.myinfo figure figcaption{
+			width: 60%;
+			display: inline-block;
+			margin-top: 5.7%;
+		}
+
+		.myinfo figure figcaption h2{
+			font-size: 13px;
+			font-weight: bold;
+			color:#c20e58;
+		}
+
+		.myinfo figure figcaption p{
+			font-size: 11px;
+			padding: 1% 0 3%;
+			line-height: 14px;
+		}
+
+		.myinfo figure figcaption p span{
+			font-size: 11px;
+			font-weight:bold;
+		}
+
+		.myinfo figure figcaption figure{
+			padding: 0;
+		}
+
+		.myinfo figure figcaption figure img{
+			width: 24px;
+			height: 24px;
+			float: left;
+			margin: 0;
+		}
+
+		.myinfo figure figcaption figure figcaption{
+			display: inline-block;
+			width: 70%;
+			font-size: 11px;
+			font-weight: bold;
+			margin-top: 6.5%;
+		}
+
+		.myinfo button{
+			float: right;
+			margin-top: 15.5%;
+			border-radius: 5px;
+			border: 0;
+			outline: none;
+			background-color: #231b26;
+			color: #fff;
+			padding: 0.5%;
+			width: 28%;
+			font-size: 12px;
+		}
+
+		.myinfo button a{
+			font-weight: bold;
+			color:#fff;
+		}
+/* ===== */
+
+/*myinfo_02 영역 */
+	.myinfo_02 ul{
+		width: 98%;
+		margin: 0 auto;
+	}
+
+	.myinfo_02 ul li{
+		padding:1.5% 0;
+		border-bottom: 1px solid #ededed; 
+	}
+
+	.myinfo_02 ul li span{
+		width: 40%;
+		font-size: 13px;
+		font-weight: bold;
+		display: inline-block;
+		text-indent: 1.5%;
+	}
+
+	.myinfo_02 ul li p{
+		font-size: 12px;
+		width: 58%;
+		display: inline-block;
+		text-align:center;
+		padding-top: 1px;
+		line-height: 14px; 
+	}
+/* ===== */
+
+		
+/*	.reply_02 ul{
+			margin-top: 6%;
+		}
+	*/
+		
+
+/* ===== */
+
+/*css 추가*/
+
+/*회원가입 약관 영역*/
+	
+
+
+
+
+	
+	/*
+	.title03 {
+		margin-bottom: 0;
+	}
+	*/
+
+	
+
+
+	.askpassword{
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	
+
+	
+
+
+
+	.modify_01{
+		height: 23px;
+	}
+
+	.modify_02{
+		position: relative;
+		top: -2px;
+		margin-right: 2%;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	.modify_03{
+		margin-right: 1%;
+	}
+
+	.modify_04{
+		position: relative;
+		top:-2px;
+	}
+
+
+
+	.title > .main_01{
+		width:90%;
+	}
+
+	.title > .main_01 tr td {
+		width: 25% !important;
+		padding:2% 0;
+		box-sizing: border-box;
+	}
+
+	.member_01{
+		width:94%;
+		margin: 0 auto;
+		margin-bottom: 3%;
+	}
+
+	.member_01 li{
+		width: 100%;
+		border: 1px solid #ededed;
+		border-bottom: 0;
+		height: 26px;
+	}
+
+	.member_01 li:last-child{
+		border:0;
+	}
+
+	.member_01 li span{
+		width: 20%;
+		border-right: 1px solid #ededed;
+		text-align: center;
+		display: inline-block;
+		padding: 2% 0;
+		background-color: rgb(239, 208, 222);
+		box-sizing: border-box;
+		height: 26px;
+	}
+
+	.member_01 li div{
+		height: 26px;
+		font-size: 14px;
+		padding:2% 0; 
+	}
+
+	.member_01 li:nth-child(3) div , .member_01 li:nth-child(4) div{
+		padding-left:5%;
+	}
+
+	.member_01 li:nth-child(3),.member_01 li:nth-child(3) span,.member_01 li:nth-child(3) div {
+		height: 110px;
+	}
+
+	.member_01 li:nth-child(3) span{
+		padding: 10% 0;
+		box-sizing: border-box;
+	}
+
+	.member_01 li:nth-child(4),.member_01 li:nth-child(4) span,.member_01 li:nth-child(4) div{
+		height: 40px;
+	}
+
+	.member_01 li:nth-child(4) span{
+		padding: 4% 0; 
+	}
+
+	.member_01 li:last-child{
+		margin-top:3% !important;
+		box-sizing: border-box;
+	}
+
+	.member_01 li:last-child button{
+		width: 20%;
+		padding:0.5%;
+		text-align:center;
+		outline: none;
+		background-color: #231b26;
+	}
+
+
+
+	.member_01 li:nth-child(4){
+		border: 1px solid #ededed;
+	}
+
+
+	.help_01{
+		font-size: 10px!important;
+	}
+
+
+
+
+	
+
+@media screen and (max-width:320px){
+
+	.enter > .id > h3{
+		font-size: 11px;
+	}
+
+	.enter > .id{
+		font-size: 11px;
+	}
+
+	.table-bottom > button{
+		font-size: 12px;
+	}
+
+	.wrap05 .talk figure figcaption{
+		padding-top: 0 !important;
+	}
+
+	}
+
+/*css 추가*/
+		.wrap > .border_button > .pull-left{
+			margin: 0%;
+		}
+
+		.wrap > .border_button > .mb10{
+			float: right;
+		} 
+
+		.wrap > .border_button > .pull-left > a{
+			padding:0;
+			font-weight: normal;
+			font-size: 11px;
+		}
+
+		.wrap > .list > form > div > label{
+			display: inline-block;
+			padding:0;
+			height: 13px;
+			line-height: 15px;
+			float: right;
+			font-size: 11px;
+			font-weight: normal;
+		}
+
+		.wrap > .list > form > div > label > input{
+			margin:0;
+			float: left;
+			margin-right: 5px;
+		}
+
+		.wrap > .list > form > div > ul > li > input{
+			margin:0;
+			float: right;
+			position: absolute;
+			right: 3%;
+		}
+
+		
+
+		
+
+		.wrap .list .table-top{
+			display: inline-block;
+			width: 100%;
+		}
+
+		.wrap .list .table-top .col-md-6 .searchbox form{
+			display: inline-block;
+			width: 100%;
+		}
+
+		.wrap .list .table-top .col-md-6 .searchbox form .form-group select{
+			height: 23px;
+			padding:0 3px 1px;
+			float: left;
+			margin-right: 2%;
+			font-size: 11px;
+
+		}
+
+		.wrap .list .table-top .col-md-6 .searchbox form .form-group input{
+			width:190px;
+			height: 23px;
+			float: left;
+			margin-right: 2%;
+		}
+
+
+		.list h3{
+		font-size:13px;
+		text-align:right;
+		margin-bottom:2%;
+		font-weight: bold;
+		}
+
+
+
+/*공지사항,이벤트의 탭영역 영역*/
+		.notice_top ul{
+			width: 100%;
+		}
+
+		.notice_top ul li{
+			width: 50%;
+			float: left;
+			border:1px solid #ededed;
+			border-right: 0;
+			box-sizing: border-box;
+		}
+
+		.notice_top ul li:last-child{
+			border-right: 1px solid #ededed;
+		}
+
+		.notice_top ul li a{
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			display: inline-block;
+			width: 100%;
+			padding: 7px 0 3px; 
+		}
+
+
+
+		.notice_top table tr td{
+			border:1px solid #ededed;
+			
+		}
+
+
+	
+
+	/*공지사항 content 영역*/
+
+	/*	.wrap04 .content p{
+	    border:1px solid #ededed;
+	    padding:3%;
+	  }*/
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*wrap padding-top 값*/
+	.wrap{
+		padding-top:35%;
+		}
+
+	.wrap02{
+		padding-top:15%;
+		}
+
+	.wrap03{
+		padding-top:25%;
+		}
+
+	.wrap04{
+		padding-top: 20%;
+	}
+
+	.wrap05{
+		padding-top:18%;
+	}
+
+/*메인화면 영역*/
+	/*메인 이미지 슬라이드 영역*/
+		.slide{
+			padding:0;
+			background-color:#ececec;
+			}
+
+		.bx-wrapper {
+			position: relative;
+			*zoom: 1;
+			}
+
+		.bx-wrapper img {
+			max-width: 100%;
+			display: block;
+			}
+
+		.bx-wrapper ul{
+			padding:0;
+			}
+
+		.bx-wrapper .bx-viewport {
+			position:fixed;
+			width:100%;
+		/*fix other elements on the page moving (on Chrome)*/
+			-webkit-transform: translatez(0);
+			-moz-transform: translatez(0);
+		    -ms-transform: translatez(0);
+		    -o-transform: translatez(0);
+		    transform: translatez(0);
+			}
+
+		.bx-wrapper .bx-pager,
+		.bx-wrapper .bx-controls-auto {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			}
+
+		.bx-wrapper .bx-loading {
+			min-height: 50px;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2000;
+			}
+
+		.bx-wrapper .bx-pager {
+			text-align: center;
+			font-size: .85em;
+			font-family: Arial;
+			font-weight: bold;
+			color: #666;
+			padding-top: 20px;
+			}
+
+		.bx-wrapper .bx-pager .bx-pager-item,
+		.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+			display: inline-block;
+			*zoom: 1;
+			*display: inline;
+			}
+
+		.bx-wrapper .bx-pager.bx-default-pager a {
+			background:#fff;
+			text-indent: -9999px;
+			display: block;
+			width: 7px;
+			height: 7px;
+			margin: 0 3px;
+			outline: 0;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			}
+
+		.bx-wrapper .bx-pager.bx-default-pager a:hover,
+		.bx-wrapper .bx-pager.bx-default-pager a.active {
+			background: #c20e58;
+			width: 12px;
+			height: 7px;
+			}
+
+		.bx-wrapper .bx-prev {
+			left: 10px;
+			}
+
+		.bx-wrapper .bx-next {
+			right: 10px;
+			}
+
+		.bx-wrapper .bx-prev:hover {
+			background-position: 0 0;
+			}
+
+		.bx-wrapper .bx-next:hover {
+			background-position: -43px 0;
+			}
+
+		.bx-wrapper .bx-controls-direction a {
+			position: absolute;
+			top: 72%;
+			margin-top: -16px;
+			outline: 0;
+			width: 32px;
+			height: 32px;
+			text-indent: -9999px;
+			z-index: 9999;
+			}
+
+		.bx-wrapper .bx-controls-direction a.disabled {
+			display: none;
+			}
+
+		.bx-wrapper .bx-controls-auto {
+			text-align: center;
+			}
+
+		.bx-wrapper .bx-controls-auto .bx-start {
+			display: block;
+			text-indent: -9999px;
+			width: 10px;
+			height: 11px;
+			outline: 0;
+			margin: 0 3px;
+			}
+
+		.bx-wrapper .bx-controls-auto .bx-start:hover,
+		.bx-wrapper .bx-controls-auto .bx-start.active {
+			background-position: -86px 0;
+			}
+
+		.bx-wrapper .bx-controls-auto .bx-stop {
+			display: block;
+			text-indent: -9999px;
+			width: 9px;
+			height: 11px;
+			outline: 0;
+			margin: 0 3px;
+			}
+
+		.bx-wrapper .bx-controls-auto .bx-stop:hover,
+		.bx-wrapper .bx-controls-auto .bx-stop.active {
+			background-position: -86px -33px;
+			}
+
+		.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+			text-align: left;
+			width: 80%;
+			}
+
+		.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+			right: 0;
+			width: 35px;
+			}
+
+		.bx-wrapper .bx-caption {
+			position: absolute;
+			bottom: 30px;
+			left: 0;
+			background: #666\9;
+			background: rgba(80, 80, 80, 0.75);
+			width: 100%;
+			}
+
+		.bx-wrapper .bx-caption span {
+			color: #fff;
+			font-family: Arial;
+			display: block;
+			font-size: .85em;
+			padding: 10px;
+			}
+
+	/*메인 메뉴 영역*/
+		.main_list ul li{
+			width:32%;
+			margin-right:2%;
+			margin-bottom:3%;
+			float: left;
+			}
+
+		.main_list ul li:nth-child(3n){
+			margin-right:0;
+			}
+
+		.main_list ul li:nth-child(7),
+		.main_list ul li:nth-child(8),
+		.main_list ul li:nth-child(9) {
+			margin-bottom:0;
+			}
+
+		.main_list ul li a figure img{
+			width:100%;
+			margin-bottom:5%;
+			border:1px solid #fff;
+			border-radius: 5px;
+			}
+
+		.main_list ul li a figure figcaption{
+			padding:0 3%;
+			}
+
+		.main_list ul li a figure figcaption h2{
+			margin-bottom:3%;
+			color:#c20e58;
+			font-size: 13px;
+			font-weight: bold;
+			}
+		.main_list ul li a figure figcaption p{
+			font-size: 11px;
+			line-height: 14px;
+		}
+
+	/*공지사항, 이벤트 영역*/
+	    .notice{
+	        width: 100%;
+	        padding:0 0 0;
+	        background-color: #231b26;
+	        margin-bottom:0;
+	    }
+
+	    .notice ul{
+	    	border:1px solid #ededed;
+	    	border-left: 0;
+	    	border-right: 0;
+	    	background-color: #fff;
+	    }
+
+	    .notice ul li{
+	        
+	        height: 20px;
+	        padding:1.5%;
+	        border-bottom: 1px solid #ededed;
+	        
+	    }
+
+	    .notice ul li:last-child{
+	        margin-bottom:0;
+	    }
+
+	    .notice ul li a{
+	        font-size: 12px;
+	    }
+
+	    .notice ul li a h3{
+	        font-size: 12px;
+	        font-weight: normal;
+	        float: left;
+	        width: 20%;
+	        text-align:center;
+	        padding:6px 0 1px;
+	        background-color: #c20e58;
+	        border-radius:7px;
+	        margin-right: 3%;
+	        color:#fff;
+	    }
+
+	    .notice ul li a p{
+	        font-size: 11px;
+	        text-overflow: ellipsis;
+	        overflow: hidden;
+	        white-space: nowrap;
+	        position: relative;
+	        top: 1px;
+	    }
+
+	/*footer02 영역*/
+		.footer_02{
+		    margin-bottom:0;
+		    position: relative;
+		    /*bottom:-5px;*/
+		    background-color: #232121;
+		    color:#fff;
+		    padding:3%;
+		   }
+
+		.footer_02 > nav > ul{
+		    border:1px solid #fff;
+		    display: inline-block;
+		    width:100%;
+		   }
+
+		.footer_02 > nav > ul > li{
+		    width: 100%;
+		    border-bottom: 1px solid #fff;
+		    box-sizing: border-box;
+		    padding:2.5% 3% 2.2%;
+		    font-size: 13px;
+		   }
+
+		.footer_02 > nav > ul > li:first-child > span{
+		    float: right;
+		    font-size: 15px;
+		    transition: rotate(0deg);
+		    position: relative;
+		    top: -1px;
+		   }
+
+		.footer_02 > nav > ul > li:nth-child(2){
+		    display: none;
+		   }
+
+		.footer_02 > nav > ul > li:nth-child(3){
+		    width: 90%;
+		    border-right: 1px solid #fff;
+		    box-sizing: border-box;
+		    float: left;
+		    padding-bottom:1.5%;
+		   }
+
+		.footer_02 > nav > ul > li:nth-child(3) > a >  figure > figcaption{
+		    float: left;
+		   }
+
+	   .footer_02 > nav > ul > li:nth-child(3) > a > figure > img{
+		    width: 4.5%;
+		    float: right;
+		    position: relative;
+		    top:-2px;
+		   }
+
+	   	.footer_02 > nav > ul > li:nth-child(3),
+	   	.footer_02 > nav > ul > li:last-child{
+	   		 border-bottom:0;
+	   		}
+
+	   .footer_02 > nav > ul > li:last-child{
+		    width: 10%;
+		    float: right;
+		    text-align:center;
+		    font-size: 10px;
+		    padding:1.2% 0 0.7%;
+		    box-sizing: border-box;
+		   }
+
+		.footer_02 > nav > ul > li:nth-child(2) > ul > li{
+		    padding: 1.5%;
+		    box-sizing: border-box;
+		    font-size: 12px;
+		    line-height: 16px;
+		   }
+
+	   .footer_02 a{
+		    color:#fff;
+		   }
+
+/*자유 게시판 , 업소후기 영역*/
+	/*자유게시판 검색 영역*/
+		.list .notice_find{
+			height: 23px;
+			margin-bottom:3%;
+		}
+
+		.list .notice_find input{
+			height: 23px;
+			box-sizing: border-box;
+			margin-right: 5px;
+			float: left;
+			border-radius: 0;
+			outline: none;
+			border:1px solid #ededed;
+			background-color: transparent;
+			padding-left: 5px;
+		}
+
+		.list .notice_find button{
+			padding:0;
+			width: 23px;
+		}
+
+		.list .notice_find button .fa{
+			text-align:center;
+		}
+
+		.wrap05 .list .notice_find .choice{
+			width:70px;
+			height: 23px;
+			margin-right:5px;
+			text-align: center;
+			position: relative;
+			float: left;
+		}
+
+		.list .notice_find .choice label{
+			width:80%;
+			height: 23px;
+			line-height: 26px;
+			display: inline-block;
+			background:url(/assets/images/temp/find_btn.png) no-repeat right center;
+			background-size: 16%;
+			padding-right: 15%;
+			font-size: 11px;
+		}
+
+		div.notice_find > .choice > select{
+			width:100%;
+			height: 23px;
+			border-radius: 0;
+			background-color: transparent;
+			color:transparent;
+			position: absolute;
+			top: 0;
+			left: 0;
+			outline: none;
+			border:1px solid #ededed;
+		}
+
+		div.notice_find > .choice > select > option{
+			color:#000;
+		}
+
+	/*자유게시판 전체목록버튼 영역*/
+		.wrap05 > .border_button > .mr10 > a{
+			font-weight: normal;
+		}
+
+	/*업소후기,자유게시판의 의 후기작성,글쓰기버튼 ,후기갯수,게시글갯수  표기 영역 영역*/
+		.title03  p{
+			font-size: 11px;
+			/*font-weight: bold;*/
+			display: inline-block;
+			float: right;
+			padding: 0;
+			line-height: 14px;
+		}
+
+		.title03 p span{
+			font-size: 13px;
+			color:#c20e58;
+			font-weight: bold;
+		}
+
+		.title03 h3{
+			font-size: 13px;
+			display: inline-block;
+			float: left;
+			margin-top: 1px;
+			padding:1.5% 2% 1%;
+			background-color: #c20e58;
+			border-radius: 5px;
+		}
+
+		.title03 h3 a{
+			color: #fff;
+		}
+
+
+	/*업소후기,자유게시판 리스트  영역*/
+		.list form{
+				/*display: inline-block;		*/
+			}
+
+		.list form div.mt10{
+				width: 100%;
+				margin: 0;
+				display: inline-block;
+			}
+
+		.list ul li{
+			box-sizing: border-box;
+			border:1px solid #ededed;
+			margin-bottom:1.5%;
+			padding:3% 2% 2%;
+			position: relative;
+			}
+
+		.list ul:nth-child(2n){
+			background-color: #f8f2f5;
+			}
+
+		.list ul li a{
+			padding:0%;
+			display: inline-block;
+			width:100%;
+			box-sizing: border-box;	
+			}
+
+		.list ul li a h2{
+			margin-bottom:2%;
+			font-weight: normal;
+			}
+
+	
+
+		.list ul li.gallery-box a p { 
+		  padding-left:2%;
+		  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+		  white-space: normal; height: 2.6em; text-align: left; word-wrap: break-word; 
+		  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+		}
+
+		.list ul li a span{
+			float:right;
+			margin-top: 3%;
+			}
+    
+	/*자유게시판 리스트 클릭해서 들어갔을때*/ 
+
+		/*제목,컨텐츠 영역*/
+				.notice_title > div{
+					padding:2% 0 1.5% 3%;
+					border:1px solid #232121;
+					font-size: 13px;
+				}
+
+				.content {
+					margin-bottom: 5%;
+				}
+
+				.content .contents-view{
+					margin-bottom: 3%;
+				}
+
+				.wrap05 .post-content {
+					border:1px solid #232121;
+					font-size: 12px ;
+					padding:2% 5%;
+					font-family: monospace;
+					line-height: 18px;
+					
+
+				}
+
+				.content .autosize { position:relative; height: 0; padding-bottom: 56.25%; overflow: hidden; margin:0; }
+				.content .autosize iframe, .autosize object, .autosize embed { position: absolute; top: 0; left: 0; width: 100%; height:100%; }
+
+		/*댓글작성 하기 영역*/
+				.reply_02{
+					padding:0;
+				}
+
+				.reply_02 .reply{
+					display:inline-block;
+					width: 50px;
+				}
+
+				.reply_02 #fcomment h2{
+					font-size: 12px;
+					font-weight: normal;
+				}
+
+				.reply_02 textarea{
+					width: 100%;
+					padding:2%;
+					box-sizing: border-box;
+					overflow: scroll;
+					height: 40px;
+					margin-top: 1.5%;
+					outline: none;
+					border:1px solid #ededed; 
+					font-size: 11px;
+					line-height: 15px;
+					border-radius: 0;
+					margin-bottom: 1%;
+				}
+
+				.reply_02 button{
+					width: 12%;
+					float: right;
+					border:0;
+					color:#fff;
+					background-color: #231b26;
+					padding: 1.5% 0 1%;
+				}
+
+		/*댓글 리스트 영역*/
+				.reply_02 ul li{
+					display: inline-block;
+					width: 100%;
+					padding:2.5%;
+					box-sizing: border-box;
+					border-bottom: 1px solid #ededed;
+				}
+
+				.reply_02 ul li div{
+					word-break: break-all;
+					padding-left: 3%;
+					background: url(../images/temp/reply_02.png) no-repeat top left;
+					font-size: 12px;
+					background-size: 5%;
+					padding-left:4%;
+					box-sizing:border-box; 
+					margin-bottom:1.5%;
+					font-family: monospace;
+					line-height: 20px;
+				}
+
+				.reply_02 ul li  span{
+					float: right;
+					font-size: 11px;
+					font-weight: normal;
+					width: 100%;
+					text-align:right;
+				}
+
+				.reply_02 #viewcomment{
+					padding:0;
+				}
+
+				.reply_02 #viewcomment div{
+					margin-bottom: 2.5%;
+					padding-top:0.8%;
+				}
+
+				.reply_02 .chk_comment_all_wrapper > label{
+					height: 13px;
+					padding:0;
+					line-height: 15px;
+					font-size: 11px;
+					font-weight: normal;
+					display: inline-block;
+				}
+
+				.reply_02 > div{
+					padding:0 3%;
+					box-sizing: border-box;
+				}
+
+				.reply_02 > div#viewcomment{
+					padding:0;
+				}
+
+
+		/*댓글리스트의 작성일 , 수정삭제 영역*/
+				.reply_02 ul li  span .reply{
+					display:inline-block;
+					width: 50px;
+				}
+
+/*업소 리스트(1*2 리스트)*/
+	.store_list ul li{
+		width:49%;
+		float: left;
+		margin-right:2%;
+		/*margin-bottom:3%;*/
+		}
+
+	.store_list ul li:nth-child(2n){
+		margin-right:0;
+		}
+
+	.store_list ul li:nth-child(3),
+	.store_list ul li:nth-child(4){
+		margin-bottom:0;
+		}
+
+	.store_list ul li a figure{
+		display: inline-block;
+		width:100%;
+		}
+
+	.store_list ul li a figure img{
+		width:100%;
+		margin-bottom:5%;
+		border:1px solid #ededed;
+		box-sizing: border-box;
+		display:block;
+		}
+
+	.store_list ul li a figure figcaption{
+		padding:0 3%;
+		box-sizing: border-box;
+		}
+
+	.store_list ul li a figure figcaption h2{
+		color:rgb(194, 14, 88);
+		margin-bottom:2%;
+		/*font-size: 13px;*/
+		font-weight: bold;
+		/*height: 0.96em;*/
+		white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /*white-space: normal;
+        word-wrap: break-word; 
+        display: -webkit-box;
+        -webkit-line-clamp: 1; -webkit-box-orient: vertical;
+        */
+        padding-top:2%;
+		}
+
+	.store_list ul li a figure figcaption p{
+		white-space: nowrap;
+		overflow: hidden;
+		margin-bottom:5%;
+		text-overflow: ellipsis;
+		white-space: normal;
+		height: 1.2em;
+		text-align: left;
+		word-wrap: break-word; 
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		font-size: 11px;
+		padding-top: 1px;
+		line-height: 14px;
+		}
+
+	.store_list ul li a figure figcaption span{
+		margin-top:3%;
+		display: block;
+		white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+		font-size: 10px;
+		font-weight: bold;
+		padding-top: 3px;
+
+		}
+
+/*업소 리스트 (1줄 리스트)*/
+	.store_list02 .table-image ul{
+		margin-bottom:1.5% !important;
+	}
+
+	.store_list02 .table-image ul:last-child{
+		margin-bottom: 0 !important;
+	}
+
+	.store_list02 ul li{
+		width:100%;
+		box-sizing: border-box;
+		border:1px solid #ededed;
+		margin-bottom:1.5%;
+		padding:3.7%;
+		padding-left: 36.7%;
+		/*padding-top:3%;
+		padding-bottom:3%;*/
+		position: relative;
+		background-size: 33% 100% !important;
+
+		/*background: url(../images/photo02.png) no-repeat left top;
+		background-size: 38.5%*/
+		}
+
+		.store_list02 ul li input{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+	.store_list02 ul li:last-child{
+		margin-bottom:0;
+		}
+
+	.store_list02 ul li a{
+		/*padding:2%;
+		padding-left: 41%;*/
+		display:inline-block;
+		width:100%;
+		box-sizing: border-box;
+		}
+
+	.store_list02 ul li a h2{
+		margin-bottom:3%;
+		color:rgb(194, 14, 88);
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 16px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		padding-top: 3px;
+		}
+
+	.store_list02 ul li a p{
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		height: 20px;
+		text-align: left;
+		word-wrap: break-word; 
+		display: -webkit-box;
+		-webkit-line-clamp: 2; -webkit-box-orient: vertical;
+		font-size: 11px;
+		padding-top: 1px;
+		line-height: 14px;
+		}
+
+	.store_list02 ul li a span{
+		float: right;
+		/*margin-top:3%;*/
+		font-size: 10px;
+		font-weight: bold;
+		}
+
+/*상점 위치확인 영역*/
+	/*상점 위치 확인의 내위치 정보 보여주는 table*/
+		.store table{
+			width:100%;
+			float: left;
+			}
+
+		.store table tr td{
+			border:1px solid #231b26;
+			padding: 2% 1.5% 1.5% 2.5%;
+			font-size: 13px;
+			font-weight: normal;
+			}
+
+		.store table tr td:first-child{
+			width:70%;
+			}
+
+		.store table tr td:last-child{
+			width:15%;
+			vertical-align: middle;
+			padding:3% 1.5% 1.5% 2%;
+			}
+
+		.store table tr:first-child td:last-child{
+			background-color: #231b26;
+			color:#fff;
+			text-align: center;
+			}
+
+	/*상점 찾아가는 방법 table*/
+		.method table{
+			width:100%;
+			}
+
+		.method table tr td{
+			width:50%;
+			border:1px solid #ededed;
+			text-align: center;
+			padding:1.5%;
+			box-sizing: border-box;
+			vertical-align: middle;
+			font-size: 13px;
+			}
+
+		.method table tr td.active{
+				background-color:rgb(239, 208, 222);
+			}
+
+		.method table tr td figure{
+			width:100%;
+			display: inline-block;
+			}
+
+		.method table tr td figure img{
+			width:20%;
+			vertical-align: middle;
+			}
+
+		.method table tr td figure figcaption{
+			display: inline-block;
+			}
+
+		.method a img {
+			width:100%;
+			border:1px solid #ededed;
+			}
+
+		#formatedAddress{
+			font-size: 13px;
+			font-weight: normal;
+			}
+
+	/* 지도 영역*/
+		.map{
+			padding:0;
+		}
+
+/*시크릿 투어,비자,렌트가 클릭시 영역*/
+	/*시크릿 투어,비자,렌트가 서브 이미지*/
+		.wrap05 .title img{
+				width: 100%;
+			}
+
+	/*시크릿 투어 메인 제목 영역*/
+		.wrap05 > .title > h2{
+			color:#c00e57;
+		}
+
+		.wrap05 > .title > h2 > span{
+			font-weight: normal;
+			margin-top: 3%;
+			margin-bottom: 0;
+			color:#000;
+		}
+
+	/*카카오톡 영역*/
+		.talk{
+			text-align: left;
+		}
+		.talk figure{
+			width: 100%;
+			margin:0 auto;
+			text-align: center;
+			display: inline-block;
+		}
+
+		.talk figure img{
+			width: 11%;
+			margin-right: 3%;
+			float: left;
+		}
+
+		.talk figure figcaption{
+			display: inline-block;
+			float: left;
+			width: 85%;
+			padding-top: 1%;
+		}
+
+		.talk figure figcaption h2{
+			font-size: 18px;
+			text-align:left;
+			font-weight: normal;
+			width: 45%;
+			margin-bottom: 0;
+			float: left;
+			line-height: 16px;
+			color:#c00e57;
+		}
+
+		.talk figure figcaption span{
+			font-size: 12px;
+			color: #000;
+			display: block;
+		}
+
+		.talk figure figcaption p{
+			color: #5d5d5d;
+			display: inline-block;
+			width: 51%;
+			text-align: right;
+			font-size: 10px;
+			line-height: 12px;
+			padding-top: 4%;
+		}
+
+	/*제목글 작성영역*/
+		.write_area{
+			width: 100%;
+			margin: 0 auto 5%;
+			display: block;
+		}
+
+		.write_area input{
+			width: 100%;
+			padding:1.5%;
+			font-size: 11px;
+			border:1px solid #231b26;
+			border-radius: 0;
+			margin-bottom: 2%;
+		}
+
+	/*내용  작성영역*/
+		.write_area textarea{
+			width: 100%;
+			height: 120px;
+			margin-bottom:2%;
+			box-sizing: border-box;
+			border:1px solid #231b26;
+			outline: none;
+			padding:1.5%;
+			border-radius: 0;
+			font-size: 11px;
+			font-family:'Arial';
+			font-weight: normal;
+		}
+
+	/*작성완료 버튼 영역*/
+		.write_area button{
+			width: 100%;
+			border-radius: 5px;
+			border: 0;
+			font-weight: bold;
+			padding-top: 7px;
+			padding-bottom: 8px;
+			outline: none;
+			font-size: 13px;
+			height: 25px;
+		}
+
+	/*댓글 검색 영역*/
+		.col-md-6 form{
+			width: 223px;
+			margin-bottom: 3%;
+		}
+
+		.col-md-6 form .form-group input{
+			width:195px;
+			height: 23px;
+			float: left;
+			margin-right: 5px;
+			border-radius: 0px;
+			background-color: transparent;
+			padding:0;
+			padding-left: 5px;
+
+		}
+
+		.col-md-6 form .form-group button{
+			width: 23px;
+			padding:0;
+		}
+
+	/*댓글리스트 영역*/
+		.inquire ul li{
+			border:1px solid #ededed;
+			padding:3% 3% 2%;
+			box-sizing: border-box;
+			display: inline-block;
+			width: 100%;
+			position: relative;
+			margin-bottom: 2%;
+		}
+
+		.inquire h3{
+			width:72%;
+			margin-right: 3%;
+			font-size: 14px;
+			/*height: 30px;*/
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2; /* 라인수 */
+			-webkit-box-orient: vertical;
+			word-wrap:break-word; 
+			line-height: 15px;
+			float: left;
+			margin-bottom: 3%;
+		}
+
+		.inquire .question{
+			 display: none;
+		}
+
+		.inquire li .clear p{
+			float: right;
+			padding-top: 4px;
+		}
+
+		.inquire li span{
+			position: absolute;
+			top: 13px;
+			right: 4%;
+		}
+		
+		.inquire form li span.color{
+			color:#c00e57;
+		}
+
+		.inquire form li .clear{
+			width: 100%;
+			display: inline-block;
+			position: relative;
+			bottom:-5px;
+		}
+
+		.inquire .question p{
+			display: inline-block;
+			margin: 3% 0 5%;
+			width: 100%;
+		}
+
+		.inquire .question ul{
+			width: 97.5%;
+			margin:0 0 0 2.5%;
+		}
+
+		.inquire .question ul li{
+			border:0;
+			font-size: 11px;
+			background:url(https://secretvt.com/assets/images/temp/reply_02.png) no-repeat top left;
+			background-size: 5%;
+			padding:2px 0 0 4.5%;
+			line-height: 14px;
+			margin-bottom: 3%;
+			display: inline-block;
+			width: 100%;
+		}
+
+		.inquire .question ul li p{
+			margin-bottom:1.5%;
+			margin-top: 0;
+		}
+
+		.inquire .button{
+			width: 45%;
+			float: right;
+		}
+
+		.inquire .button button{
+			width: 32%;
+			text-align:center;
+			border: 0;
+			border-radius: 3px;
+			background:#232121;
+			font-size: 10px; 
+			padding: 2px 0 2px;
+			float: left;
+			font-weight: bold;
+			color:#fff;
+			outline: none;
+			margin-right: 2%;
+		}
+
+		.inquire .button button:last-child{
+			margin-right: 0%;
+		}
+
+		.inquire .question .button{
+			width:30%;
+		}
+
+		.inquire .question .button button{
+			width:49%;
+		}
+
+	/*주의사항 영역*/
+		.caution h2{
+		margin-bottom: 3%;
+		color:#c00e57;
+		}
+
+		.caution pre{
+			display: inline-block;
+			width: 100%;
+			font-size: 11px;
+			line-height: 13px;
+			margin-bottom: 1.5%;
+			color: #5d5d5d;
+		}
+
+/*후기 작성영역*/
+
+	/*작성정보 영역*/
+		.write figure{
+			width:100%;
+			padding: 0 1.5%;
+			box-sizing: border-box;
+			display: inline-block;
+			background-color: #231b26;
+			border-radius: 10px;
+			}
+
+		.write figure img{
+			width: 10%;
+			float: left;
+			margin-left: 2.5%;
+			}
+
+		.write figure figcaption{
+			color:#fff;
+			width: 87%;
+			font-size:14px;
+			padding-top: 3%;
+			display:inline-block; 
+			}
+
+		.write figure figcaption span{
+			float:right;
+			padding-top: 2%;
+			padding-right: 5%;
+			font-weight: normal;
+			font-size: 11px;
+			}
+
+	/*제목,업로드 라벨영역 */
+		label.text_title {
+			float:left;
+			margin-right:1%;
+			width:18%;
+			font-size:12px;
+			padding:7px 0 1%;
+			text-align: center;
+			background-color:#231b26;
+			box-sizing: border-box;
+			border-radius: 6px;
+			color:#fff;
+			height: 24px;
+			}
+
+	/*파일업로드 영역*/
+		input.text_title{
+			width:79%;
+			margin-top: 0.5%;
+			padding:0.5% 0;
+			border:1px solid #231b26;
+			outline: none;
+			background-color: #fff;
+			font-size: 12px;
+			box-sizing: border-box;
+			padding-left: 1%;
+			height: 22px;
+			float: right;
+		}
+
+		.filebox input[type="file"]{
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0,0,0,0);
+		border:0;
+		}
+
+	/*작성완료,시트릿투어 의 작성하기 버튼 영역 , 취소 버튼 영역*/
+		.table-bottom button:first-child{
+		margin-right: 0;
+		/*width: 20%;*/
+		}
+
+		.table-bottom button{
+		background-color: #231b26;
+		padding:0px 10px;
+		color:#fff;
+		/*width: 11%;*/
+		}
+
+/*광고 영역(공통)*/
+	.ad{
+		padding:0;
+		margin:0;
+		}
+
+	.ad a img{
+		width:100%;
+		border-top: 1px solid #ededed;
+		border-bottom:1px solid #ededed;
+		box-sizing: border-box;
+		}
+
+/*공지사항 리스트 영역*/
+		.notice_list table{
+			width: 100%;
+			border-top: 2px solid #231b26;
+		}
+
+		.notice_list table tr:nth-child(2){
+			border-top:1px solid #231b26;
+		}
+
+		.notice_list table tr{
+			border-bottom:1px solid #231b26;
+		}
+
+		.notice_list table tr th{
+			padding:7px 0 3px;
+			font-size: 12px;
+			text-align:center;
+			font-weight: bold;
+		}
+
+		.notice_list table tr td{
+			padding:10px 0 7px;
+			font-size: 11px;
+			text-align:center;
+		}
+
+/*이벤트 리스트 영역*/
+	.event_list{
+		margin-bottom:0;
+	}
+	.event_list li{
+		width: 49%;
+        margin-right: 2%;
+        float: left;
+        margin-bottom: 5%;
+    }
+    .event_list li:nth-child(2n){
+        margin-right: 0;
+    }
+    .event_list  figure img{
+        margin-bottom: 5%;
+        width:100%;
+    }
+    .event_list figcaption h3{
+        font-size: 12px;
+        padding:0 3%;
+        text-align:center;
+        line-height: 18px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .event_list figcaption span{
+        font-size: 10px;
+        display:block;
+        margin-top: 3%;
+    }
+
+/* 로그인 화면 영역 */
+	.enter{
+		margin-bottom: 5%;
+	}
+	/*"알려드립니다 메일 타이틀 영역*/
+		.enter h2{
+			text-align:center;
+			line-height: 18px;
+			margin-bottom:3%
+			}
+
+		.enter span{
+			display: block;
+			margin-bottom:3%;
+			font-size:18px; 
+			color:#ee2c6c;
+			}
+
+	/*.id 영역*/
+		.enter .id{
+			width: 55%;
+			height: 23px;
+			margin:0 auto;
+			margin-bottom:3%;
+			position: relative;
+			font-size:12px;
+			}
+			/*아이디 ,  패스워트 입력 영역*/
+				.enter .id h3{
+					display: inline-block;
+					font-size: 12px;
+					position: absolute;
+					width: 25%;
+					height: 21px;
+					line-height:20px;
+					font-weight: bold;
+					top: 4px;
+					}
+
+				.enter .id div{
+					width: 70%;
+					height: 22px;
+					float: right;
+					position: relative;
+					border:1px solid #838383;
+					box-sizing: border-box;
+				}
+
+				.enter .id div input{
+					position: absolute;
+					top: 2px;
+					left: 2px;
+					background-color: transparent !important;
+					border-radius: 0;
+					border:0;
+					outline: none;
+					width: 95%; 
+					padding: 0
+				}
+			/*아이디,패스워드 기억하기 영역*/
+				.enter .id input[type="checkbox"]{
+					margin: 0;
+					position: absolute;
+					left: 9%;
+				}
+
+				.enter .id label{
+					margin: 0;
+					position: absolute;
+					left: 21%;
+					top: 3px;
+				}
+
+				.enter label.error{
+					margin-top: 19px;
+					left : 0px;
+				}
+			/*로그인 버튼 영역*/
+				.enter .id .submit_btn{
+					width:100%;
+					height:25px;
+					background-color: #231b26;
+					border:none;
+					border-radius: 3px
+					}
+
+				.enter .id input[type="submit"]{
+					float:right;
+					width:100%;
+					line-height: 26px
+					; height:25px;
+					background-color: transparent;
+					border:none;
+					position: absolute;
+					top:0; right:0;
+					font-weight: bold;
+					color:#fff;
+					outline: none;
+					font-size: 15px
+					}
+
+	/*회원가입,아이디 찾기 영역*/
+		.enter .signup02 {
+			width:100%;
+			margin:0 auto;
+			font-size:11px;
+			display: inline-block;
+			}
+
+		.enter .signup02 p  {
+			width:50%;
+			text-align: center;
+			font-size:11px;
+			display: inline-block;
+			float: left;
+			border-right:1px solid #ededed;
+			box-sizing: border-box;
+			line-height: 13px;
+			}
+
+		.enter .signup02 p:last-child{
+			border:0;
+			}
+
+		.enter .signup02 p a {
+			margin-top:5%;
+			font-weight: bold;
+			font-size:13px;
+			display: block;
+			}
+
+	/*자물쇠 이미지 영역*/
+		.enter figure{
+			text-align: center;
+		}
+
+		.enter figure img{
+			width: 20%;
+		}
+
+/*회원가입의 이용약관 영역 */
+	/*필수사항 css*/
+		.table-box > .title02 > p > span{
+			font-size: 11px;
+		}
+
+	.agree{
+		margin-bottom: 8%;
+	}
+
+	/*약관동의합니다 checkbox 문구 영역*/
+		.agree label{
+			font-size:13px;
+			vertical-align: middle;
+			}
+
+	/*약관내용 글자 css*/
+		.document div{
+			font-size: 11px;
+			line-height: 13px;
+		}
+
+		.agree p , .agree pre {
+			width:100%;
+			height: 200px;
+			border:1px solid #ededed;
+			padding:3%;
+			box-sizing: border-box;
+			overflow-y: scroll;
+			margin-bottom:3%;
+			}
+
+		.agree div.document {
+		width:100%;
+		height: 200px;
+		border:1px solid #ededed;
+		padding:3%;
+		box-sizing: border-box;
+		overflow-y: scroll;
+		margin-bottom:3%;
+		font-size:11px;
+		padding-top: 1px;
+		line-height: 13px
+		}
+
+	/*회원가입 정보입력영역,회원가입약관 의 회원가입 버튼*/
+		.my_info01 button{
+			width:20%;
+			padding:1.5%;
+			text-align: center;
+			background-color: #231b26;
+			color:#fff;
+			border:0;
+			/*font-weight: bold;*/
+			font-size:12px;
+			border-radius: 5px;
+			float: right;
+			outline: none;
+			font-family: 'Jeju Gothic', sans-serif;
+			}
+
+/*회원가입 정보 입력 영역*/
+	.my_info01 table{
+		width:100%;
+		border:1px solid #ededed;
+		margin-bottom: 3%;
+		}
+
+	.my_info01 tr{
+		border:1px solid #ededed;
+		}
+
+	.my_info01 td{
+		border:1px solid #ededed;
+		text-align: center;
+		padding: 2.5% 0 2%;
+		font-size:11px;
+		line-height: 13px;
+		}
+
+	.my_info01 td:first-child{
+		width:20%;
+		font-weight: bold;
+		background-color: rgb(239, 208, 222);
+		vertical-align: middle;
+		}
+
+	.my_info01 td:last-child{
+		padding-left:5%;
+		text-align:left;
+		}
+
+	.my_info01 td:last-child input{
+		width:90%;
+		font-size:11px;
+		padding: 1.5% 0 1.5% 3%;
+		border-radius: 0;
+		display: block;
+		}
+
+	/*조건문 영역*/
+		.my_info01 p{
+			margin-bottom:1%;
+			}
+
+
+
+
+
+	
+
+
+	.my_info01 ul{
+		margin-top: 5%;
+		padding:0 5%;
+	}
+
+	.my_info01 ul li{
+		padding:0 0.5%;
+		border-bottom:1px solid #ededed;
+	}
+
+	.my_info01 ul span{
+		float:right;
+	}
+
+/*회원가입 축하 메시지 이미지*/
+		.msg_content > img{
+			width:40%; 
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 3%;
+		}
+
+/*이메일 주소로 계정찾기 영역*/
+	.findarea .table-body > div{
+		text-align:center;
+	}
+
+	.findarea .table-body > div > img{
+		width:50%;
+	}
+
+	.findarea .table-body .text-center input{
+		height: 23px;
+	}
+
+	.findarea form div.alert button{
+		display: none;
+	}
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+/* boyoon 추가 css */
+	div.media div.media-body {
+		border-bottom:1px solid #ededed;
+		font-size:12px;
+		
+	}
+
+	div.media div.media-body h4{
+		padding:1.5% 0;
+		font-size:12px;
+		display: inline-block;
+		float:right;
+	}
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+/*목록,다음글 이전글 버튼 영역 */
+	/*가라오케의 업소 정보 영역 의 버튼 영역*/
+		.wrap > .mb3per,
+		.wrap04 > .mb3per
+		 {
+			width:96%;
+			margin: 0 auto 3%;
+		}
+
+		.wrap > .mb3per > .pull-right,
+		.wrap04 > .mb3per > .pull-right{
+			float: left !important;
+		}
+
+		.border_button{
+				width: 100%;
+			}
+
+		.btn-group > a{
+			font-weight: normal;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
