@@ -53,14 +53,14 @@
                 <?php echo banner('index_bxslider','order',3,0,'<li>','</li>'); ?>
         </section>
 
-        <section class="ad" style="margin-bottom:4%;">
+        <!-- <section class="ad" style="margin-bottom:4%;">
             <h4>
                 ad01
             </h4>
             <a href="<?php echo base_url('write/vtn_discount') ?>">
                 <img src="<?php echo base_url('assets/images/temp/middle_btn.png') ?>">
             </a>
-        </section>
+        </section> -->
 
         <section class="main_list">
             <h4>main_list</h4>
@@ -199,7 +199,7 @@
             </a>
         </section>
 
-        <section class="secret_bn">
+        <!-- <section class="secret_bn">
             <a href="<?php echo base_url('write/vtn_safevisa') ?>">
                 <h4>ad02</h4>
                 <figure>
@@ -239,7 +239,7 @@
                         </figcaption>
                     </figure>
             </a>
-        </section>
+        </section> -->
 
     <?php 
     if(element('noti_title',element('0',element('notice_result', $view))) || element('eve_title',element('0',element('event_result', $view)))){
