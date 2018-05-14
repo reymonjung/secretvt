@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*wrap padding-top 값*/
 	.wrap{
-		padding-top:35%;
+		padding-top:30%;
 	}
 
 	.wrap02{
@@ -22,6 +22,10 @@
 
 	.wrap06{
 		padding-top: 13%;
+	}
+
+	.wrap07{
+		padding-top:15%;
 	}
 
 #jssor_1 > div > div > div > div{

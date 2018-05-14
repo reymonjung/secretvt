@@ -56,8 +56,8 @@ foreach (element(0, $menu) as $mkey => $mval) {
 
 ?>
 
-<div class="wrap03">
-<section>
+<div >
+<section class="wrap07">
 <h2><?php echo html_escape($men_name); ?> > <?php echo html_escape(element('board_name', element('board', $view))); ?><span><a href="<?php echo element('list_url', $view) ?>">목록보기 ></a></span></h2>
 
 <!-- 글쓴이 정보영역 -->

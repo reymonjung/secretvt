@@ -14,7 +14,7 @@
 
 
 
-<div class="wrap03">
+<div class="wrap07">
 
     <!-- <h3><?php echo html_escape(element('board_name', element('board', $view))); ?> 글쓰기</h3> -->
     <?php
