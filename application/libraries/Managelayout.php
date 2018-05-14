@@ -470,7 +470,7 @@ class Managelayout extends CI_Controller
 
         <div id="dialog_talk"  style="display:none;background:#fff">
             <div>
-                <img src="'.base_url('assets/images/temp/talk_popup.png').'" alt="benefit" style="width:100%;display:block" >
+                <img src="'.base_url('assets/images/temp/talk_logo.png').'" alt="benefit" style="width:100%;display:block" >
                 복사하기 <input id="clip_target" type="text" value="secretvn17" class="input px150" style="" >
             </div>
             <div class="popup_layer_footer" >
