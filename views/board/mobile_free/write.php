@@ -1,6 +1,19 @@
 <?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css'); ?>
 <?php echo element('headercontent', element('board', $view)); ?>
 
+<script>
+    $(document).ready(function(){
+        $(".write_title input").css("width" , $(".write_title").width()- 60);
+        $(".write_upload .upload-name").css("width" , $(".write_title").width()- 80);
+    });
+</script>
+
+
+
+
+
+
+
 <div class="wrap03">
 
     <!-- <h3><?php echo html_escape(element('board_name', element('board', $view))); ?> 글쓰기</h3> -->
@@ -17,13 +30,12 @@
         <?php if (element('is_post_name', element('post', $view))) { ?>
              <input type="hidden"  name="post_nickname" id="post_nickname" value="<?php echo set_value('post_nickname', element('post_nickname', element('post', $view))); ?>" />
              <input type="hidden"  name="post_email" id="post_email" value="<?php echo set_value('post_email', element('post_email', element('post', $view))); ?>" />
-            <section class="write">
+            <section class="write_info">
                 <figure>
-                    <img src="<?php echo base_url('assets/images/temp/user.png');?>" alt="user">
+                    <img src="<?php echo base_url('assets/images/temp/write_img/write_user.png');?>" alt="user">
                     <figcaption>
-
-                        <?php echo set_value('post_nickname', element('post_nickname', element('post', $view))); ?>
-                        <span><?php echo date("Y.m.d") ?></span>
+                        <h2><?php echo set_value('post_nickname', element('post_nickname', element('post', $view))); ?></h2>
+                        <span>작성일 : <?php echo date("Y.m.d") ?></span>
                     </figcaption>
                 </figure>
             </section>
@@ -45,13 +57,12 @@
             </li> -->
         <?php } else { ?>
        
-            <section class="write">
+            <section class="write_info">
                 <figure>
-                    <img src="<?php echo base_url('assets/images/temp/user.png');?>" alt="user">
+                    <img src="<?php echo base_url('assets/images/temp/write_img/write_user.png');?>" alt="user">
                     <figcaption>
-
-                        <?php echo $this->member->item('mem_nickname'); ?>
-                        <span><?php echo date("Y.m.d") ?></span>
+                       <h2><?php echo $this->member->item('mem_nickname'); ?></h2>
+                        <span>작성일 : <?php echo date("Y.m.d") ?></span>
                     </figcaption>
                 </figure>
             </section>
@@ -59,11 +70,11 @@
       
         <?php } ?>
         
-        <section  style="text-align:center; margin-bottom: 1.5%;">
-            <label class="text_title">
+        <section class="write_title">
+            <label>
                 제 목
             </label>
-            <input type="text" class="text_title input" name="post_title" id="post_title" value="<?php echo set_value('post_title', element('post_title', element('post', $view))); ?>" />
+            <input type="text" class="text_title" name="post_title" id="post_title" value="<?php echo set_value('post_title', element('post_title', element('post', $view))); ?>" />
         </section>
        
        
@@ -126,7 +137,7 @@
                 입력하실 수 있습니다.
             </div>
         <?php } ?>
-        <section class="form-group mb3per">
+        <section class="write_cont form-group mb3per">
             <!-- <?php if ( ! element('use_dhtml', element('board', $view))) { ?>
                 <div class="btn-group pull-right mb10">
                     <button type="button" class="btn btn-default btn-sm" onClick="resize_textarea('post_content', 'down');"><i class="fa fa-plus fa-lg"></i></button>
@@ -136,6 +147,8 @@
 
             <?php echo display_dhtml_editor('post_content', set_value('post_content', element('post_content', element('post', $view))), $classname = 'dhtmleditor', $is_dhtml_editor = element('use_dhtml', element('board', $view)), $editor_type = $this->cbconfig->item('post_editor_type')); ?>
         </section>
+
+
         <?php
         if (element('link_count', element('board', $view)) > 0) {
             $link_count = element('link_count', element('board', $view));
@@ -143,13 +156,14 @@
                 $link = html_escape(element('pln_url', element($i, element('link', $view))));
                 $link_column = $link ? 'post_link_update[' . element('pln_id', element($i, element('link', $view))) . ']' : 'post_link[' . $i . ']';
         ?>
-            <section class="filebox bs3-primary preview-image" style="margin-bottom:1%;"> 
-                
-                <input type="text" class="upload-name text_title " name="<?php echo $link_column; ?>" value="<?php echo set_value($link_column, $link); ?>" />
-                <label  class="text_title" style="margin-right: 3%;">
-                        링크<!--<?php echo $i+1; ?>-->
+        <section class="filebox bs3-primary preview-image"> 
+                <div class="write_upload" style="margin-bottom:1.5%; display: inline-block;">
+                    <input type="text" class="upload-name text_title " name="<?php echo $link_column; ?>" value="<?php echo set_value($link_column, $link); ?>" />
+                    <label  class="text_title">
+                            링크<!--<?php echo $i+1; ?>-->
                     </label>
-            </section>
+                </div>
+            
         <?php
             }
         }
@@ -162,22 +176,27 @@
         ?>
 
            
-                <section class="filebox bs3-primary preview-image" style="margin-bottom:1%;">                    
+            <div class="write_upload filebox bs3-primary preview-image">                    
+                <input class="upload-name text_title" value="선택된 파일이 없습니다." disabled="disabled" >
+                <input type="file" id="input_file<?php echo $i+1; ?>" class="upload-hidden text_title" name="<?php echo $file_column; ?>">
+                <label for="input_file<?php echo $i+1; ?>" class="text_title">
+                    업로드<!--<?php echo $i+1; ?>-->
+                </label>
+            </div>
+        </section>
 
-                    <input class="upload-name text_title" value="선택된 파일이 없습니다." disabled="disabled" >
-                    <input type="file" id="input_file<?php echo $i+1; ?>" class="upload-hidden text_title" name="<?php echo $file_column; ?>">
-                    <label for="input_file<?php echo $i+1; ?>" class="text_title" style="margin-right: 3%;">
-                        업로드<!--<?php echo $i+1; ?>-->
-                    </label>
-                    <?php if ($download_link) { ?>
+
+
+            <section class="write_del">
+                <?php if ($download_link) { ?>
                     <a href="<?php echo $download_link; ?>"><?php echo html_escape(element('pfi_originname', element($i, element('file', $view)))); ?></a>
                     <label for="<?php echo $del_column; ?>">
                         <input type="checkbox" name="<?php echo $del_column; ?>" id="<?php echo $del_column; ?>" value="1" <?php echo set_checkbox($del_column, '1'); ?> /> 삭제
                     </label>
                 <?php } ?>
-                </section>
+            </section>
+               
 
-                
                 
             
         <?php
@@ -196,9 +215,9 @@
                 <?php } ?>
             </div>
         <?php } ?>
-             <section class="table-bottom text-center mb10" style="text-align: right;">            
-                <button type="submit" class="btn btn-success btn-sm">작성완료</button> 
-                <button type="button" class="btn btn-default btn-sm btn-history-back" style="font-weight: normal;">취소</button> 
+             <section class="write_clear table-bottom">            
+                <button type="submit">작성완료</button> 
+                <button type="button" class="btn-history-back" style="font-weight: normal;">취소</button> 
             </section>
         </div>
     <?php echo form_close(); ?>

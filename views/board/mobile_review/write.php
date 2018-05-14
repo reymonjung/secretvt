@@ -70,7 +70,7 @@
             <label>
                 제 목
             </label>
-            <input type="text" class="text_title input" name="post_title" id="post_title" value="<?php echo set_value('post_title', element('post_title', element('post', $view))); ?>" />
+            <input type="text" class="text_title" name="post_title" id="post_title" value="<?php echo set_value('post_title', element('post_title', element('post', $view))); ?>" />
         </section>
        
        

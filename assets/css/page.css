@@ -655,7 +655,7 @@
         margin-bottom: 5%;
         padding-top: 2px;
         font-family: 'Jeju Gothic', sans-serif;
-        color: #eb2328;
+        color: #c20e58;
     }
 
     .event_list figcaption span{
@@ -1633,17 +1633,26 @@
 	.title03 h3{
 		display: inline-block;
 		float: left;
+		height: 10px;
+		background-color: #232121;
+		color: #fff;
+		line-height: 7px;
+		border-radius: 5px;
+		padding:5px 0;
+		width: 25%;
+		text-align: center; 
 	}
 
 	.title03 h3 a{
 		font-family: 'Jeju Gothic', sans-serif;
-		color: #0c1e42;
+		color: #fff;
+		font-size: 11px;
 	}
 
 /*업소후기,글쓰기 작성영역의 작성자 정보 영역*/
 	.write_info figure{
 		height: 52px;
-		background-color: #e7ecf5;
+		background-color: #f7edf1;
 		padding:3px 20px;
 		box-sizing: border-box;
 		border-radius:5px;
@@ -1675,7 +1684,7 @@
 		height: 24px;
 		line-height: 26px;
 		border-radius: 5px;
-		background-color: #0c1e42;
+		background-color: #232121;
 		display: inline-block;
 		color: #fff;
 		text-align:center;
@@ -1713,7 +1722,7 @@
 		margin-right: 10px;
 		line-height: 26px;
 		border-radius: 5px;
-		background-color: #0c1e42;
+		background-color: #232121;
 		display: inline-block;
 		color: #fff;
 		text-align:center;
@@ -1753,7 +1762,7 @@
 		height: 25px;
 		line-height: 26px;
 		border-radius: 5px;
-		background-color: #0c1e42;
+		background-color: #232121;
 		display: inline-block;
 		color: #fff;
 		text-align: center;
@@ -1805,13 +1814,14 @@
 		height: 25px;
 		line-height: 26px;
 		border-radius: 5px;
-		background-color:#0c1e42;
+		background-color:#c20e58;
 		display: inline-block;
 		color: #fff;
 		text-align: center;
 		float: right;
 		font-size: 13px;
 		margin-bottom: 2.5%;
+		outline: none;
 	}
 
 /*자유게시판의 댓글 리스트 영역*/

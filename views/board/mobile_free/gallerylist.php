@@ -32,7 +32,7 @@ if (element('menu', $layout)) {
         <p>총 <span><?php echo element('total_rows', element('data', element('list', $view))) ?>개</span>의 게시글이 있습니다.</p>
          <?php if (element('write_url', element('list', $view))) { ?>
         <h3>
-            <a href="<?php echo element('write_url', element('list', $view)); ?>" class="btn btn-sm">글쓰기</a>
+            <a href="<?php echo element('write_url', element('list', $view)); ?>" class="btn-sm">글쓰기</a>
         </h3>
     <?php } ?>
     </section>
