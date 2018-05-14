@@ -53,14 +53,14 @@
                 <?php echo banner('index_bxslider','order',3,0,'<li>','</li>'); ?>
         </section>
 
-        <!-- <section class="ad" style="margin-bottom:4%;">
+        <section class="ad" style="margin-bottom:4%;">
             <h4>
                 ad01
             </h4>
             <a href="<?php echo base_url('write/vtn_discount') ?>">
                 <img src="<?php echo base_url('assets/images/temp/middle_btn.png') ?>">
             </a>
-        </section> -->
+        </section>
 
         <section class="main_list">
             <h4>main_list</h4>
@@ -183,7 +183,7 @@
                 <h4>ad02</h4>
                 <figure>
                     <img src="<?php echo base_url('assets/images/temp/main_bot/bottom_bn01.png') ?>" alt="bottom_vtn_tour">
-                    <figcaption style="left: 8%;">
+                    <figcaption style="right: 8%;">
                         <h2>시크릿 투어</h2>
                      
                         <p>
