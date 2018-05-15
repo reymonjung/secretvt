@@ -51,16 +51,21 @@
         <section class="slide" style="visibility: hidden;">
             <ul >
                 <?php echo banner('index_bxslider','order',3,0,'<li>','</li>'); ?>
+            </ul>
+            <p>
+                  A resort for you only ! You can get all the information<br>
+                  you need in one trip to Vietnam  
+                </p>
         </section>
 
-        <!-- <section class="ad" style="margin-bottom:4%;">
+        <section class="ad" style="margin-bottom:4%;">
             <h4>
                 ad01
             </h4>
             <a href="<?php echo base_url('write/vtn_discount') ?>">
                 <img src="<?php echo base_url('assets/images/temp/middle_btn.png') ?>">
             </a>
-        </section> -->
+        </section>
 
         <section class="main_list">
             <h4>main_list</h4>

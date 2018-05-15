@@ -5,7 +5,7 @@
     <section class="title">
         <div></div>
         <h2>공지사항</h2>
-        <span>시크릿 베트남에서 알려 드립니다.</span>
+        <!-- <span>시크릿 베트남에서 알려 드립니다.</span> -->
         <table class="table02">
             <tr>
                 <td style="background-color:#f7edf1">
@@ -32,7 +32,7 @@
     </section>
     
     <section class="notice_list">
-        <table >
+<!--         <table >
             <thead>
                 <tr>
                     <th class="px50">번 호</th>
@@ -47,9 +47,9 @@
                 foreach (element('list', element('data', $view)) as $result) {
             ?>
                 <tr>
-                    <td><?php echo element('num', $result); ?></td>
+                    <td><?php echo element('num', $result); ?></td> -->
                     <!-- <td style="padding:0px"><?php if (element('thumb_url', $result)) { ?><img class="media-object" src="<?php echo element('thumb_url', $result); ?>" alt="<?php echo html_escape(element('post_title', $result)); ?>" title="<?php echo html_escape(element('post_title', $result)); ?>" style="width:50px;height:40px;" /><?php } ?></td> -->
-                    <td><a href="<?php echo element('post_url', $result); ?>" title="<?php echo html_escape(element('noti_title', $result)); ?>"><?php echo html_escape(element('noti_title', $result)); ?></a>
+                    <!-- <td><a href="<?php echo element('post_url', $result); ?>" title="<?php echo html_escape(element('noti_title', $result)); ?>"><?php echo html_escape(element('noti_title', $result)); ?></a>
         
                     </td>
                     <td><?php echo element('display_datetime', $result); ?></td>
@@ -66,11 +66,20 @@
             }
             ?>
             </tbody>
+        </table> -->
+
+        <table>
+            <tr>
+                <td>
+                    <h2><span>[공지]</span>공지사항제목영역입니다.공지사항제목영역입니다.공지사항제목영역입니다.공지사항제목영역입니다.공지사항제목영역입니다.공지사항제목영역입니다.</h2>
+                    <p>2018.00.00</p>
+                </td>
+            </tr>
         </table>
     
     <nav><?php echo element('paging', $view); ?></nav>
     </section>
-    <section class="ad">
+    <section class="ad" style="margin-bottom:0;">
         <h4>ad</h4>
         <?php echo banner("mypage_banner_1") ?>
     </section>

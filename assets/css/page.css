@@ -83,6 +83,7 @@
 	.bx-wrapper {
 		position: relative;
 		*zoom: 1;
+		margin-bottom: 3%;
 	}
 
 	.bx-wrapper img {
@@ -280,7 +281,7 @@
 	.main_list ul li a figure figcaption{
 		position: absolute;
 		left: 9%;
-		bottom:15%;
+		bottom:10%;
 	}
 
 	.main_list ul li a figure figcaption h2{
@@ -613,7 +614,7 @@
 	}
 
 /*공지사항 리스트 영역*/
-	.notice_list table{
+/*	.notice_list table{
 		width: 100%;
 		border-top: 2px solid #231b26;
 	}
@@ -638,7 +639,42 @@
 		font-size: 11px;
 		line-height: 17px;
 		text-align:center;
+	}*/
+
+	.notice_list table{
+		width: 100%;
+		table-layout: fixed;
 	}
+
+	.notice_list table td{
+		border:1px solid #ededed;
+		box-sizing: border-box;
+		padding:5%;
+	}
+
+	.notice_list table td span{
+		font-family: 'Jeju Gothic', sans-serif;
+		margin-right: 2%;
+	}
+
+	.notice_list table td h2{
+		width: 100%;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		overflow:hidden;
+		padding-bottom: 3px;
+		float: left;
+		margin-bottom:1.5%;
+	}
+
+	.notice_list table td p{
+		font-size: 10px;
+		color: #6d6d6d;
+		font-family: 'Jeju Gothic', sans-serif;
+	}
+
+
+
 
 /*이벤트 리스트 영역*/
 	.event_list li{
@@ -768,7 +804,7 @@
 
 	.write_area textarea{
 		width: 100%;
-		height: 300px;
+		height: 150px;
 		outline: none;
 		padding:5px;
 		border:1px solid #ededed;
@@ -821,7 +857,7 @@
 	}
 
 /*시크릿 투어,비자,렌트 카 클릭시 댓글리스트 영역*/
-	#fboardlist > ul > li{
+	/*#fboardlist > ul > li{
 		width: 100%;
 		display: inline-block;
 		border:1px solid #ededed;
@@ -892,9 +928,121 @@
 		background: none;
 		font-size: 11px;
 		outline: none;
-	}
+	}*/
 
+		.inquire ul li{
+			border:1px solid #ededed;
+			padding:3% 3% 2%;
+			box-sizing: border-box;
+			display: inline-block;
+			width: 100%;
+			position: relative;
+			margin-bottom: 2%;
+		}
 
+		.inquire h3{
+			width:72%;
+			margin-right: 3%;
+			/* height: 30px; */
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2; /* 라인수 */
+			-webkit-box-orient: vertical;
+			word-wrap:break-word;
+			line-height: 15px;
+			float: left;
+			margin-bottom: 3%;
+		}
+
+		.inquire .question{
+			 display: none;
+		}
+
+		.inquire li .clear p{
+			float: right;
+			padding-top: 4px;
+			height: 20px;
+			font-size: 11px;
+		}
+
+		.inquire li span{
+			position: absolute;
+			top: 13px;
+			right: 4%;
+			font-family: 'Jeju Gothic', sans-serif;
+		}
+		
+		.inquire form li span.color{
+			color:#c00e57;
+		}
+
+		.inquire form li .clear{
+			width: 100%;
+			display: inline-block;
+			position: relative;
+			bottom:-5px;
+		}
+
+		.inquire .question p{
+			display: inline-block;
+			margin: 3% 0 5%;
+			width: 100%;
+		}
+
+		.inquire .question ul{
+			width: 97.5%;
+			margin:0 0 0 2.5%;
+		}
+
+		.inquire .question ul li{
+			border:0;
+			font-size: 11px;
+			background:url(https://secretvt.com/assets/images/temp/reply_02.png) no-repeat top left;
+			background-size: 5%;
+			padding:2px 0 0 4.5%;
+			line-height: 14px;
+			margin-bottom: 3%;
+			display: inline-block;
+			width: 100%;
+		}
+
+		.inquire .question ul li p{
+			margin-bottom:1.5%;
+			margin-top: 0;
+		}
+
+		.inquire .button{
+			width: 45%;
+			float: right;
+		}
+
+		.inquire .button button{
+			width: 32%;
+			text-align:center;
+			border: 0;
+			border-radius: 3px;
+			background:#232121;
+			font-size: 10px; 
+			padding: 2px 0 2px;
+			float: left;
+			font-weight: bold;
+			color:#fff;
+			outline: none;
+			margin-right: 2%;
+		}
+
+		.inquire .button button:last-child{
+			margin-right: 0%;
+		}
+
+		.inquire .question .button{
+			width:30%;
+		}
+
+		.inquire .question .button button{
+			width:49%;
+		}
 
 /*시크릿 투어,비자,렌트 카 클릭시 주의사항 영역*/
 	.caution h2{
@@ -913,15 +1061,17 @@
 		color: #5d5d5d;
 	}
 
-	.caution li strong{
+	.caution strong{
 		float: left;
+		height: 35px;
 	}
 
-	.caution li p{
-		width: 93%;
+	.caution p{
+		width: 95%;
 		display: inline-block;
 		font-size: 11px;
 		float: right;
+		line-height: 18px;
 	}
 
 /*업소후기의 컨텐츠 영역*/
@@ -1155,9 +1305,9 @@
 		box-sizing: border-box;
 	}
 
-	.txt_list:nth-child(2n){
+	/*.txt_list:nth-child(2n){
 		background-color: #fbf8f8;
-	}
+	}*/
 
 	.txt_list:last-child{
 		margin-bottom: 0;

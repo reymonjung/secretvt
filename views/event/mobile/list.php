@@ -5,7 +5,7 @@
     <section class="title">
         <div></div>
         <h2>이벤트</h2>
-        <span>다양한 이벤트를 만나보세요.</span>
+        <!-- <span>다양한 이벤트를 만나보세요.</span> -->
         <table class="table02">
             <tr>
                 <td>
