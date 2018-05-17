@@ -78,7 +78,7 @@ if ($this->member->is_member() === false) {
     <?php
     echo validation_errors('<div class="alert alert-warning" role="alert">', '</div>');
     echo show_alert_message(element('message', $view), '<div class="alert alert-auto-close alert-dismissible alert-info">', '</div>');
-    echo show_alert_message($this->session->flashdata('message'), '<div class="alert alert-auto-close alert-dismissible alert-info"><button type="button" class="close alertclose" >&times;</button>', '</div>'); 
+    echo show_alert_message($this->session->flashdata('message'), '<div class="alert alert-auto-close alert-dismissible alert-info">', '</div>'); 
     $attributes = array('class' => 'form-horizontal', 'name' => 'fwrite', 'id' => 'fwrite', 'onsubmit' => 'return submitContents(this)');
     echo form_open_multipart(current_full_url(), $attributes);
     ?>
@@ -87,9 +87,13 @@ if ($this->member->is_member() === false) {
        
         
             
-            <input type="text" name="post_title" id="post_title" <?php echo $readonly ?> value="<?php echo element('reply', $view) && element('origin', $view) ? 'RE) '.set_value('post_title', element('post_title', element('origin', $view))) : set_value('post_title', element('post_title', element('post', $view))); ?>" placeholder="제목글을 작성해 주세요.리스트에 노출됩니다." onfocus="this.placeholder=''" onblur="this.placeholder='제목글을 작성해 주세요. 리스트에 노출됩니다.'" />
-<!-- <input type="text" name="post_title" id="post_title" <?php echo $readonly ?> value="<?php echo element('reply', $view) && element('origin', $view) ? 'RE) '.set_value('post_title', element('post_title', element('origin', $view))) : set_value('post_title', element('post_title', element('post', $view))); ?>" placeholder="제목글을 작성해 주세요.리스트에 노출됩니다." onfocus="this.placeholder=''" onblur="this.placeholder='제목글을 작성해 주세요. 리스트에 노출됩니다.'" /> -->
-        
+            <input type="text" name="post_title" id="post_title" <?php echo $readonly ?> value="<?php echo element('reply', $view) && element('origin', $view) ? 'RE) '.set_value('post_title', element('post_title', element('origin', $view))) : set_value('post_title', element('post_title', element('post', $view))); ?>" placeholder="제목글을 작성해 주세요.리스트에 노출됩니다." onfocus="this.placeholder=''" onblur="this.placeholder='제목글을 작성해 주세요. 리스트에 노출됩니다.'" style="display:block;" />
+            <?php if ($this->member->is_member() === false ) { ?>
+            <input type="hidden" name="post_nickname"  value="손님" />
+            <input type="hidden" name="post_email"  value="guest@secretvt.com" />
+<input type="password" name="post_password" id="post_password" value="" placeholder="비밀번호를 입력해 주세요" onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호를 입력해 주세요.'" style="display:block;margin-top:5px;" />
+            
+        <?php } ?>
         <?php if ( ! element('use_dhtml', element('board', $view)) AND (element('post_min_length', element('board', $view)) OR element('post_max_length', element('board', $view)))) { ?>
             <div class="well well-sm" style="margin-bottom:15px;">
                 현재 <strong><span id="char_count">0</span></strong> 글자이며,
@@ -243,11 +247,6 @@ $(function() {
 <?php } ?>
 <?php if ($this->member->is_member() === false) { ?>
             , post_password: {required :true, minlength:4, maxlength:100}
-<?php if ($this->cbconfig->item('use_recaptcha')) { ?>
-            , recaptcha : {recaptchaKey:true}
-<?php } else { ?>
-            , captcha_key : {required: true, captchaKey:true}
-<?php } ?>
 <?php } ?>
 <?php if (element('use_category', element('board', $view))) { ?>
             , post_category : {required: true}

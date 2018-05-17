@@ -1,5 +1,10 @@
 <?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css'); ?>
-
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+    #dialog_tour label,#dialog_tour input { display:block; }
+    #dialog_tour input.text {  width:95%; padding: .4em; }
+    .ui-dialog-titlebar{display: block;}
+  </style>
 <?php echo element('headercontent', element('board', element('list', $view))); ?>
 
 <div class="wrap05" style="padding-top:0px;" >
@@ -59,12 +64,17 @@
             <?php
             if (element('list', element('data', element('list', $view))))   {
                 foreach (element('list', element('data', element('list', $view))) as  $key => $result) {
+                    
 
-            ?>
-                <?php if (element('brd_key',element('board', $view)) ==='vtn_discount' || element('is_admin', $view) || element('modify_url', $result)) { ?>
-                <li class="" id="heading_<?php echo $key; ?>" onclick="return faq_open(this);">
-                <?php } else {?>
-                <li id="heading_<?php echo $key; ?>" onclick="alert('본인의 글 이외의 열람이 금지되어있습니다.');">
+            ?>  
+                <?php if(empty(element('mem_id', $result)) && !element('is_admin', $view)){?>
+                <li id="heading_<?php echo element('post_id', $result) ?>" data-post_id="<?php echo element('post_id', $result) ?>" class="guest_post">
+
+                <?php } elseif (element('brd_key',element('board', $view)) ==='vtn_discount' || element('is_admin', $view) || element('modify_url', $result)) { ?>
+                <li class="" id="heading_<?php echo element('post_id', $result) ?>" onclick="return faq_open(this);">
+                
+                <?php }else {?>
+                <li  onclick="alert('본인의 글 이외의 열람이 금지되어있습니다.');">
                 <?php } ?>
                 
                 <div class="table-box">
@@ -170,26 +180,25 @@
             </p>
     </section>
 </div>
-<div id="dialog_tour"  style="display:none">
+  
+<div id="dialog_tour"  style="display:none;" title="비밀번호 확인">
     <?php 
 
-    $attributes = array('class' => 'form-horizontal', 'name' => 'fwrite', 'id' => 'fwrite', 'onsubmit' => 'return submitContents(this)');
+    $attributes = array('class' => 'form-horizontal', 'name' => 'fpassword', 'id' => 'fpassword');
     echo form_open_multipart(current_full_url(), $attributes);
      ?>
     <input type="hidden" name="<?php echo element('primary_key', $view); ?>"    value="<?php echo element(element('primary_key', $view), element('post', $view)); ?>" />
-        <div >
-       
-        
-            
-            <input type="text" name="post_title" id="post_title" <?php echo $readonly ?> value="<?php echo element('reply', $view) && element('origin', $view) ? 'RE) '.set_value('post_title', element('post_title', element('origin', $view))) : set_value('post_title', element('post_title', element('post', $view))); ?>" placeholder="제목글을 작성해 주세요.리스트에 노출됩니다." onfocus="this.placeholder=''" onblur="this.placeholder='제목글을 작성해 주세요. 리스트에 노출됩니다.'" />
-     </div>
+    <label for="password">Password</label>
+    <input type="password" name="modify_password" id="modify_password" value="" class="text">
     <?php echo form_close(); ?>
-  <div class="popup_layer_footer" >
-    <div style="width:70%; border-right: 1px solid #fff; box-sizing: border-box;" class="popup_layer_reject pull-left text-center" data-wrapper-id="popup_layer_gps">다시보지않기
+   
+
+  <!-- <div class="popup_layer_footer" >
+    <div style="width:70%; border-right: 1px solid #fff; box-sizing: border-box;" class="popup_layer_reject pull-left text-center" data-wrapper-id="popup_layer_gps">입력전송
     </div>
     <div style="width:30%" class="popup_layer_close pull-right text-center" >닫기
     </div>
-  </div>
+  </div> -->
 </div>
 <?php echo element('footercontent', element('board', element('list', $view))); ?>
 
@@ -224,25 +233,97 @@ function btn_one_delete_click(el) {
 </script>
 
 <script type="text/javascript">
+var guest_post_id;
+
     $(document).ready(function(){
+
+
         $('.inquire .form-group input').css('width' , $('.inquire .form-group').width()-35);
 
 
         $( "#dialog_tour" ).dialog({
           autoOpen: false,
           modal : true,
-          
+          buttons: {
+            "확 인": faq_open_confirm,
+            Cancel: function() {
+              jQuery('#dialog_tour').dialog('close');
+            }
+          },
+          close: function() {        
+            $("#modify_password").val("");
+          },
           
           hide: {
             effect: "fade",
             duration: 300
           },
-          open: function() { jQuery('div.ui-widget-overlay').bind('click', function() { jQuery('#dialog_tour').dialog('close'); }) }
+          // open: function() { jQuery('div.ui-widget-overlay').bind('click', function() { jQuery('#dialog_tour').dialog('close'); }) }
         });
 
-        $( ".popup_layer_close" ).on( "click", function() {
-          $( "#dialog_tour" ).dialog( "close" );
+function faq_open_confirm(){
+    
+
+
+    var href;
+
+    if ( guest_post_id == '') {
+        return false;
+    }
+
+    if($("#modify_password").val() == ''){
+        alert('비밀번호를 입력해 주세요');
+        return false;
+    }
+
+    href = cb_url + '/postact/tour_post_chk/' + guest_post_id + '/' + $("#modify_password").val();
+
+    $.ajax({
+        url : href,
+        type : 'get',
+        dataType : 'json',
+        success : function(data) {
+            if (data.error) {
+                alert(data.message);
+                return false;
+            } else if (data.success) {
+                
+
+                var $heading_ = $("#heading_"+guest_post_id).find('div.table-box div.question');
+
+  
+                    $('.table-answer.answer:visible').css('display', 'none');
+                    $heading_.slideDown();
+  
+
+                return false;
+            }
+        }
+    });
+
+    jQuery('#dialog_tour').dialog('close');
+}
+
+ // $( "#dialog_tour" ).dialog( "open" );
+
+        $('.guest_post').click(function(){
+
+
+            var $heading_ = $(this).find('div.table-box div.question');
+
+            if ($heading_.is(':visible')) {
+                
+            } else {
+                $('.table-answer.answer:visible').css('display', 'none');
+                guest_post_id=$(this).data('post_id');
+                $( "#dialog_tour" ).dialog( "open" );
+            }
+            
+            
+
+          
         });
     });
+
 
 </script>

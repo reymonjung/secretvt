@@ -3137,4 +3137,59 @@ class Postact extends CB_Controller
 
         echo $xml;
     }
+
+
+    public function tour_post_chk($post_id = 0,$modify_password='')
+    {
+
+        // 이벤트 라이브러리를 로딩합니다
+        $eventname = 'event_postact_delete';
+        $this->load->event($eventname);
+
+        // 이벤트가 존재하면 실행합니다
+        Events::trigger('before', $eventname);
+
+        $post_id = (int) $post_id;
+        if (empty($post_id) OR $post_id < 1) {
+            $result = array('error' => 1,"message" => '오류입니다 다시 시도해 주세요');
+            exit(json_encode($result));
+
+        }
+
+        if (empty($modify_password)) {
+            $result = array('error' => 1,"message" => '오류입니다 다시 시도해 주세요');
+            exit(json_encode($result));
+        }
+        
+
+        $post = $this->Post_model->get_one($post_id);
+
+        if ( ! element('post_id', $post)) {
+            $result = array('error' => 1,"message" => '오류입니다 다시 시도해 주세요');
+            exit(json_encode($result));
+        }
+
+        if (!empty(element('mem_id', $post))) {
+            $result = array('error' => 1,"message" => '오류입니다 다시 시도해 주세요');
+            exit(json_encode($result));
+        }
+    
+
+            
+
+        if ( ! function_exists('password_hash')) {
+            $this->load->helper('password');
+        }
+        if ( password_verify($modify_password, element('post_password', $post))) {
+            
+            $result = array('success' => 1,"message" => '성공');
+            exit(json_encode($result));
+        } else {
+            $result = array('error' => 1,"message" => '패스워드가 맞지 앖습니다.');
+            exit(json_encode($result));
+        }
+        
+        $result = array('error' => 1,"message" => '오류입니다 다시 시도해 주세요');
+            exit(json_encode($result));
+    }
 }

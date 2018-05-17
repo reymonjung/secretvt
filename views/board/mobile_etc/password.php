@@ -1,8 +1,11 @@
 <?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css'); ?>
+<style>
 
-<div class="board">
+label.error{padding-left:30%;}
+</style>
+<div class="wrap05 ">
     <div class="table-box">
-        <div class="table-heading">패스워드 입력</div>
+        <!-- <div class="table-heading">패스워드 입력</div> -->
         <div class="table-body change_pw">
             <?php
             echo validation_errors('<div class="alert alert-warning" role="alert">', '</div>');
@@ -19,7 +22,8 @@
                     </li>
                     <li>
                         <span></span>
-                        <button type="submit" class="btn btn-black">확인</button>
+                        <button type="submit" class="btn btn-black ml50">확 인</button>
+                        <button type="button" class="btn  btn-success btn-history-back">취 소</button>
                     </li>
                 </ol>
             <?php echo form_close(); ?>

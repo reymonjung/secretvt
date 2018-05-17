@@ -393,19 +393,19 @@ class Board_write extends CB_Controller
                 'rules' => 'trim|required|min_length[' . $password_length . ']|callback__mem_password_check',
             );
 
-            if ($this->cbconfig->item('use_recaptcha')) {
-                $config[] = array(
-                    'field' => 'g-recaptcha-response',
-                    'label' => '자동등록방지문자',
-                    'rules' => 'trim|required|callback__check_recaptcha',
-                );
-            } else {
-                $config[] = array(
-                    'field' => 'captcha_key',
-                    'label' => '자동등록방지문자',
-                    'rules' => 'trim|required|callback__check_captcha',
-                );
-            }
+            // if ($this->cbconfig->item('use_recaptcha')) {
+            //     $config[] = array(
+            //         'field' => 'g-recaptcha-response',
+            //         'label' => '자동등록방지문자',
+            //         'rules' => 'trim|required|callback__check_recaptcha',
+            //     );
+            // } else {
+            //     $config[] = array(
+            //         'field' => 'captcha_key',
+            //         'label' => '자동등록방지문자',
+            //         'rules' => 'trim|required|callback__check_captcha',
+            //     );
+            // }
         }
         if (element('use_category', $board) && $is_admin === false) {
             $config[] = array(
@@ -1524,19 +1524,19 @@ class Board_write extends CB_Controller
                 'label' => '패스워드',
                 'rules' => 'trim|required|min_length[' . $password_length . ']|callback__mem_password_check',
             );
-            if ($this->cbconfig->item('use_recaptcha')) {
-                $config[] = array(
-                    'field' => 'g-recaptcha-response',
-                    'label' => '자동등록방지문자',
-                    'rules' => 'trim|required|callback__check_recaptcha',
-                );
-            } else {
-                $config[] = array(
-                    'field' => 'captcha_key',
-                    'label' => '자동등록방지문자',
-                    'rules' => 'trim|required|callback__check_captcha',
-                );
-            }
+            // if ($this->cbconfig->item('use_recaptcha')) {
+            //     $config[] = array(
+            //         'field' => 'g-recaptcha-response',
+            //         'label' => '자동등록방지문자',
+            //         'rules' => 'trim|required|callback__check_recaptcha',
+            //     );
+            // } else {
+            //     $config[] = array(
+            //         'field' => 'captcha_key',
+            //         'label' => '자동등록방지문자',
+            //         'rules' => 'trim|required|callback__check_captcha',
+            //     );
+            // }
         }
         if (element('use_category', $board) && $is_admin === false) {
             $config[] = array(
@@ -2759,9 +2759,9 @@ class Board_write extends CB_Controller
 
                 $result['list'][$key]['is_mobile'] = (element('post_device', $val) === 'mobile') ? true : false;
 
-                $can_modify = ((element('mem_id', $val) && $mem_id === abs(element('mem_id', $val)))) ? true : false;
+                $can_modify = (empty(element('mem_id', $val)) || $mem_id === abs(element('mem_id', $val))) ? true : false;
                 $can_delete = ($is_admin !== false 
-                    OR (element('mem_id', $val) && $mem_id === abs(element('mem_id', $val)))) ? true : false;
+                    OR empty(element('mem_id', $val)) || $mem_id === abs(element('mem_id', $val))) ? true : false;
 
                 $can_reply = $this->accesslevel->is_accessable(
                     element('access_reply', $board),
