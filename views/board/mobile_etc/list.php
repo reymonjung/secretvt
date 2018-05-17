@@ -14,7 +14,7 @@
                         <input type="hidden" name="sfield" value="post_title" />
                         <div class="form-group">
                             
-                            <input type="text" class="input px100" placeholder="Search" name="skeyword" value="<?php echo html_escape($this->input->get('skeyword')); ?>" />
+                            <input type="text" class="input px200 mr10" placeholder="Search" name="skeyword" value="<?php echo html_escape($this->input->get('skeyword')); ?>" />
                             <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-search"></i></button>
                         </div>
                     </form>
@@ -71,12 +71,15 @@
                     <h3 <?php echo element('brd_key',element('board', $view))==='vtn_discount' ? 'style=width:100%;':''; ?>><?php echo html_escape(element('post_title', $result)); ?></h3>
                         <div class="question " style = "width:100%;" id="answer_<?php echo $key; ?>">
                             <?php if (element('brd_key',element('board', $view)) ==='vtn_discount' || element('is_admin', $view) || element('modify_url', $result)) { ?>
-                                <p><?php echo element('post_content', $result); ?></p>
+                                <div class="question-content"><?php echo display_html_content(
+                        element('post_content', $result),
+                        element('post_html', $result));  ?></div>
                             <?php } ?>
                             <?php if (element(abs(element('post_num', $result)),element('reply_content', element('reply_data', element('list', $view))))) { ?>
 
                                 <ul>
-                                    <li><p><?php echo element(abs(element('post_num', $result)),element('reply_content', element('reply_data', element('list', $view)))) ?>
+                                    <li><p><?php echo display_html_content(element(abs(element('post_num', $result)),element('reply_content', element('reply_data', element('list', $view)))),
+                        element('post_html', $result)) ?>
                                     </p>
 
                                 <div class='button' >
@@ -167,7 +170,27 @@
             </p>
     </section>
 </div>
+<div id="dialog_tour"  style="display:none">
+    <?php 
 
+    $attributes = array('class' => 'form-horizontal', 'name' => 'fwrite', 'id' => 'fwrite', 'onsubmit' => 'return submitContents(this)');
+    echo form_open_multipart(current_full_url(), $attributes);
+     ?>
+    <input type="hidden" name="<?php echo element('primary_key', $view); ?>"    value="<?php echo element(element('primary_key', $view), element('post', $view)); ?>" />
+        <div >
+       
+        
+            
+            <input type="text" name="post_title" id="post_title" <?php echo $readonly ?> value="<?php echo element('reply', $view) && element('origin', $view) ? 'RE) '.set_value('post_title', element('post_title', element('origin', $view))) : set_value('post_title', element('post_title', element('post', $view))); ?>" placeholder="제목글을 작성해 주세요.리스트에 노출됩니다." onfocus="this.placeholder=''" onblur="this.placeholder='제목글을 작성해 주세요. 리스트에 노출됩니다.'" />
+     </div>
+    <?php echo form_close(); ?>
+  <div class="popup_layer_footer" >
+    <div style="width:70%; border-right: 1px solid #fff; box-sizing: border-box;" class="popup_layer_reject pull-left text-center" data-wrapper-id="popup_layer_gps">다시보지않기
+    </div>
+    <div style="width:30%" class="popup_layer_close pull-right text-center" >닫기
+    </div>
+  </div>
+</div>
 <?php echo element('footercontent', element('board', element('list', $view))); ?>
 
 
@@ -197,4 +220,29 @@ function btn_one_delete_click(el) {
     }
 }
 //]]>
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.inquire .form-group input').css('width' , $('.inquire .form-group').width()-35);
+
+
+        $( "#dialog_tour" ).dialog({
+          autoOpen: false,
+          modal : true,
+          
+          
+          hide: {
+            effect: "fade",
+            duration: 300
+          },
+          open: function() { jQuery('div.ui-widget-overlay').bind('click', function() { jQuery('#dialog_tour').dialog('close'); }) }
+        });
+
+        $( ".popup_layer_close" ).on( "click", function() {
+          $( "#dialog_tour" ).dialog( "close" );
+        });
+    });
+
 </script>

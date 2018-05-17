@@ -32,27 +32,19 @@
     </section>
     
     <section class="notice_list">
-<!--         <table >
-            <thead>
-                <tr>
-                    <th class="px50">번 호</th>
-                    <th>제 목</th>
-                    <th class="px100">날 짜</th>
-                </tr>
-            </thead>
-            <tbody>
-
+        <table >
             <?php
             if (element('list', element('data', $view))) {
                 foreach (element('list', element('data', $view)) as $result) {
             ?>
                 <tr>
-                    <td><?php echo element('num', $result); ?></td> -->
+                    <td>
                     <!-- <td style="padding:0px"><?php if (element('thumb_url', $result)) { ?><img class="media-object" src="<?php echo element('thumb_url', $result); ?>" alt="<?php echo html_escape(element('post_title', $result)); ?>" title="<?php echo html_escape(element('post_title', $result)); ?>" style="width:50px;height:40px;" /><?php } ?></td> -->
-                    <!-- <td><a href="<?php echo element('post_url', $result); ?>" title="<?php echo html_escape(element('noti_title', $result)); ?>"><?php echo html_escape(element('noti_title', $result)); ?></a>
+                    <h2><span>[공지]</span><a href="<?php echo element('post_url', $result); ?>" title="<?php echo html_escape(element('noti_title', $result)); ?>"><?php echo html_escape(element('noti_title', $result)); ?></a></h2>
         
+                    
+                    <p><?php echo element('display_datetime', $result); ?></p>
                     </td>
-                    <td><?php echo element('display_datetime', $result); ?></td>
                 </tr>
             <?php
                 }
@@ -66,16 +58,9 @@
             }
             ?>
             </tbody>
-        </table> -->
-
-        <table>
-            <tr>
-                <td>
-                    <h2><span>[공지]</span>공지사항제목영역입니다.공지사항제목영역입니다.공지사항제목영역입니다.공지사항제목영역입니다.공지사항제목영역입니다.공지사항제목영역입니다.</h2>
-                    <p>2018.00.00</p>
-                </td>
-            </tr>
         </table>
+
+       
     
     <nav><?php echo element('paging', $view); ?></nav>
     </section>

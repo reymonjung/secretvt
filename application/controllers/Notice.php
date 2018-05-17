@@ -102,7 +102,7 @@ class Notice extends CB_Controller
                 $result['list'][$key]['post_url'] = document_post_url('notice', element('noti_id', $val));
 
                 $result['list'][$key]['display_datetime'] = display_datetime(
-                    element('noti_datetime', $val)
+                    element('noti_datetime', $val),'full'
                 );
                 if (empty($val['noti_start_date']) OR $val['noti_start_date'] === '0000-00-00') {
                     $result['list'][$key]['noti_start_date'] = '미지정';

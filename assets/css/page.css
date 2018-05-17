@@ -645,7 +645,10 @@
 		width: 100%;
 		table-layout: fixed;
 	}
-
+	
+	.notice_list table tr:nth-child(2n){
+		background-color: #fbf8f8;
+	}
 	.notice_list table td{
 		border:1px solid #ededed;
 		box-sizing: border-box;
@@ -669,7 +672,7 @@
 
 	.notice_list table td p{
 		font-size: 10px;
-		color: #6d6d6d;
+		color: #7e7e7e;
 		font-family: 'Jeju Gothic', sans-serif;
 	}
 
@@ -984,10 +987,11 @@
 			bottom:-5px;
 		}
 
-		.inquire .question p{
+		.inquire .question div.question-content{
 			display: inline-block;
 			margin: 3% 0 5%;
 			width: 100%;
+			line-height:17px;
 		}
 
 		.inquire .question ul{
@@ -1007,7 +1011,7 @@
 			width: 100%;
 		}
 
-		.inquire .question ul li p{
+		.inquire .question ul li div.question-content{
 			margin-bottom:1.5%;
 			margin-top: 0;
 		}

@@ -4,7 +4,7 @@
 
 $readonly='';
 if ($this->member->is_member() === false) {
-    $readonly = 'readonly="readonly"';
+    // $readonly = 'readonly="readonly"';
 }
 ?>
 
@@ -88,6 +88,7 @@ if ($this->member->is_member() === false) {
         
             
             <input type="text" name="post_title" id="post_title" <?php echo $readonly ?> value="<?php echo element('reply', $view) && element('origin', $view) ? 'RE) '.set_value('post_title', element('post_title', element('origin', $view))) : set_value('post_title', element('post_title', element('post', $view))); ?>" placeholder="제목글을 작성해 주세요.리스트에 노출됩니다." onfocus="this.placeholder=''" onblur="this.placeholder='제목글을 작성해 주세요. 리스트에 노출됩니다.'" />
+<!-- <input type="text" name="post_title" id="post_title" <?php echo $readonly ?> value="<?php echo element('reply', $view) && element('origin', $view) ? 'RE) '.set_value('post_title', element('post_title', element('origin', $view))) : set_value('post_title', element('post_title', element('post', $view))); ?>" placeholder="제목글을 작성해 주세요.리스트에 노출됩니다." onfocus="this.placeholder=''" onblur="this.placeholder='제목글을 작성해 주세요. 리스트에 노출됩니다.'" /> -->
         
         <?php if ( ! element('use_dhtml', element('board', $view)) AND (element('post_min_length', element('board', $view)) OR element('post_max_length', element('board', $view)))) { ?>
             <div class="well well-sm" style="margin-bottom:15px;">
@@ -154,6 +155,7 @@ if ($this->member->is_member() === false) {
             </div>
         </div>
     <?php echo form_close(); ?>
+    </section>
 </div>
 <?php } ?>
 <?php echo element('footercontent', element('board', $view)); ?>
@@ -258,10 +260,10 @@ $(function() {
     });
 });
 <?php if ($this->member->is_member() === false) { ?>
-    $("#post_title").bind('click',function(){location.href='<?php echo site_url('login?url=' . urlencode(current_full_url()));?>';});
-    $("#post_title").bind('focus',function(){location.href='<?php echo site_url('login?url=' . urlencode(current_full_url()));?>';});
-    $("#post_content").bind('click',function(){location.href='<?php echo site_url('login?url=' . urlencode(current_full_url()));?>';});
-    $("#post_content").bind('focus',function(){location.href='<?php echo site_url('login?url=' . urlencode(current_full_url()));?>';});
+    // $("#post_title").bind('click',function(){location.href='<?php echo site_url('login?url=' . urlencode(current_full_url()));?>';});
+    // $("#post_title").bind('focus',function(){location.href='<?php echo site_url('login?url=' . urlencode(current_full_url()));?>';});
+    // $("#post_content").bind('click',function(){location.href='<?php echo site_url('login?url=' . urlencode(current_full_url()));?>';});
+    // $("#post_content").bind('focus',function(){location.href='<?php echo site_url('login?url=' . urlencode(current_full_url()));?>';});
 <?php } ?>
 <?php if (element('has_tempsave', $view)) { ?>get_tempsave(cb_board); <?php } ?>
 <?php if ( ! element('post_id', element('post', $view))) { ?>window.onbeforeunload = function () { auto_tempsave(cb_board); } <?php } ?>

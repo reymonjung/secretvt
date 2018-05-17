@@ -58,14 +58,14 @@
                 </p>
         </section>
 
-        <section class="ad" style="margin-bottom:4%;">
+       <!--  <section class="ad" style="margin-bottom:4%;">
             <h4>
                 ad01
             </h4>
             <a href="<?php echo base_url('write/vtn_discount') ?>">
                 <img src="<?php echo base_url('assets/images/temp/middle_btn.png') ?>">
             </a>
-        </section>
+        </section> -->
 
         <section class="main_list">
             <h4>main_list</h4>
