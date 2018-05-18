@@ -187,7 +187,7 @@
             <a href="<?php echo base_url('write/vtn_tour') ?>">
                 <h4>ad02</h4>
                 <figure>
-                    <img src="<?php echo base_url('assets/images/temp/main_bot/bottom_bn01.png') ?>" alt="bottom_vtn_tour">
+                    <img src="<?php echo base_url('assets/images/temp/main_bot/bottom_bn01.png?ver=1.0') ?>" alt="bottom_vtn_tour">
                     <figcaption style="right: 8%;">
                         <h2>시크릿 투어</h2>
                      
