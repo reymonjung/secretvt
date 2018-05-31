@@ -18,7 +18,14 @@
 <?php if (element('canonical', $view)) { ?><link rel="canonical" href="<?php echo element('canonical', $view); ?>" /><?php } ?>
 
 <link rel="stylesheet" type="text/css" href="<?php echo element('layout_skin_url', $layout); ?>/css/style.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/import.css?'.$this->cbconfig->item('browser_cache_version')) ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/dialog.css')?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/reset.css?'.$this->cbconfig->item('browser_cache_version'))?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/global.css?'.$this->cbconfig->item('browser_cache_version'))?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/page.css?'.$this->cbconfig->item('browser_cache_version'))?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css?'.$this->cbconfig->item('browser_cache_version'))?>" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css" />
+
 <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css" /> -->
 <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 <!-- <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/ui-lightness/jquery-ui.css" /> -->
