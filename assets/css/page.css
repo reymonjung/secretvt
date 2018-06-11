@@ -2006,6 +2006,7 @@
 
 	.reply_list .reply_cont{
 		margin-bottom: 3%;
+		line-height:20px;
 	}
 
 	.reply_list .reply_info{

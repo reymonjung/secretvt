@@ -12,11 +12,11 @@ if (element('list', element('data', $view))) {
         <?php } ?>
         <ul>
             <li class="reply_list">
-                <img src="/assets/images/temp/write_img/reply_arrow.png">
+                
                 <?php if (element('is_admin', $view)) { ?><input type="checkbox" name="chk_comment_id[]" value="<?php echo element('cmt_id', $result); ?>" /><?php } ?>
-                <div class="reply_cont"><?php echo element('content', $result); ?></div>
-            
-                <div class="reply_info">
+                <div class="reply_cont pull-right per95" ><?php echo element('content', $result); ?></div>
+                <div class="pull-right"><img src="/assets/images/temp/write_img/reply_arrow.png"></div>
+                <div class="reply_info pull-right" >
                     <?php echo element('display_name', $result); ?> | 
                     작성일 : <?php echo element('display_datetime', $result); ?>
                 
